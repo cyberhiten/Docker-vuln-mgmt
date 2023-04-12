@@ -1,0 +1,166 @@
+
+httpd:alpine3.15 (alpine 3.15.4)
+================================
+Total: 49 (UNKNOWN: 0, LOW: 1, MEDIUM: 14, HIGH: 23, CRITICAL: 11)
+
+┌───────────────┬────────────────┬──────────┬───────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
+│    Library    │ Vulnerability  │ Severity │ Installed Version │ Fixed Version │                            Title                            │
+├───────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ apr           │ CVE-2022-24963 │ CRITICAL │ 1.7.0-r0          │ 1.7.1-r0      │ apr-util: integer overflow/wraparound in apr_encode         │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-24963                  │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-25147 │          │                   │               │ apr-util: out-of-bounds writes in the apr_base64            │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-25147                  │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-28331 │          │                   │               │ apr-util: Windows out-of-bounds write in apr_socket_sendv   │
+│               │                │          │                   │               │ function                                                    │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-28331                  │
+│               ├────────────────┼──────────┤                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2021-35940 │ HIGH     │                   │ 1.7.0-r1      │ apr: Regression of CVE-2017-12613 fix in apr 1.7            │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2021-35940                  │
+├───────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ apr-util      │ CVE-2022-25147 │ CRITICAL │ 1.6.1-r11         │ 1.6.3-r0      │ apr-util: out-of-bounds writes in the apr_base64            │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-25147                  │
+├───────────────┤                │          │                   │               │                                                             │
+│ apr-util-ldap │                │          │                   │               │                                                             │
+│               │                │          │                   │               │                                                             │
+├───────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ expat         │ CVE-2022-40674 │ HIGH     │ 2.4.7-r0          │ 2.4.9-r0      │ expat: a use-after-free in the doContent function in        │
+│               │                │          │                   │               │ xmlparse.c                                                  │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-40674                  │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-43680 │          │                   │ 2.5.0-r0      │ expat: use-after free caused by overeager destruction of a  │
+│               │                │          │                   │               │ shared DTD in...                                            │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-43680                  │
+├───────────────┼────────────────┤          ├───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ libcrypto1.1  │ CVE-2022-4450  │          │ 1.1.1n-r0         │ 1.1.1t-r0     │ openssl: double free after calling PEM_read_bio_ex          │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-4450                   │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-0215  │          │                   │               │ openssl: use-after-free following BIO_new_NDEF              │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2023-0215                   │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-0286  │          │                   │               │ openssl: X.400 address type confusion in X.509 GeneralName  │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2023-0286                   │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-0464  │          │                   │ 1.1.1t-r2     │ openssl: Denial of service by excessive resource usage in   │
+│               │                │          │                   │               │ verifying X509 policy...                                    │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2023-0464                   │
+│               ├────────────────┼──────────┤                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-2097  │ MEDIUM   │                   │ 1.1.1q-r0     │ openssl: AES OCB fails to encrypt some bytes                │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-2097                   │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-4304  │          │                   │ 1.1.1t-r0     │ openssl: timing attack in RSA Decryption implementation     │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-4304                   │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-0465  │          │                   │ 1.1.1t-r3     │ openssl: Invalid certificate policies in leaf certificates  │
+│               │                │          │                   │               │ are silently ignored                                        │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2023-0465                   │
+├───────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ libcurl       │ CVE-2022-32207 │ CRITICAL │ 7.80.0-r0         │ 7.80.0-r2     │ curl: Unpreserved file permissions                          │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-32207                  │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-32221 │          │                   │ 7.80.0-r4     │ curl: POST following PUT confusion                          │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-32221                  │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-42915 │          │                   │               │ curl: HTTP proxy double-free                                │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-42915                  │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-23914 │          │                   │ 7.80.0-r6     │ curl: HSTS ignored on multiple requests                     │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2023-23914                  │
+│               ├────────────────┼──────────┤                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-22576 │ HIGH     │                   │ 7.80.0-r1     │ curl: OAUTH2 bearer bypass in connection re-use             │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-22576                  │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-27775 │          │                   │               │ curl: bad local IPv6 connection reuse                       │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-27775                  │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-27780 │          │                   │ 7.80.0-r2     │ curl: percent-encoded path separator in URL host            │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-27780                  │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-27781 │          │                   │               │ curl: CERTINFO never-ending busy-loop                       │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-27781                  │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-27782 │          │                   │               │ curl: TLS and SSH connection too eager reuse                │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-27782                  │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-42916 │          │                   │ 7.80.0-r4     │ curl: HSTS bypass via IDN                                   │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-42916                  │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-43551 │          │                   │ 7.80.0-r5     │ curl: HSTS bypass via IDN                                   │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-43551                  │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-23916 │          │                   │ 7.80.0-r6     │ curl: HTTP multi-header compression denial of service       │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2023-23916                  │
+│               ├────────────────┼──────────┤                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-27774 │ MEDIUM   │                   │ 7.80.0-r1     │ curl: credential leak on redirect                           │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-27774                  │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-27776 │          │                   │               │ curl: auth/cookie leak on redirect                          │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-27776                  │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-32205 │          │                   │ 7.80.0-r2     │ curl: Set-Cookie denial of service                          │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-32205                  │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-32206 │          │                   │               │ curl: HTTP compression denial of service                    │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-32206                  │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-32208 │          │                   │               │ curl: FTP-KRB bad message verification                      │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-32208                  │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-43552 │          │                   │ 7.80.0-r5     │ curl: Use-after-free triggered by an HTTP proxy deny        │
+│               │                │          │                   │               │ response                                                    │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-43552                  │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-23915 │          │                   │ 7.80.0-r6     │ curl: HSTS amnesia with --parallel                          │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2023-23915                  │
+│               ├────────────────┼──────────┤                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-35252 │ LOW      │                   │ 7.80.0-r3     │ curl: Incorrect handling of control code characters in      │
+│               │                │          │                   │               │ cookies                                                     │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-35252                  │
+├───────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ libldap       │ CVE-2022-29155 │ CRITICAL │ 2.6.0-r0          │ 2.6.2-r0      │ openldap: OpenLDAP SQL injection                            │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-29155                  │
+├───────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ libssl1.1     │ CVE-2022-4450  │ HIGH     │ 1.1.1n-r0         │ 1.1.1t-r0     │ openssl: double free after calling PEM_read_bio_ex          │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-4450                   │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-0215  │          │                   │               │ openssl: use-after-free following BIO_new_NDEF              │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2023-0215                   │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-0286  │          │                   │               │ openssl: X.400 address type confusion in X.509 GeneralName  │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2023-0286                   │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-0464  │          │                   │ 1.1.1t-r2     │ openssl: Denial of service by excessive resource usage in   │
+│               │                │          │                   │               │ verifying X509 policy...                                    │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2023-0464                   │
+│               ├────────────────┼──────────┤                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-2097  │ MEDIUM   │                   │ 1.1.1q-r0     │ openssl: AES OCB fails to encrypt some bytes                │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-2097                   │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-4304  │          │                   │ 1.1.1t-r0     │ openssl: timing attack in RSA Decryption implementation     │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-4304                   │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-0465  │          │                   │ 1.1.1t-r3     │ openssl: Invalid certificate policies in leaf certificates  │
+│               │                │          │                   │               │ are silently ignored                                        │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2023-0465                   │
+├───────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ libxml2       │ CVE-2022-2309  │ HIGH     │ 2.9.13-r0         │ 2.9.14-r1     │ lxml: NULL Pointer Dereference in lxml                      │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-2309                   │
+│               ├────────────────┤          │                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-40303 │          │                   │ 2.9.14-r2     │ libxml2: integer overflows with XML_PARSE_HUGE              │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-40303                  │
+│               ├────────────────┤          │                   │               ├─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-40304 │          │                   │               │ libxml2: dict corruption caused by entity reference cycles  │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-40304                  │
+│               ├────────────────┼──────────┤                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│               │ CVE-2022-29824 │ MEDIUM   │                   │ 2.9.14-r0     │ libxml2: integer overflows in xmlBuf and xmlBuffer lead to  │
+│               │                │          │                   │               │ out-of-bounds write                                         │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-29824                  │
+├───────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ xz-libs       │ CVE-2022-1271  │ HIGH     │ 5.2.5-r0          │ 5.2.5-r1      │ gzip: arbitrary-file-write vulnerability                    │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-1271                   │
+├───────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ zlib          │ CVE-2022-37434 │ CRITICAL │ 1.2.12-r0         │ 1.2.12-r2     │ zlib: heap-based buffer over-read and overflow in inflate() │
+│               │                │          │                   │               │ in inflate.c via a...                                       │
+│               │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-37434                  │
+└───────────────┴────────────────┴──────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘

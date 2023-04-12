@@ -1,0 +1,607 @@
+
+debian:wheezy-20170606 (debian 7.11)
+====================================
+Total: 171 (UNKNOWN: 4, LOW: 43, MEDIUM: 54, HIGH: 47, CRITICAL: 23)
+
+┌────────────────────┬──────────────────┬──────────┬─────────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
+│      Library       │  Vulnerability   │ Severity │  Installed Version  │  Fixed Version   │                            Title                             │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ bash               │ CVE-2016-9401    │ MEDIUM   │ 4.2+dfsg-0.1+deb7u4 │                  │ bash: popd controlled free                                   │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-9401                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ bsdutils           │ CVE-2014-9114    │ HIGH     │ 1:2.20.1-5.3        │                  │ util-linux: command injection flaw in blkid                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-9114                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-5011    │ MEDIUM   │                     │                  │ util-linux: Extended partition loop in MBR partition table   │
+│                    │                  │          │                     │                  │ leads to DOS                                                 │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-5011                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-0157    │ LOW      │                     │                  │ util-linux: mount folder existence information disclosure    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-0157                    │
+├────────────────────┼──────────────────┤          ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ coreutils          │ CVE-2014-9471    │          │ 8.13-3.5            │                  │ coreutils: memory corruption flaw in parse_datetime()        │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-9471                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-2781    │          │                     │                  │ coreutils: Non-privileged session can escape to the parent   │
+│                    │                  │          │                     │                  │ session in chroot                                            │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-2781                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ gcc-4.7-base       │ CVE-2014-5044    │ CRITICAL │ 4.7.2-5             │                  │ gcc: integer overflow flaws in libgfortran                   │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-5044                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-11671   │ MEDIUM   │                     │                  │ gcc: GCC generates incorrect code for RDRAND/RDSEED          │
+│                    │                  │          │                     │                  │ intrinsics                                                   │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-11671                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2002-2439    │ LOW      │                     │                  │ gcc: Integer overflow can occur during the computation of    │
+│                    │                  │          │                     │                  │ the memory region...                                         │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2002-2439                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ gnupg              │ CVE-2015-1607    │ MEDIUM   │ 1.4.12-7+deb7u8     │                  │ gnupg2: memcpy with overlapping ranges (keybox_search.c)     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2015-1607                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-7526    │          │                     │ 1.4.12-7+deb7u9  │ libgcrypt: Use of left-to-right sliding window method allows │
+│                    │                  │          │                     │                  │ full RSA key recovery...                                     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-7526                    │
+├────────────────────┼──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ gpgv               │ CVE-2015-1607    │          │                     │                  │ gnupg2: memcpy with overlapping ranges (keybox_search.c)     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2015-1607                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-7526    │          │                     │ 1.4.12-7+deb7u9  │ libgcrypt: Use of left-to-right sliding window method allows │
+│                    │                  │          │                     │                  │ full RSA key recovery...                                     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-7526                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ inetutils-ping     │ CVE-2014-3634    │ HIGH     │ 2:1.9-2             │                  │ rsyslog: remote syslog PRI vulnerability                     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-3634                    │
+├────────────────────┼──────────────────┤          ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libblkid1          │ CVE-2014-9114    │          │ 2.20.1-5.3          │                  │ util-linux: command injection flaw in blkid                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-9114                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-5011    │ MEDIUM   │                     │                  │ util-linux: Extended partition loop in MBR partition table   │
+│                    │                  │          │                     │                  │ leads to DOS                                                 │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-5011                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-0157    │ LOW      │                     │                  │ util-linux: mount folder existence information disclosure    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-0157                    │
+├────────────────────┼──────────────────┤          ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libbz2-1.0         │ CVE-2016-3189    │          │ 1.0.6-4             │                  │ bzip2: heap use after free in bzip2recover                   │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-3189                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libc-bin           │ CVE-2014-9761    │ CRITICAL │ 2.13-38+deb7u11     │                  │ glibc: Unbounded stack allocation in nan* functions          │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-9761                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-6485    │          │                     │                  │ glibc: Integer overflow in posix_memalign in memalign        │
+│                    │                  │          │                     │                  │ functions                                                    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-6485                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-2856    │ HIGH     │                     │                  │ pt_chown in the glibc package before 2.19-18+deb8u4 on       │
+│                    │                  │          │                     │                  │ Debian jessie; ......                                        │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-2856                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-1000366 │          │                     │ 2.13-38+deb7u12  │ glibc: heap/stack gap jumping via unbounded stack            │
+│                    │                  │          │                     │                  │ allocations                                                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-1000366                 │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-1000408 │          │                     │                  │ glibc: Memory leak reachable via LD_HWCAP_MASK               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-1000408                 │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-1000409 │          │                     │                  │ glibc: Buffer overflow triggerable via LD_LIBRARY_PATH       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-1000409                 │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-16997   │          │                     │                  │ glibc: Incorrect handling of RPATH in elf/dl-load.c can be   │
+│                    │                  │          │                     │                  │ used to execute...                                           │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-16997                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-1000001 │          │                     │                  │ glibc: realpath() buffer underflow when getcwd() returns     │
+│                    │                  │          │                     │                  │ relative path allows privilege escalation...                 │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-1000001                 │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-10228   │ MEDIUM   │                     │                  │ glibc: iconv program can hang when invoked with the -c       │
+│                    │                  │          │                     │                  │ option                                                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-10228                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-4429    │          │                     │                  │ glibc: libtirpc: stack (frame) overflow in Sun RPC           │
+│                    │                  │          │                     │                  │ clntudp_call()                                               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-4429                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-12132   │          │                     │                  │ glibc: Fragmentation attacks possible when EDNS0 is enabled  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-12132                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-12133   │          │                     │                  │ glibc: Use-after-free read access in clntudp_call in sunrpc  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-12133                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-2207    │ LOW      │                     │                  │ glibc (pt_chown): Improper pseudotty ownership and           │
+│                    │                  │          │                     │                  │ permissions changes when granting access to...               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-2207                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2015-5180    │          │                     │                  │ glibc: DNS resolver NULL pointer dereference with crafted    │
+│                    │                  │          │                     │                  │ record type                                                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2015-5180                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-15670   │          │                     │                  │ glibc: Buffer overflow in glob with GLOB_TILDE               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-15670                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-15671   │          │                     │                  │ glibc: Memory leak in glob with GLOB_TILDE                   │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-15671                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-15804   │          │                     │                  │ glibc: Buffer overflow during unescaping of user names with  │
+│                    │                  │          │                     │                  │ the ~ operator...                                            │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-15804                   │
+├────────────────────┼──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libc6              │ CVE-2014-9761    │ CRITICAL │                     │                  │ glibc: Unbounded stack allocation in nan* functions          │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-9761                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-6485    │          │                     │                  │ glibc: Integer overflow in posix_memalign in memalign        │
+│                    │                  │          │                     │                  │ functions                                                    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-6485                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-2856    │ HIGH     │                     │                  │ pt_chown in the glibc package before 2.19-18+deb8u4 on       │
+│                    │                  │          │                     │                  │ Debian jessie; ......                                        │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-2856                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-1000366 │          │                     │ 2.13-38+deb7u12  │ glibc: heap/stack gap jumping via unbounded stack            │
+│                    │                  │          │                     │                  │ allocations                                                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-1000366                 │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-1000408 │          │                     │                  │ glibc: Memory leak reachable via LD_HWCAP_MASK               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-1000408                 │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-1000409 │          │                     │                  │ glibc: Buffer overflow triggerable via LD_LIBRARY_PATH       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-1000409                 │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-16997   │          │                     │                  │ glibc: Incorrect handling of RPATH in elf/dl-load.c can be   │
+│                    │                  │          │                     │                  │ used to execute...                                           │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-16997                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-1000001 │          │                     │                  │ glibc: realpath() buffer underflow when getcwd() returns     │
+│                    │                  │          │                     │                  │ relative path allows privilege escalation...                 │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-1000001                 │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-10228   │ MEDIUM   │                     │                  │ glibc: iconv program can hang when invoked with the -c       │
+│                    │                  │          │                     │                  │ option                                                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-10228                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-4429    │          │                     │                  │ glibc: libtirpc: stack (frame) overflow in Sun RPC           │
+│                    │                  │          │                     │                  │ clntudp_call()                                               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-4429                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-12132   │          │                     │                  │ glibc: Fragmentation attacks possible when EDNS0 is enabled  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-12132                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-12133   │          │                     │                  │ glibc: Use-after-free read access in clntudp_call in sunrpc  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-12133                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-2207    │ LOW      │                     │                  │ glibc (pt_chown): Improper pseudotty ownership and           │
+│                    │                  │          │                     │                  │ permissions changes when granting access to...               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-2207                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2015-5180    │          │                     │                  │ glibc: DNS resolver NULL pointer dereference with crafted    │
+│                    │                  │          │                     │                  │ record type                                                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2015-5180                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-15670   │          │                     │                  │ glibc: Buffer overflow in glob with GLOB_TILDE               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-15670                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-15671   │          │                     │                  │ glibc: Memory leak in glob with GLOB_TILDE                   │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-15671                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-15804   │          │                     │                  │ glibc: Buffer overflow during unescaping of user names with  │
+│                    │                  │          │                     │                  │ the ~ operator...                                            │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-15804                   │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libdb5.1           │ CVE-2017-10140   │ HIGH     │ 5.1.29-5            │ 5.1.29-5+deb7u1  │ libdb: Reads DB_CONFIG from the current working directory    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-10140                   │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libgcc1            │ CVE-2014-5044    │ CRITICAL │ 1:4.7.2-5           │                  │ gcc: integer overflow flaws in libgfortran                   │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-5044                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-11671   │ MEDIUM   │                     │                  │ gcc: GCC generates incorrect code for RDRAND/RDSEED          │
+│                    │                  │          │                     │                  │ intrinsics                                                   │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-11671                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2002-2439    │ LOW      │                     │                  │ gcc: Integer overflow can occur during the computation of    │
+│                    │                  │          │                     │                  │ the memory region...                                         │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2002-2439                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libmount1          │ CVE-2014-9114    │ HIGH     │ 2.20.1-5.3          │                  │ util-linux: command injection flaw in blkid                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-9114                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-5011    │ MEDIUM   │                     │                  │ util-linux: Extended partition loop in MBR partition table   │
+│                    │                  │          │                     │                  │ leads to DOS                                                 │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-5011                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-0157    │ LOW      │                     │                  │ util-linux: mount folder existence information disclosure    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-0157                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libncurses5        │ CVE-2017-10684   │ CRITICAL │ 5.9-10              │                  │ ncurses: Stack-based buffer overflow in fmt_entry function   │
+│                    │                  │          │                     │                  │ in dump_entry.c                                              │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-10684                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-10685   │          │                     │                  │ ncurses: Stack-based buffer overflow caused by format string │
+│                    │                  │          │                     │                  │ vulnerability in fmt_entry function...                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-10685                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-11112   │ HIGH     │                     │                  │ ncurses: Illegal address access in append_acs function       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-11112                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-11113   │          │                     │                  │ ncurses: Null pointer dereference vulnerability in           │
+│                    │                  │          │                     │                  │ _nc_parse_entry function                                     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-11113                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13728   │          │                     │                  │ ncurses: Infinite loop in the next_char function             │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13728                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-16879   │          │                     │                  │ ncurses: Stack-based buffer overflow in the _nc_write_entry  │
+│                    │                  │          │                     │                  │ function                                                     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-16879                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13729   │ MEDIUM   │                     │                  │ ncurses: Illegal address access in the _nc_save_str function │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13729                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13730   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ _nc_read_entry_source()                                      │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13730                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13731   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ postprocess_termcap()                                        │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13731                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13732   │          │                     │                  │ ncurses: Illegal address access in the function dump_uses()  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13732                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13733   │          │                     │                  │ ncurses: Illegal address access in the function fmt_entry    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13733                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13734   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ _nc_safe_strcat                                              │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13734                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-19211   │ LOW      │                     │                  │ ncurses: Null pointer dereference at function                │
+│                    │                  │          │                     │                  │ _nc_parse_entry in parse_entry.c                             │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-19211                   │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libpam-modules     │ CVE-2015-3238    │ MEDIUM   │ 1.1.3-7.1           │                  │ pam: DoS/user enumeration due to blocking pipe in pam_unix   │
+│                    │                  │          │                     │                  │ module                                                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2015-3238                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-7041    │ LOW      │                     │                  │ pam: pam_userdb case insensitive password hash comparison    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-7041                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2014-2583    │          │                     │                  │ pam: path traversal issue in pam_timestamp's                 │
+│                    │                  │          │                     │                  │ format_timestamp_name()                                      │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-2583                    │
+├────────────────────┼──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libpam-modules-bin │ CVE-2015-3238    │ MEDIUM   │                     │                  │ pam: DoS/user enumeration due to blocking pipe in pam_unix   │
+│                    │                  │          │                     │                  │ module                                                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2015-3238                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-7041    │ LOW      │                     │                  │ pam: pam_userdb case insensitive password hash comparison    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-7041                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2014-2583    │          │                     │                  │ pam: path traversal issue in pam_timestamp's                 │
+│                    │                  │          │                     │                  │ format_timestamp_name()                                      │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-2583                    │
+├────────────────────┼──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libpam-runtime     │ CVE-2015-3238    │ MEDIUM   │                     │                  │ pam: DoS/user enumeration due to blocking pipe in pam_unix   │
+│                    │                  │          │                     │                  │ module                                                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2015-3238                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-7041    │ LOW      │                     │                  │ pam: pam_userdb case insensitive password hash comparison    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-7041                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2014-2583    │          │                     │                  │ pam: path traversal issue in pam_timestamp's                 │
+│                    │                  │          │                     │                  │ format_timestamp_name()                                      │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-2583                    │
+├────────────────────┼──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libpam0g           │ CVE-2015-3238    │ MEDIUM   │                     │                  │ pam: DoS/user enumeration due to blocking pipe in pam_unix   │
+│                    │                  │          │                     │                  │ module                                                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2015-3238                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-7041    │ LOW      │                     │                  │ pam: pam_userdb case insensitive password hash comparison    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-7041                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2014-2583    │          │                     │                  │ pam: path traversal issue in pam_timestamp's                 │
+│                    │                  │          │                     │                  │ format_timestamp_name()                                      │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-2583                    │
+├────────────────────┼──────────────────┤          ├─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libreadline6       │ CVE-2014-2524    │          │ 6.2+dfsg-0.1        │                  │ readline: insecure temporary file use in _rl_tropen()        │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-2524                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libstdc++6         │ CVE-2014-5044    │ CRITICAL │ 4.7.2-5             │                  │ gcc: integer overflow flaws in libgfortran                   │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-5044                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-11671   │ MEDIUM   │                     │                  │ gcc: GCC generates incorrect code for RDRAND/RDSEED          │
+│                    │                  │          │                     │                  │ intrinsics                                                   │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-11671                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2002-2439    │ LOW      │                     │                  │ gcc: Integer overflow can occur during the computation of    │
+│                    │                  │          │                     │                  │ the memory region...                                         │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2002-2439                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libtinfo5          │ CVE-2017-10684   │ CRITICAL │ 5.9-10              │                  │ ncurses: Stack-based buffer overflow in fmt_entry function   │
+│                    │                  │          │                     │                  │ in dump_entry.c                                              │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-10684                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-10685   │          │                     │                  │ ncurses: Stack-based buffer overflow caused by format string │
+│                    │                  │          │                     │                  │ vulnerability in fmt_entry function...                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-10685                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-11112   │ HIGH     │                     │                  │ ncurses: Illegal address access in append_acs function       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-11112                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-11113   │          │                     │                  │ ncurses: Null pointer dereference vulnerability in           │
+│                    │                  │          │                     │                  │ _nc_parse_entry function                                     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-11113                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13728   │          │                     │                  │ ncurses: Infinite loop in the next_char function             │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13728                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-16879   │          │                     │                  │ ncurses: Stack-based buffer overflow in the _nc_write_entry  │
+│                    │                  │          │                     │                  │ function                                                     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-16879                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13729   │ MEDIUM   │                     │                  │ ncurses: Illegal address access in the _nc_save_str function │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13729                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13730   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ _nc_read_entry_source()                                      │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13730                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13731   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ postprocess_termcap()                                        │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13731                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13732   │          │                     │                  │ ncurses: Illegal address access in the function dump_uses()  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13732                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13733   │          │                     │                  │ ncurses: Illegal address access in the function fmt_entry    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13733                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13734   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ _nc_safe_strcat                                              │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13734                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-19211   │ LOW      │                     │                  │ ncurses: Null pointer dereference at function                │
+│                    │                  │          │                     │                  │ _nc_parse_entry in parse_entry.c                             │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-19211                   │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libuuid1           │ CVE-2014-9114    │ HIGH     │ 2.20.1-5.3          │                  │ util-linux: command injection flaw in blkid                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-9114                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-5011    │ MEDIUM   │                     │                  │ util-linux: Extended partition loop in MBR partition table   │
+│                    │                  │          │                     │                  │ leads to DOS                                                 │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-5011                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-0157    │ LOW      │                     │                  │ util-linux: mount folder existence information disclosure    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-0157                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ login              │ CVE-2017-12424   │ CRITICAL │ 1:4.1.5.1-1+deb7u1  │                  │ shadow-utils: Buffer overflow via newusers tool              │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-12424                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-7169    │ LOW      │                     │                  │ shadow-utils: newgidmap allows unprivileged user to drop     │
+│                    │                  │          │                     │                  │ supplementary groups potentially allowing privilege...       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-7169                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ mount              │ CVE-2014-9114    │ HIGH     │ 2.20.1-5.3          │                  │ util-linux: command injection flaw in blkid                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-9114                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-5011    │ MEDIUM   │                     │                  │ util-linux: Extended partition loop in MBR partition table   │
+│                    │                  │          │                     │                  │ leads to DOS                                                 │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-5011                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-0157    │ LOW      │                     │                  │ util-linux: mount folder existence information disclosure    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-0157                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ multiarch-support  │ CVE-2014-9761    │ CRITICAL │ 2.13-38+deb7u11     │                  │ glibc: Unbounded stack allocation in nan* functions          │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-9761                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-6485    │          │                     │                  │ glibc: Integer overflow in posix_memalign in memalign        │
+│                    │                  │          │                     │                  │ functions                                                    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-6485                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-2856    │ HIGH     │                     │                  │ pt_chown in the glibc package before 2.19-18+deb8u4 on       │
+│                    │                  │          │                     │                  │ Debian jessie; ......                                        │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-2856                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-1000366 │          │                     │ 2.13-38+deb7u12  │ glibc: heap/stack gap jumping via unbounded stack            │
+│                    │                  │          │                     │                  │ allocations                                                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-1000366                 │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-1000408 │          │                     │                  │ glibc: Memory leak reachable via LD_HWCAP_MASK               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-1000408                 │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-1000409 │          │                     │                  │ glibc: Buffer overflow triggerable via LD_LIBRARY_PATH       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-1000409                 │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-16997   │          │                     │                  │ glibc: Incorrect handling of RPATH in elf/dl-load.c can be   │
+│                    │                  │          │                     │                  │ used to execute...                                           │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-16997                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-1000001 │          │                     │                  │ glibc: realpath() buffer underflow when getcwd() returns     │
+│                    │                  │          │                     │                  │ relative path allows privilege escalation...                 │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-1000001                 │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-10228   │ MEDIUM   │                     │                  │ glibc: iconv program can hang when invoked with the -c       │
+│                    │                  │          │                     │                  │ option                                                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-10228                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-4429    │          │                     │                  │ glibc: libtirpc: stack (frame) overflow in Sun RPC           │
+│                    │                  │          │                     │                  │ clntudp_call()                                               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-4429                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-12132   │          │                     │                  │ glibc: Fragmentation attacks possible when EDNS0 is enabled  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-12132                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-12133   │          │                     │                  │ glibc: Use-after-free read access in clntudp_call in sunrpc  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-12133                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-2207    │ LOW      │                     │                  │ glibc (pt_chown): Improper pseudotty ownership and           │
+│                    │                  │          │                     │                  │ permissions changes when granting access to...               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-2207                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2015-5180    │          │                     │                  │ glibc: DNS resolver NULL pointer dereference with crafted    │
+│                    │                  │          │                     │                  │ record type                                                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2015-5180                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-15670   │          │                     │                  │ glibc: Buffer overflow in glob with GLOB_TILDE               │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-15670                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-15671   │          │                     │                  │ glibc: Memory leak in glob with GLOB_TILDE                   │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-15671                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-15804   │          │                     │                  │ glibc: Buffer overflow during unescaping of user names with  │
+│                    │                  │          │                     │                  │ the ~ operator...                                            │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-15804                   │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-base       │ CVE-2017-10684   │ CRITICAL │ 5.9-10              │                  │ ncurses: Stack-based buffer overflow in fmt_entry function   │
+│                    │                  │          │                     │                  │ in dump_entry.c                                              │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-10684                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-10685   │          │                     │                  │ ncurses: Stack-based buffer overflow caused by format string │
+│                    │                  │          │                     │                  │ vulnerability in fmt_entry function...                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-10685                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-11112   │ HIGH     │                     │                  │ ncurses: Illegal address access in append_acs function       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-11112                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-11113   │          │                     │                  │ ncurses: Null pointer dereference vulnerability in           │
+│                    │                  │          │                     │                  │ _nc_parse_entry function                                     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-11113                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13728   │          │                     │                  │ ncurses: Infinite loop in the next_char function             │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13728                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-16879   │          │                     │                  │ ncurses: Stack-based buffer overflow in the _nc_write_entry  │
+│                    │                  │          │                     │                  │ function                                                     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-16879                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13729   │ MEDIUM   │                     │                  │ ncurses: Illegal address access in the _nc_save_str function │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13729                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13730   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ _nc_read_entry_source()                                      │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13730                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13731   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ postprocess_termcap()                                        │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13731                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13732   │          │                     │                  │ ncurses: Illegal address access in the function dump_uses()  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13732                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13733   │          │                     │                  │ ncurses: Illegal address access in the function fmt_entry    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13733                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13734   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ _nc_safe_strcat                                              │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13734                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-19211   │ LOW      │                     │                  │ ncurses: Null pointer dereference at function                │
+│                    │                  │          │                     │                  │ _nc_parse_entry in parse_entry.c                             │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-19211                   │
+├────────────────────┼──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-bin        │ CVE-2017-10684   │ CRITICAL │                     │                  │ ncurses: Stack-based buffer overflow in fmt_entry function   │
+│                    │                  │          │                     │                  │ in dump_entry.c                                              │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-10684                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-10685   │          │                     │                  │ ncurses: Stack-based buffer overflow caused by format string │
+│                    │                  │          │                     │                  │ vulnerability in fmt_entry function...                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-10685                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-11112   │ HIGH     │                     │                  │ ncurses: Illegal address access in append_acs function       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-11112                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-11113   │          │                     │                  │ ncurses: Null pointer dereference vulnerability in           │
+│                    │                  │          │                     │                  │ _nc_parse_entry function                                     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-11113                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13728   │          │                     │                  │ ncurses: Infinite loop in the next_char function             │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13728                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-16879   │          │                     │                  │ ncurses: Stack-based buffer overflow in the _nc_write_entry  │
+│                    │                  │          │                     │                  │ function                                                     │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-16879                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13729   │ MEDIUM   │                     │                  │ ncurses: Illegal address access in the _nc_save_str function │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13729                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13730   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ _nc_read_entry_source()                                      │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13730                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13731   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ postprocess_termcap()                                        │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13731                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13732   │          │                     │                  │ ncurses: Illegal address access in the function dump_uses()  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13732                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13733   │          │                     │                  │ ncurses: Illegal address access in the function fmt_entry    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13733                   │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2017-13734   │          │                     │                  │ ncurses: Illegal address access in the function              │
+│                    │                  │          │                     │                  │ _nc_safe_strcat                                              │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-13734                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-19211   │ LOW      │                     │                  │ ncurses: Null pointer dereference at function                │
+│                    │                  │          │                     │                  │ _nc_parse_entry in parse_entry.c                             │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-19211                   │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ passwd             │ CVE-2017-12424   │ CRITICAL │ 1:4.1.5.1-1+deb7u1  │                  │ shadow-utils: Buffer overflow via newusers tool              │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-12424                   │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-7169    │ LOW      │                     │                  │ shadow-utils: newgidmap allows unprivileged user to drop     │
+│                    │                  │          │                     │                  │ supplementary groups potentially allowing privilege...       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-7169                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ perl-base          │ CVE-2018-6797    │ CRITICAL │ 5.14.2-21+deb7u5    │                  │ perl: heap write overflow in regcomp.c                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-6797                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2018-6913    │          │                     │ 5.14.2-21+deb7u6 │ perl: heap buffer overflow in pp_pack.c                      │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2018-6913                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-7422    │ HIGH     │                     │                  │ perl: segmentation fault in S_regmatch on negative           │
+│                    │                  │          │                     │                  │ backreference                                                │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-7422                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2015-8853    │          │                     │                  │ perl: regexp matching hangs indefinitely on illegal UTF-8    │
+│                    │                  │          │                     │                  │ input                                                        │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2015-8853                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ readline-common    │ CVE-2014-2524    │ LOW      │ 6.2+dfsg-0.1        │                  │ readline: insecure temporary file use in _rl_tropen()        │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-2524                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ sensible-utils     │ CVE-2017-17512   │ HIGH     │ 0.0.7               │ 0.0.7+deb7u1     │ sensible-browser in sensible-utils before 0.0.11 does not    │
+│                    │                  │          │                     │                  │ validate str ...                                             │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2017-17512                   │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ tzdata             │ DLA-1155-1       │ UNKNOWN  │ 2017b-0+deb7u1      │ 2017c-0+deb7u1   │ tzdata - new upstream version                                │
+│                    ├──────────────────┤          │                     ├──────────────────┤                                                              │
+│                    │ DLA-1291-1       │          │                     │ 2018c-0+deb7u1   │                                                              │
+│                    ├──────────────────┤          │                     ├──────────────────┤                                                              │
+│                    │ DLA-1323-1       │          │                     │ 2018d-0+deb7u1   │                                                              │
+│                    ├──────────────────┤          │                     ├──────────────────┤                                                              │
+│                    │ DLA-1371-1       │          │                     │ 2018e-0+deb7u1   │                                                              │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ util-linux         │ CVE-2014-9114    │ HIGH     │ 2.20.1-5.3          │                  │ util-linux: command injection flaw in blkid                  │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2014-9114                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-5011    │ MEDIUM   │                     │                  │ util-linux: Extended partition loop in MBR partition table   │
+│                    │                  │          │                     │                  │ leads to DOS                                                 │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-5011                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2013-0157    │ LOW      │                     │                  │ util-linux: mount folder existence information disclosure    │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2013-0157                    │
+├────────────────────┼──────────────────┼──────────┼─────────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ zlib1g             │ CVE-2016-9841    │ CRITICAL │ 1:1.2.7.dfsg-13     │                  │ zlib: Out-of-bounds pointer arithmetic in inffast.c          │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-9841                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-9843    │          │                     │                  │ zlib: Big-endian out-of-bounds pointer                       │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-9843                    │
+│                    ├──────────────────┼──────────┤                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-9840    │ HIGH     │                     │                  │ zlib: Out-of-bounds pointer arithmetic in inftrees.c         │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-9840                    │
+│                    ├──────────────────┤          │                     ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2016-9842    │          │                     │                  │ zlib: Undefined left shift of negative number                │
+│                    │                  │          │                     │                  │ https://avd.aquasec.com/nvd/cve-2016-9842                    │
+└────────────────────┴──────────────────┴──────────┴─────────────────────┴──────────────────┴──────────────────────────────────────────────────────────────┘

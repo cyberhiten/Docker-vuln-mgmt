@@ -1,0 +1,115 @@
+
+python:3.7.0a3-alpine3.7 (alpine 3.7.0)
+=======================================
+Total: 22 (UNKNOWN: 0, LOW: 0, MEDIUM: 5, HIGH: 11, CRITICAL: 6)
+
+┌───────────────────────┬────────────────┬──────────┬───────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
+│        Library        │ Vulnerability  │ Severity │ Installed Version │  Fixed Version   │                            Title                             │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ expat                 │ CVE-2018-20843 │ HIGH     │ 2.2.5-r0          │ 2.2.7-r0         │ expat: large number of colons in input makes parser consume  │
+│                       │                │          │                   │                  │ high amount...                                               │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-20843                   │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2019-15903 │          │                   │ 2.2.7-r1         │ expat: heap-based buffer over-read via crafted XML input     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2019-15903                   │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ freetype              │ CVE-2018-6942  │ MEDIUM   │ 2.8.1-r2          │ 2.8.1-r3         │ freetype: NULL pointer dereference in the Ins_GETVARIATION() │
+│                       │                │          │                   │                  │ function                                                     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-6942                    │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libbz2                │ CVE-2019-12900 │ CRITICAL │ 1.0.6-r6          │ 1.0.6-r7         │ bzip2: out-of-bounds write in function BZ2_decompress        │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2019-12900                   │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libpng                │ CVE-2018-14550 │ HIGH     │ 1.6.34-r1         │ 1.6.37-r0        │ libpng: Stack-based buffer overflow in                       │
+│                       │                │          │                   │                  │ contrib/pngminus/pnm2png.c:get_token() potentially leading   │
+│                       │                │          │                   │                  │ to arbitrary code execution...                               │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-14550                   │
+│                       ├────────────────┼──────────┤                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-14048 │ MEDIUM   │                   │                  │ libpng: Segmentation fault in png.c:png_free_data function   │
+│                       │                │          │                   │                  │ causing denial of service                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-14048                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2019-7317  │          │                   │                  │ libpng: use-after-free in png_image_free in png.c            │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2019-7317                    │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libressl2.6-libcrypto │ CVE-2018-0732  │ HIGH     │ 2.6.3-r0          │ 2.6.5-r0         │ openssl: Malicious server can send large prime to client     │
+│                       │                │          │                   │                  │ during DH(E) TLS...                                          │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0732                    │
+│                       ├────────────────┼──────────┤                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0495  │ MEDIUM   │                   │                  │ ROHNP: Key Extraction Side Channel in Multiple Crypto        │
+│                       │                │          │                   │                  │ Libraries                                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0495                    │
+├───────────────────────┼────────────────┼──────────┤                   │                  ├──────────────────────────────────────────────────────────────┤
+│ libressl2.6-libssl    │ CVE-2018-0732  │ HIGH     │                   │                  │ openssl: Malicious server can send large prime to client     │
+│                       │                │          │                   │                  │ during DH(E) TLS...                                          │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0732                    │
+│                       ├────────────────┼──────────┤                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0495  │ MEDIUM   │                   │                  │ ROHNP: Key Extraction Side Channel in Multiple Crypto        │
+│                       │                │          │                   │                  │ Libraries                                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0495                    │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libx11                │ CVE-2018-14599 │ CRITICAL │ 1.6.5-r1          │ 1.6.6-r0         │ libX11: Off-by-one error in XListExtensions in ListExt.c     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-14599                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-14600 │          │                   │                  │ libX11: Out of Bounds write in XListExtensions in ListExt.c  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-14600                   │
+│                       ├────────────────┼──────────┤                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-14598 │ HIGH     │                   │                  │ libX11: Crash on invalid reply in XListExtensions in         │
+│                       │                │          │                   │                  │ ListExt.c                                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-14598                   │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ musl                  │ CVE-2019-14697 │ CRITICAL │ 1.1.18-r2         │ 1.1.18-r4        │ musl libc through 1.1.23 has an x87 floating-point stack     │
+│                       │                │          │                   │                  │ adjustment im ......                                         │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2019-14697                   │
+├───────────────────────┤                │          │                   │                  │                                                              │
+│ musl-utils            │                │          │                   │                  │                                                              │
+│                       │                │          │                   │                  │                                                              │
+│                       │                │          │                   │                  │                                                              │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-libs          │ CVE-2017-16879 │ HIGH     │ 6.0_p20170930-r0  │ 6.0_p20171125-r0 │ ncurses: Stack-based buffer overflow in the _nc_write_entry  │
+│                       │                │          │                   │                  │ function                                                     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-16879                   │
+├───────────────────────┤                │          │                   │                  │                                                              │
+│ ncurses-terminfo      │                │          │                   │                  │                                                              │
+│                       │                │          │                   │                  │                                                              │
+│                       │                │          │                   │                  │                                                              │
+├───────────────────────┤                │          │                   │                  │                                                              │
+│ ncurses-terminfo-base │                │          │                   │                  │                                                              │
+│                       │                │          │                   │                  │                                                              │
+│                       │                │          │                   │                  │                                                              │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ sqlite-libs           │ CVE-2019-8457  │ CRITICAL │ 3.21.0-r0         │ 3.25.3-r1        │ sqlite: heap out-of-bound read in function rtreenode()       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2019-8457                    │
+│                       ├────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-20346 │ HIGH     │                   │ 3.25.3-r0        │ CVE-2018-20505 CVE-2018-20506 sqlite: Multiple flaws in      │
+│                       │                │          │                   │                  │ sqlite which can be triggered via...                         │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-20346                   │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-8740  │          │                   │ 3.21.0-r1        │ sqlite: NULL pointer dereference with databases with schema  │
+│                       │                │          │                   │                  │ corrupted with CREATE TABLE...                               │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-8740                    │
+└───────────────────────┴────────────────┴──────────┴───────────────────┴──────────────────┴──────────────────────────────────────────────────────────────┘
+
+Python (python-pkg)
+===================
+Total: 4 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 3, CRITICAL: 0)
+
+┌───────────────────────┬────────────────┬──────────┬───────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
+│        Library        │ Vulnerability  │ Severity │ Installed Version │ Fixed Version │                            Title                            │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ pip (METADATA)        │ CVE-2019-20916 │ HIGH     │ 9.0.1             │ 19.2          │ python-pip: directory traversal in _download_http_url()     │
+│                       │                │          │                   │               │ function in src/pip/_internal/download.py                   │
+│                       │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2019-20916                  │
+│                       ├────────────────┼──────────┤                   ├───────────────┼─────────────────────────────────────────────────────────────┤
+│                       │ CVE-2021-3572  │ MEDIUM   │                   │ 21.1          │ python-pip: Incorrect handling of unicode separators in git │
+│                       │                │          │                   │               │ references                                                  │
+│                       │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2021-3572                   │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ setuptools (METADATA) │ CVE-2022-40897 │ HIGH     │ 38.2.4            │ 65.5.1        │ pypa-setuptools: Regular Expression Denial of Service       │
+│                       │                │          │                   │               │ (ReDoS) in package_index.py                                 │
+│                       │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-40897                  │
+├───────────────────────┼────────────────┤          ├───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ wheel (METADATA)      │ CVE-2022-40898 │          │ 0.30.0            │ 0.38.1        │ python-wheel: remote attackers can cause denial of service  │
+│                       │                │          │                   │               │ via attacker controlled...                                  │
+│                       │                │          │                   │               │ https://avd.aquasec.com/nvd/cve-2022-40898                  │
+└───────────────────────┴────────────────┴──────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘

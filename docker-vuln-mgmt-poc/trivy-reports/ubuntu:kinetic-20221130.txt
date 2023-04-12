@@ -1,0 +1,67 @@
+
+ubuntu:kinetic-20221130 (ubuntu 22.10)
+======================================
+Total: 16 (UNKNOWN: 0, LOW: 10, MEDIUM: 6, HIGH: 0, CRITICAL: 0)
+
+┌────────────────────┬────────────────┬──────────┬───────────────────┬──────────────────────────────┬──────────────────────────────────────────────────────────────┐
+│      Library       │ Vulnerability  │ Severity │ Installed Version │        Fixed Version         │                            Title                             │
+├────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ coreutils          │ CVE-2016-2781  │ LOW      │ 8.32-4.1ubuntu1   │                              │ coreutils: Non-privileged session can escape to the parent   │
+│                    │                │          │                   │                              │ session in chroot                                            │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2016-2781                    │
+├────────────────────┼────────────────┤          ├───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ gpgv               │ CVE-2022-3219  │          │ 2.2.35-3ubuntu1   │                              │ gnupg: denial of service issue (resource consumption) using  │
+│                    │                │          │                   │                              │ compressed packets                                           │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
+├────────────────────┼────────────────┤          ├───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libc-bin           │ CVE-2016-20013 │          │ 2.36-0ubuntu4     │                              │ sha256crypt and sha512crypt through 0.6 allow attackers to   │
+│                    │                │          │                   │                              │ cause a denial of...                                         │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2016-20013                   │
+├────────────────────┤                │          │                   ├──────────────────────────────┤                                                              │
+│ libc6              │                │          │                   │                              │                                                              │
+│                    │                │          │                   │                              │                                                              │
+│                    │                │          │                   │                              │                                                              │
+├────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libgnutls30        │ CVE-2023-0361  │ MEDIUM   │ 3.7.7-2ubuntu2    │ 3.7.7-2ubuntu2.1             │ gnutls: timing side-channel in the TLS RSA key exchange code │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2023-0361                    │
+├────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libpam-modules     │ CVE-2022-28321 │ LOW      │ 1.5.2-2ubuntu1    │ 1.5.2-2ubuntu1.1             │ pam: authentication bypass for SSH logins                    │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2022-28321                   │
+├────────────────────┤                │          │                   │                              │                                                              │
+│ libpam-modules-bin │                │          │                   │                              │                                                              │
+│                    │                │          │                   │                              │                                                              │
+├────────────────────┤                │          │                   │                              │                                                              │
+│ libpam-runtime     │                │          │                   │                              │                                                              │
+│                    │                │          │                   │                              │                                                              │
+├────────────────────┤                │          │                   │                              │                                                              │
+│ libpam0g           │                │          │                   │                              │                                                              │
+│                    │                │          │                   │                              │                                                              │
+├────────────────────┼────────────────┤          ├───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libpcre3           │ CVE-2017-11164 │          │ 2:8.39-14         │                              │ pcre: OP_KETRMAX feature in the match function in            │
+│                    │                │          │                   │                              │ pcre_exec.c                                                  │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2017-11164                   │
+│                    ├────────────────┤          │                   ├──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2019-20838 │          │                   │                              │ pcre: Buffer over-read in JIT when UTF is disabled and \X    │
+│                    │                │          │                   │                              │ or...                                                        │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2019-20838                   │
+├────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libsystemd0        │ CVE-2022-4415  │ MEDIUM   │ 251.4-1ubuntu7    │ 251.4-1ubuntu7.1             │ systemd: local information leak due to systemd-coredump not  │
+│                    │                │          │                   │                              │ respecting fs.suid_dumpable kernel setting...                │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2022-4415                    │
+│                    ├────────────────┤          │                   │                              ├──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2022-45873 │          │                   │                              │ systemd: deadlock in systemd-coredump via a crash with a     │
+│                    │                │          │                   │                              │ long backtrace                                               │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2022-45873                   │
+├────────────────────┼────────────────┤          │                   │                              ├──────────────────────────────────────────────────────────────┤
+│ libudev1           │ CVE-2022-4415  │          │                   │                              │ systemd: local information leak due to systemd-coredump not  │
+│                    │                │          │                   │                              │ respecting fs.suid_dumpable kernel setting...                │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2022-4415                    │
+│                    ├────────────────┤          │                   │                              ├──────────────────────────────────────────────────────────────┤
+│                    │ CVE-2022-45873 │          │                   │                              │ systemd: deadlock in systemd-coredump via a crash with a     │
+│                    │                │          │                   │                              │ long backtrace                                               │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2022-45873                   │
+├────────────────────┼────────────────┤          ├───────────────────┼──────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ tar                │ CVE-2022-48303 │          │ 1.34+dfsg-1build3 │ 1.34+dfsg-1ubuntu0.1.22.10.1 │ tar: heap buffer overflow at from_header() in list.c via     │
+│                    │                │          │                   │                              │ specially crafted checksum...                                │
+│                    │                │          │                   │                              │ https://avd.aquasec.com/nvd/cve-2022-48303                   │
+└────────────────────┴────────────────┴──────────┴───────────────────┴──────────────────────────────┴──────────────────────────────────────────────────────────────┘

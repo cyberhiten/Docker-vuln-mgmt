@@ -1,0 +1,380 @@
+
+nginx:1.8.1-alpine (alpine 3.3.3)
+=================================
+Total: 107 (UNKNOWN: 0, LOW: 0, MEDIUM: 49, HIGH: 42, CRITICAL: 16)
+
+┌───────────────────────┬────────────────┬──────────┬───────────────────┬──────────────────┬──────────────────────────────────────────────────────────────┐
+│        Library        │ Vulnerability  │ Severity │ Installed Version │  Fixed Version   │                            Title                             │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ busybox               │ CVE-2016-6301  │ HIGH     │ 1.24.1-r7         │ 1.24.2-r1        │ busybox: NTP server denial of service flaw                   │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-6301                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-16544 │          │                   │ 1.24.2-r2        │ busybox: Insufficient sanitization of filenames when         │
+│                       │                │          │                   │                  │ autocompleting                                               │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-16544                   │
+│                       ├────────────────┼──────────┤                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-15873 │ MEDIUM   │                   │                  │ busybox: Integer overflow in the get_next_block function     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-15873                   │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libcrypto1.0          │ CVE-2016-2177  │ CRITICAL │ 1.0.2g-r0         │ 1.0.2h-r1        │ openssl: Possible integer overflow vulnerabilities in        │
+│                       │                │          │                   │                  │ codebase                                                     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2177                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2182  │          │                   │ 1.0.2h-r3        │ openssl: Out-of-bounds write caused by unchecked errors in   │
+│                       │                │          │                   │                  │ BN_bn2dec()                                                  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2182                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-6303  │          │                   │                  │ openssl: Integer overflow in MDC2_Update()                   │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-6303                    │
+│                       ├────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2105  │ HIGH     │                   │ 1.0.2h-r0        │ openssl: EVP_EncodeUpdate overflow                           │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2105                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2106  │          │                   │                  │ openssl: EVP_EncryptUpdate overflow                          │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2106                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2109  │          │                   │                  │ openssl: ASN.1 BIO handling of large amounts of data         │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2109                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2176  │          │                   │                  │ openssl: EBCDIC overread in X509_NAME_oneline()              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2176                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2179  │          │                   │ 1.0.2h-r3        │ openssl: DTLS memory exhaustion DoS when messages are not    │
+│                       │                │          │                   │                  │ removed from fragment...                                     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2179                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2180  │          │                   │ 1.0.2h-r2        │ OpenSSL: OOB read in TS_OBJ_print_bio()                      │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2180                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2181  │          │                   │ 1.0.2h-r4        │ openssl: DTLS replay protection bypass allows DoS against    │
+│                       │                │          │                   │                  │ DTLS connection                                              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2181                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2183  │          │                   │ 1.0.2i-r0        │ SSL/TLS: Birthday attack against 64-bit block ciphers        │
+│                       │                │          │                   │                  │ (SWEET32)                                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2183                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-6302  │          │                   │ 1.0.2h-r3        │ openssl: Insufficient TLS session ticket HMAC length checks  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-6302                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-6304  │          │                   │ 1.0.2i-r0        │ openssl: OCSP Status Request extension unbounded memory      │
+│                       │                │          │                   │                  │ growth                                                       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-6304                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-7052  │          │                   │ 1.0.2j-r0        │ openssl: Missing CRL sanity check                            │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-7052                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3731  │          │                   │ 1.0.2k-r0        │ openssl: Truncated packet could crash via OOB read           │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3731                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0732  │          │                   │ 1.0.2o-r1        │ openssl: Malicious server can send large prime to client     │
+│                       │                │          │                   │                  │ during DH(E) TLS...                                          │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0732                    │
+│                       ├────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2107  │ MEDIUM   │                   │ 1.0.2h-r0        │ openssl: Padding oracle in AES-NI CBC MAC check              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2107                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2178  │          │                   │ 1.0.2h-r1        │ openssl: Non-constant time codepath followed for certain     │
+│                       │                │          │                   │                  │ operations in DSA implementation                             │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2178                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-6306  │          │                   │ 1.0.2i-r0        │ openssl: certificate message OOB reads                       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-6306                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-7055  │          │                   │ 1.0.2k-r0        │ openssl: Carry propagating bug in Montgomery multiplication  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-7055                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3732  │          │                   │                  │ openssl: BN_mod_exp may produce incorrect results on x86_64  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3732                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3735  │          │                   │ 1.0.2m-r0        │ openssl: Malformed X.509 IPAdressFamily could cause OOB read │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3735                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3736  │          │                   │                  │ openssl: bn_sqrx8x_internal carry bug on x86_64              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3736                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3737  │          │                   │ 1.0.2n-r0        │ openssl: Read/write after SSL object in error state          │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3737                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3738  │          │                   │                  │ openssl: rsaz_1024_mul_avx2 overflow bug on x86_64           │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3738                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0733  │          │                   │ 1.0.2o-r0        │ openssl: Implementation bug in PA-RISC CRYPTO_memcmp         │
+│                       │                │          │                   │                  │ function allows attackers to forge authenticated...          │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0733                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0734  │          │                   │ 1.0.2q-r0        │ openssl: timing side channel attack in the DSA signature     │
+│                       │                │          │                   │                  │ algorithm                                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0734                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0737  │          │                   │ 1.0.2o-r1        │ openssl: RSA key generation cache timing vulnerability in    │
+│                       │                │          │                   │                  │ crypto/rsa/rsa_gen.c allows attackers to...                  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0737                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0739  │          │                   │ 1.0.2o-r0        │ openssl: Handling of crafted recursive ASN.1 structures can  │
+│                       │                │          │                   │                  │ cause a stack overflow...                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0739                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-5407  │          │                   │ 1.0.2q-r0        │ openssl: Side-channel vulnerability on SMT/Hyper-Threading   │
+│                       │                │          │                   │                  │ architectures (PortSmash)                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-5407                    │
+├───────────────────────┼────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libssl1.0             │ CVE-2016-2177  │ CRITICAL │                   │ 1.0.2h-r1        │ openssl: Possible integer overflow vulnerabilities in        │
+│                       │                │          │                   │                  │ codebase                                                     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2177                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2182  │          │                   │ 1.0.2h-r3        │ openssl: Out-of-bounds write caused by unchecked errors in   │
+│                       │                │          │                   │                  │ BN_bn2dec()                                                  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2182                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-6303  │          │                   │                  │ openssl: Integer overflow in MDC2_Update()                   │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-6303                    │
+│                       ├────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2105  │ HIGH     │                   │ 1.0.2h-r0        │ openssl: EVP_EncodeUpdate overflow                           │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2105                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2106  │          │                   │                  │ openssl: EVP_EncryptUpdate overflow                          │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2106                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2109  │          │                   │                  │ openssl: ASN.1 BIO handling of large amounts of data         │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2109                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2176  │          │                   │                  │ openssl: EBCDIC overread in X509_NAME_oneline()              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2176                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2179  │          │                   │ 1.0.2h-r3        │ openssl: DTLS memory exhaustion DoS when messages are not    │
+│                       │                │          │                   │                  │ removed from fragment...                                     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2179                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2180  │          │                   │ 1.0.2h-r2        │ OpenSSL: OOB read in TS_OBJ_print_bio()                      │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2180                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2181  │          │                   │ 1.0.2h-r4        │ openssl: DTLS replay protection bypass allows DoS against    │
+│                       │                │          │                   │                  │ DTLS connection                                              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2181                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2183  │          │                   │ 1.0.2i-r0        │ SSL/TLS: Birthday attack against 64-bit block ciphers        │
+│                       │                │          │                   │                  │ (SWEET32)                                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2183                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-6302  │          │                   │ 1.0.2h-r3        │ openssl: Insufficient TLS session ticket HMAC length checks  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-6302                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-6304  │          │                   │ 1.0.2i-r0        │ openssl: OCSP Status Request extension unbounded memory      │
+│                       │                │          │                   │                  │ growth                                                       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-6304                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-7052  │          │                   │ 1.0.2j-r0        │ openssl: Missing CRL sanity check                            │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-7052                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3731  │          │                   │ 1.0.2k-r0        │ openssl: Truncated packet could crash via OOB read           │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3731                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0732  │          │                   │ 1.0.2o-r1        │ openssl: Malicious server can send large prime to client     │
+│                       │                │          │                   │                  │ during DH(E) TLS...                                          │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0732                    │
+│                       ├────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2107  │ MEDIUM   │                   │ 1.0.2h-r0        │ openssl: Padding oracle in AES-NI CBC MAC check              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2107                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-2178  │          │                   │ 1.0.2h-r1        │ openssl: Non-constant time codepath followed for certain     │
+│                       │                │          │                   │                  │ operations in DSA implementation                             │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-2178                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-6306  │          │                   │ 1.0.2i-r0        │ openssl: certificate message OOB reads                       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-6306                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-7055  │          │                   │ 1.0.2k-r0        │ openssl: Carry propagating bug in Montgomery multiplication  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-7055                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3732  │          │                   │                  │ openssl: BN_mod_exp may produce incorrect results on x86_64  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3732                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3735  │          │                   │ 1.0.2m-r0        │ openssl: Malformed X.509 IPAdressFamily could cause OOB read │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3735                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3736  │          │                   │                  │ openssl: bn_sqrx8x_internal carry bug on x86_64              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3736                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3737  │          │                   │ 1.0.2n-r0        │ openssl: Read/write after SSL object in error state          │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3737                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-3738  │          │                   │                  │ openssl: rsaz_1024_mul_avx2 overflow bug on x86_64           │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-3738                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0733  │          │                   │ 1.0.2o-r0        │ openssl: Implementation bug in PA-RISC CRYPTO_memcmp         │
+│                       │                │          │                   │                  │ function allows attackers to forge authenticated...          │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0733                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0734  │          │                   │ 1.0.2q-r0        │ openssl: timing side channel attack in the DSA signature     │
+│                       │                │          │                   │                  │ algorithm                                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0734                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0737  │          │                   │ 1.0.2o-r1        │ openssl: RSA key generation cache timing vulnerability in    │
+│                       │                │          │                   │                  │ crypto/rsa/rsa_gen.c allows attackers to...                  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0737                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-0739  │          │                   │ 1.0.2o-r0        │ openssl: Handling of crafted recursive ASN.1 structures can  │
+│                       │                │          │                   │                  │ cause a stack overflow...                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-0739                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2018-5407  │          │                   │ 1.0.2q-r0        │ openssl: Side-channel vulnerability on SMT/Hyper-Threading   │
+│                       │                │          │                   │                  │ architectures (PortSmash)                                    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2018-5407                    │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ libxml2               │ CVE-2016-5131  │ HIGH     │ 2.9.3-r0          │ 2.9.4-r1         │ libxml2: Use after free triggered by XPointer paths          │
+│                       │                │          │                   │                  │ beginning with range-to                                      │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-5131                    │
+│                       ├────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-9318  │ MEDIUM   │                   │ 2.9.4-r2         │ libxml2: XML External Entity vulnerability                   │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-9318                    │
+│                       ├────────────────┤          │                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-5969  │          │                   │ 2.9.4-r3         │ libxml2: Null pointer dereference in xmlSaveDoc              │
+│                       │                │          │                   │                  │ implementation                                               │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-5969                    │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ musl                  │ CVE-2016-8859  │ CRITICAL │ 1.1.12-r4         │ 1.1.12-r6        │ Multiple integer overflows in the TRE library and musl libc  │
+│                       │                │          │                   │                  │ allow atta...                                                │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-8859                    │
+│                       ├────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-15650 │ HIGH     │                   │ 1.1.12-r8        │ musl libc before 1.1.17 has a buffer overflow via crafted    │
+│                       │                │          │                   │                  │ DNS replies...                                               │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-15650                   │
+├───────────────────────┼────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ musl-utils            │ CVE-2016-8859  │ CRITICAL │                   │ 1.1.12-r6        │ Multiple integer overflows in the TRE library and musl libc  │
+│                       │                │          │                   │                  │ allow atta...                                                │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-8859                    │
+│                       ├────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-15650 │ HIGH     │                   │ 1.1.12-r8        │ musl libc before 1.1.17 has a buffer overflow via crafted    │
+│                       │                │          │                   │                  │ DNS replies...                                               │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-15650                   │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-libs          │ CVE-2017-10684 │ CRITICAL │ 6.0-r6            │ 6.0-r7           │ ncurses: Stack-based buffer overflow in fmt_entry function   │
+│                       │                │          │                   │                  │ in dump_entry.c                                              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-10684                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-10685 │          │                   │                  │ ncurses: Stack-based buffer overflow caused by format string │
+│                       │                │          │                   │                  │ vulnerability in fmt_entry function...                       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-10685                   │
+│                       ├────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-11112 │ HIGH     │                   │ 6.0_p20170701-r0 │ ncurses: Illegal address access in append_acs function       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-11112                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-11113 │          │                   │                  │ ncurses: Null pointer dereference vulnerability in           │
+│                       │                │          │                   │                  │ _nc_parse_entry function                                     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-11113                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13728 │          │                   │                  │ ncurses: Infinite loop in the next_char function             │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13728                   │
+│                       ├────────────────┼──────────┤                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13729 │ MEDIUM   │                   │                  │ ncurses: Illegal address access in the _nc_save_str function │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13729                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13730 │          │                   │                  │ ncurses: Illegal address access in the function              │
+│                       │                │          │                   │                  │ _nc_read_entry_source()                                      │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13730                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13731 │          │                   │                  │ ncurses: Illegal address access in the function              │
+│                       │                │          │                   │                  │ postprocess_termcap()                                        │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13731                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13732 │          │                   │                  │ ncurses: Illegal address access in the function dump_uses()  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13732                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13733 │          │                   │                  │ ncurses: Illegal address access in the function fmt_entry    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13733                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13734 │          │                   │                  │ ncurses: Illegal address access in the function              │
+│                       │                │          │                   │                  │ _nc_safe_strcat                                              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13734                   │
+├───────────────────────┼────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-terminfo      │ CVE-2017-10684 │ CRITICAL │                   │ 6.0-r7           │ ncurses: Stack-based buffer overflow in fmt_entry function   │
+│                       │                │          │                   │                  │ in dump_entry.c                                              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-10684                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-10685 │          │                   │                  │ ncurses: Stack-based buffer overflow caused by format string │
+│                       │                │          │                   │                  │ vulnerability in fmt_entry function...                       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-10685                   │
+│                       ├────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-11112 │ HIGH     │                   │ 6.0_p20170701-r0 │ ncurses: Illegal address access in append_acs function       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-11112                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-11113 │          │                   │                  │ ncurses: Null pointer dereference vulnerability in           │
+│                       │                │          │                   │                  │ _nc_parse_entry function                                     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-11113                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13728 │          │                   │                  │ ncurses: Infinite loop in the next_char function             │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13728                   │
+│                       ├────────────────┼──────────┤                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13729 │ MEDIUM   │                   │                  │ ncurses: Illegal address access in the _nc_save_str function │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13729                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13730 │          │                   │                  │ ncurses: Illegal address access in the function              │
+│                       │                │          │                   │                  │ _nc_read_entry_source()                                      │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13730                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13731 │          │                   │                  │ ncurses: Illegal address access in the function              │
+│                       │                │          │                   │                  │ postprocess_termcap()                                        │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13731                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13732 │          │                   │                  │ ncurses: Illegal address access in the function dump_uses()  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13732                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13733 │          │                   │                  │ ncurses: Illegal address access in the function fmt_entry    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13733                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13734 │          │                   │                  │ ncurses: Illegal address access in the function              │
+│                       │                │          │                   │                  │ _nc_safe_strcat                                              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13734                   │
+├───────────────────────┼────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-terminfo-base │ CVE-2017-10684 │ CRITICAL │                   │ 6.0-r7           │ ncurses: Stack-based buffer overflow in fmt_entry function   │
+│                       │                │          │                   │                  │ in dump_entry.c                                              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-10684                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-10685 │          │                   │                  │ ncurses: Stack-based buffer overflow caused by format string │
+│                       │                │          │                   │                  │ vulnerability in fmt_entry function...                       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-10685                   │
+│                       ├────────────────┼──────────┤                   ├──────────────────┼──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-11112 │ HIGH     │                   │ 6.0_p20170701-r0 │ ncurses: Illegal address access in append_acs function       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-11112                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-11113 │          │                   │                  │ ncurses: Null pointer dereference vulnerability in           │
+│                       │                │          │                   │                  │ _nc_parse_entry function                                     │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-11113                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13728 │          │                   │                  │ ncurses: Infinite loop in the next_char function             │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13728                   │
+│                       ├────────────────┼──────────┤                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13729 │ MEDIUM   │                   │                  │ ncurses: Illegal address access in the _nc_save_str function │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13729                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13730 │          │                   │                  │ ncurses: Illegal address access in the function              │
+│                       │                │          │                   │                  │ _nc_read_entry_source()                                      │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13730                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13731 │          │                   │                  │ ncurses: Illegal address access in the function              │
+│                       │                │          │                   │                  │ postprocess_termcap()                                        │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13731                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13732 │          │                   │                  │ ncurses: Illegal address access in the function dump_uses()  │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13732                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13733 │          │                   │                  │ ncurses: Illegal address access in the function fmt_entry    │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13733                   │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2017-13734 │          │                   │                  │ ncurses: Illegal address access in the function              │
+│                       │                │          │                   │                  │ _nc_safe_strcat                                              │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2017-13734                   │
+├───────────────────────┼────────────────┼──────────┼───────────────────┼──────────────────┼──────────────────────────────────────────────────────────────┤
+│ zlib                  │ CVE-2016-9841  │ CRITICAL │ 1.2.8-r2          │ 1.2.11-r0        │ zlib: Out-of-bounds pointer arithmetic in inffast.c          │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-9841                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-9843  │          │                   │                  │ zlib: Big-endian out-of-bounds pointer                       │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-9843                    │
+│                       ├────────────────┼──────────┤                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-9840  │ HIGH     │                   │                  │ zlib: Out-of-bounds pointer arithmetic in inftrees.c         │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-9840                    │
+│                       ├────────────────┤          │                   │                  ├──────────────────────────────────────────────────────────────┤
+│                       │ CVE-2016-9842  │          │                   │                  │ zlib: Undefined left shift of negative number                │
+│                       │                │          │                   │                  │ https://avd.aquasec.com/nvd/cve-2016-9842                    │
+└───────────────────────┴────────────────┴──────────┴───────────────────┴──────────────────┴──────────────────────────────────────────────────────────────┘
