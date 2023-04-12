@@ -2,7 +2,8 @@
 
 ## Docker Vulnerability management using OSS tools 
 
-I have performed a POC of vulnerability scan on 30+ Docker images using Trivy (default scan option). My current goal is to perform similar scans using various OSS tools like Trivy, Anchore, Clair among others. My objective is to perform bulk scans of 30 images locally using these OSS tools.  
+I have performed a POC of vulnerability scan on 30+ Docker images using Trivy (default scan option). My current goal is to perform similar scans using various OSS tools like Trivy, Anchore, Clair among others. My objective is to perform bulk scans of 30 images locally using these OSS tools.
+(this is not a how-to, but I will share the bash commands  I have used and history file )
 
 Trivy scans have been completed and the reports are available in the [Trivy folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/trivy-reports).
 
