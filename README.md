@@ -9,6 +9,16 @@ Trivy scans have been completed - [Trivy reports folder](https://github.com/cybe
 
 Grype scans have been completed -  [Grype reports folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/grype-reports)
 
+#### below are the commands I have used to bulk process grype for all images available on local host 
+```
+$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype ${image} -o template -t html.tmpl  >  "${image}.html" ; done
+
+$ docker images > docker_images.txt
+
+$ history | cut -c 8- | sed -e 's/^/$ /' -e '$a\ ' | awk '!a[$0]++' | grep -i grype  >> history222.txt
+```
+
+
 ##### I will also be adding scans of SBOMs ######
 
 (Software Bill of Materials) soon. SBOMs are important for vulnerability and patch management of Docker images as they provide transparency into the software supply chain and enable better identification of vulnerabilities and dependencies. With a complete SBOM for a Docker image, it becomes easier to track and manage dependencies, identify potential vulnerabilities, prioritize and patch vulnerabilities, as well as identify alternative components or versions that may be less susceptible to attack. 
@@ -96,9 +106,7 @@ node                          0.12.1-slim          fc2863e27a0a   8 years ago   
 localhost:5000/node           0.12.1-slim          fc2863e27a0a   8 years ago     160MB
 ubuntu                        10.04                e21dbcc7c9de   8 years ago     183MB
 localhost:5000/ubuntu         10.04                e21dbcc7c9de   8 years ago     183MB
-
 ----------------------------------------------------------------------------------------------
-
 ```
 
 </details>
