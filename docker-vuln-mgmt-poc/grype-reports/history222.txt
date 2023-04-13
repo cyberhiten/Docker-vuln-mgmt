@@ -1,0 +1,37 @@
+$ curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
+$ sudo curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
+$ mkdir grype 
+$ cd grype 
+$ sudo curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b ./ v0.61.0   
+$ cd grype
+$ grype 
+$ grype
+$ sudo cp grype /usr/local/bin
+$ grype registry_backup.tar
+$ grype httpd:latest 
+$ mkdir grype-reports
+$ cd grype-reports
+$ grype httpd:latest  --scope all-layers
+$ grype httpd:latest  --scope all-layers |wc
+$ grype httpd:latest   |wc
+
+
+$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype  "${image}.txt" $image; done
+$ history |grep grype 
+$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype ${image} -o template -t html.tmpl  >  "${image}.html" ; done
+$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype ${image} -o template -t html.tmpl  >  "${image}.html" ; done
+$ e
+$ du -ms
+$ docker images 
+$ docker images > docker_images.txt\n
+$ history |grep grype 
+$ history |grep history 
+$ history
+$ exit
+$ history | grep history
+$ pwd
+$ cd /mnt/linuxdata/
+$ history | cut -c 8- | sed -e 's/^/$ /' -e '$a\ ' | awk '!a[$0]++' | grep -i grype  >> history222.txt
+$ cat history222.txt
+$ history 
+ 

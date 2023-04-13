@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="ISO-8859-1">
+  <title>Grype</title>
+  <script>
+    function myFunction() {
+      // Declare variables 
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who do not match the search query
+      for (i = 1; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+          var tdata = td[j];
+          if (tdata) {
+            if (tdata.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+              break;
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style type="text/css">
+    table,
+    th,
+    td {
+      border: 1px solid black; // changing-colors
+      // word-wrap: break-word;
+    }
+
+    tr:first-child {
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background: #eef
+    }
+
+    // changing-colors
+    tr:nth-child(odd) {
+      background: #fee
+    }
+
+    // changing-colors
+
+    * {
+      box-sizing: border-box;
+    }
+
+    #myInput {
+      background-image: url("search.png");
+      background-position: left center;
+      background-repeat: no-repeat;
+      width: 94%;
+      font-size: 16px;
+      padding: 8px 20px 8px 40px;
+      border: 2px solid Tomato; // changing-colors
+      margin-bottom: 18px;
+    }
+
+    #myTable {
+      border-collapse: collapse;
+      border: 1px solid #ddd; // changing-colors
+      width: 100%;
+      margin-top: 18px;
+      // Remove the // in front of the below two lines, to get fixed-width
+      // table-layout: fixed;
+      // word-wrap: break-word;
+      // font-size: 18px;
+    }
+
+    #myTable th,
+    #myTable td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    #myTable tr {
+      border-bottom: 1px solid #ddd; // changing-colors
+    }
+
+    #myTable tr:first-child:hover,
+    #myTable tr:hover {
+      background-color: rgb(4, 112, 155); // changing-colors
+    }
+
+    #myTable tr:first-child {
+      background-color: rgb(4, 112, 155); // changing-colors
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 style="text-align:center;background-color:DodgerBlue;color:White;">Identified Vulnerabilites</h2>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search in all Fields...."
+    title="Type in a Search String" autofocus="autofocus">
+  <table id="myTable">
+    <tr>
+      <th>NAME</th>
+      <th>INSTALLED</th>
+      <th>TYPE</th>
+      <th>VULNERABILITY</th>
+      <th>SEVERITY</th>
+      <th>DESCRIPTION</th>
+      <th>STATE</th>
+      <th>FIXED IN</th>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2007-4559"</td>
+      <td>"Medium"</td>
+      <td>"Directory traversal vulnerability in the (1) extract and (2) extractall functions in the tarfile module in Python allows user-assisted remote attackers to overwrite arbitrary files via a .. (dot dot) sequence in filenames in a TAR archive, a related issue to CVE-2001-1267."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2013-0340"</td>
+      <td>"Medium"</td>
+      <td>"expat 2.1.0 and earlier does not properly handle entities expansion unless an application developer uses the XML_SetEntityDeclHandler function, which allows remote attackers to cause a denial of service (resource consumption), send HTTP requests to intranet servers, or read arbitrary files via a crafted XML document, aka an XML External Entity (XXE) issue. NOTE: it could be argued that because expat already provides the ability to disable external entity expansion, the responsibility for resolving this issue lies with application developers; according to this argument, this entry should be REJECTed, and each affected application would need its own CVE."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2015-20107"</td>
+      <td>"High"</td>
+      <td>"In Python (aka CPython) up to 3.10.8, the mailcap module does not add escape characters into commands discovered in the system mailcap file. This may allow attackers to inject shell commands into applications that call mailcap.findmatch with untrusted input (if they lack validation of user-provided filenames or arguments). The fix is also back-ported to 3.7, 3.8, 3.9"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2016-3189"</td>
+      <td>"Medium"</td>
+      <td>"Use-after-free vulnerability in bzip2recover in bzip2 1.0.6 allows remote attackers to cause a denial of service (crash) via a crafted bzip2 file, related to block ends set to before the start of the block."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"ncurses-libs"</td>
+      <td>"6.0_p20170930-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-16879"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[6.0_p20171125-r0]"</td>
+    </tr>
+    <tr>
+      <td>"ncurses-terminfo"</td>
+      <td>"6.0_p20170930-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-16879"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[6.0_p20171125-r0]"</td>
+    </tr>
+    <tr>
+      <td>"ncurses-terminfo-base"</td>
+      <td>"6.0_p20170930-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-16879"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[6.0_p20171125-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libressl2.6-libcrypto"</td>
+      <td>"2.6.3-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0495"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.6.5-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libressl2.6-libssl"</td>
+      <td>"2.6.3-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0495"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.6.5-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libressl2.6-libcrypto"</td>
+      <td>"2.6.3-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0732"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.6.5-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libressl2.6-libssl"</td>
+      <td>"2.6.3-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0732"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.6.5-r0]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-1000500"</td>
+      <td>"High"</td>
+      <td>"Busybox contains a Missing SSL certificate validation vulnerability in The "busybox wget" applet that can result in arbitrary code execution. This attack appear to be exploitable via Simply download any file over HTTPS using "busybox wget https://compromised-domain.com/important-file"."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-1000517"</td>
+      <td>"Critical"</td>
+      <td>"BusyBox project BusyBox wget version prior to commit 8e2174e9bd836e53c8b9c6e00d1bc6e2a718686e contains a Buffer Overflow vulnerability in Busybox wget that can result in heap buffer overflow. This attack appear to be exploitable via network connectivity. This vulnerability appears to have been fixed in after commit 8e2174e9bd836e53c8b9c6e00d1bc6e2a718686e."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"ncurses-libs"</td>
+      <td>"6.0_p20170930-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-10754"</td>
+      <td>"Unknown"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[6.0_p20171125-r1]"</td>
+    </tr>
+    <tr>
+      <td>"ncurses-terminfo"</td>
+      <td>"6.0_p20170930-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-10754"</td>
+      <td>"Unknown"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[6.0_p20171125-r1]"</td>
+    </tr>
+    <tr>
+      <td>"ncurses-terminfo-base"</td>
+      <td>"6.0_p20170930-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-10754"</td>
+      <td>"Unknown"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[6.0_p20171125-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libpng"</td>
+      <td>"1.6.34-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-13785"</td>
+      <td>"Medium"</td>
+      <td>"In libpng 1.6.34, a wrong calculation of row_factor in the png_check_chunk_length function (pngrutil.c) may trigger an integer overflow and resultant divide-by-zero while processing a crafted PNG file, leading to a denial of service."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libpng"</td>
+      <td>"1.6.34-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-14048"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.6.37-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libpng"</td>
+      <td>"1.6.34-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-14550"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.6.37-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libx11"</td>
+      <td>"1.6.5-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-14598"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.6.6-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libx11"</td>
+      <td>"1.6.5-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-14599"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.6.6-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libx11"</td>
+      <td>"1.6.5-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-14600"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.6.6-r0]"</td>
+    </tr>
+    <tr>
+      <td>"pip"</td>
+      <td>"9.0.1"</td>
+      <td>"python"</td>
+      <td>"CVE-2018-20225"</td>
+      <td>"High"</td>
+      <td>"** DISPUTED ** An issue was discovered in pip (all versions) because it installs the version with the highest version number, even if the user had intended to obtain a private package from a private index. This only affects use of the --extra-index-url option, and exploitation requires that the package does not already exist in the public index (and thus the attacker can put the package there with an arbitrary version number). NOTE: it has been reported that this is intended functionality and the user is responsible for using --extra-index-url securely."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-20346"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[3.25.3-r0]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2018-20406"</td>
+      <td>"High"</td>
+      <td>"Modules/_pickle.c in Python before 3.7.1 has an integer overflow via a large LONG_BINPUT value that is mishandled during a "resize to twice the size" attempt. This issue might cause memory exhaustion, but is only relevant if the pickle format is used for serializing tens or hundreds of gigabytes of data. This issue is fixed in: v3.4.10, v3.4.10rc1; v3.5.10, v3.5.10rc1, v3.5.7, v3.5.7rc1, v3.5.8, v3.5.8rc1, v3.5.8rc2, v3.5.9; v3.6.10, v3.6.10rc1, v3.6.11, v3.6.11rc1, v3.6.12, v3.6.7, v3.6.7rc1, v3.6.7rc2, v3.6.8, v3.6.8rc1, v3.6.9, v3.6.9rc1; v3.7.1, v3.7.1rc1, v3.7.1rc2, v3.7.2, v3.7.2rc1, v3.7.3, v3.7.3rc1, v3.7.4, v3.7.4rc1, v3.7.4rc2, v3.7.5, v3.7.5rc1, v3.7.6, v3.7.6rc1, v3.7.7, v3.7.7rc1, v3.7.8, v3.7.8rc1, v3.7.9."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-20505"</td>
+      <td>"High"</td>
+      <td>"SQLite 3.25.2, when queries are run on a table with a malformed PRIMARY KEY, allows remote attackers to cause a denial of service (application crash) by leveraging the ability to run arbitrary SQL statements (such as in certain WebSQL use cases)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-20506"</td>
+      <td>"High"</td>
+      <td>"SQLite before 3.25.3, when the FTS3 extension is enabled, encounters an integer overflow (and resultant buffer overflow) for FTS3 queries in a "merge" operation that occurs after crafted changes to FTS3 shadow tables, allowing remote attackers to execute arbitrary code by leveraging the ability to run arbitrary SQL statements (such as in certain WebSQL use cases). This is a different vulnerability than CVE-2018-20346."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-20679"</td>
+      <td>"High"</td>
+      <td>"An issue was discovered in BusyBox before 1.30.0. An out of bounds read in udhcp components (consumed by the DHCP server, client, and relay) allows a remote attacker to leak sensitive information from the stack by sending a crafted DHCP message. This is related to verification in udhcp_get_option() in networking/udhcp/common.c that 4-byte options are indeed 4 bytes."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"expat"</td>
+      <td>"2.2.5-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-20843"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.2.7-r0]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2018-20852"</td>
+      <td>"Medium"</td>
+      <td>"http.cookiejar.DefaultPolicy.domain_return_ok in Lib/http/cookiejar.py in Python before 3.7.3 does not correctly validate the domain: it can be tricked into sending existing cookies to the wrong server. An attacker may abuse this flaw by using a server with a hostname that has another valid hostname as a suffix (e.g., pythonicexample.com to steal cookies for example.com). When a program uses http.cookiejar.DefaultPolicy and tries to do an HTTP connection to an attacker-controlled server, existing cookies can be leaked to the attacker. This affects 2.x through 2.7.16, 3.x before 3.4.10, 3.5.x before 3.5.7, 3.6.x before 3.6.9, and 3.7.x before 3.7.3."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2018-25032"</td>
+      <td>"High"</td>
+      <td>"zlib before 1.2.12 allows memory corruption when deflating (i.e., when compressing) if the input has many distant matches."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"zlib"</td>
+      <td>"1.2.11-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-25032"</td>
+      <td>"High"</td>
+      <td>"zlib before 1.2.12 allows memory corruption when deflating (i.e., when compressing) if the input has many distant matches."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"freetype"</td>
+      <td>"2.8.1-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-6942"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.8.1-r3]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-8740"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[3.21.0-r1]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-10160"</td>
+      <td>"Critical"</td>
+      <td>"A security regression of CVE-2019-9636 was discovered in python since commit d537ab0ff9767ef024f26246899728f0116b1ec3 affecting versions 2.7, 3.5, 3.6, 3.7 and from v3.8.0a4 through v3.8.0b1, which still allows an attacker to exploit CVE-2019-9636 by abusing the user and password parts of a URL. When an application parses user-supplied URLs to store cookies, authentication credentials, or other kind of information, it is possible for an attacker to provide specially crafted URLs to make the application locate host-related information (e.g. cookies, authentication data) and send them to a different host than where it should, unlike if the URLs had been correctly parsed. The result of an attack may vary based on the application."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libbz2"</td>
+      <td>"1.0.6-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-12900"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.6-r7]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-12900"</td>
+      <td>"Critical"</td>
+      <td>"BZ2_decompress in decompress.c in bzip2 through 1.0.6 has an out-of-bounds write when there are many selectors."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"musl"</td>
+      <td>"1.1.18-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-14697"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.18-r4]"</td>
+    </tr>
+    <tr>
+      <td>"musl-utils"</td>
+      <td>"1.1.18-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-14697"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.18-r4]"</td>
+    </tr>
+    <tr>
+      <td>"expat"</td>
+      <td>"2.2.5-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-15903"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.2.7-r1]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-15903"</td>
+      <td>"High"</td>
+      <td>"In libexpat before 2.2.8, crafted XML input could fool the parser into changing from DTD parsing to document parsing too early; a consecutive call to XML_GetCurrentLineNumber (or XML_GetCurrentColumnNumber) then resulted in a heap-based buffer over-read."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-16056"</td>
+      <td>"High"</td>
+      <td>"An issue was discovered in Python through 2.7.16, 3.x through 3.5.7, 3.6.x through 3.6.9, and 3.7.x through 3.7.4. The email module wrongly parses email addresses that contain multiple @ characters. An application that uses the email module and implements some kind of checks on the From/To headers of a message could be tricked into accepting an email address that should be denied. An attack may be the same as in CVE-2019-11340; however, this CVE applies to Python more generally."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-16168"</td>
+      <td>"Medium"</td>
+      <td>"In SQLite through 3.29.0, whereLoopAddBtreeIndex in sqlite3.c can crash a browser or other application because of missing validation of a sqlite_stat1 sz field, aka a "severe division by zero in the query planner.""</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-16935"</td>
+      <td>"Medium"</td>
+      <td>"The documentation XML-RPC server in Python through 2.7.16, 3.x through 3.6.9, and 3.7.x through 3.7.4 has XSS via the server_title field. This occurs in Lib/DocXMLRPCServer.py in Python 2.x, and in Lib/xmlrpc/server.py in Python 3.x. If set_server_title is called with untrusted input, arbitrary JavaScript can be delivered to clients that visit the http URL for this server."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-18348"</td>
+      <td>"Medium"</td>
+      <td>"An issue was discovered in urllib2 in Python 2.x through 2.7.17 and urllib in Python 3.x through 3.8.0. CRLF injection is possible if the attacker controls a url parameter, as demonstrated by the first argument to urllib.request.urlopen with \r\n (specifically in the host component of a URL) followed by an HTTP header. This is similar to the CVE-2019-9740 query string issue and the CVE-2019-9947 path string issue. (This is not exploitable when glibc has CVE-2016-10739 fixed.). This is fixed in: v2.7.18, v2.7.18rc1; v3.5.10, v3.5.10rc1; v3.6.11, v3.6.11rc1, v3.6.12; v3.7.8, v3.7.8rc1, v3.7.9; v3.8.3, v3.8.3rc1, v3.8.4, v3.8.4rc1, v3.8.5, v3.8.6, v3.8.6rc1."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-19645"</td>
+      <td>"Medium"</td>
+      <td>"alter.c in SQLite through 3.30.1 allows attackers to trigger infinite recursion via certain types of self-referential views in conjunction with ALTER TABLE statements."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-19646"</td>
+      <td>"Critical"</td>
+      <td>"pragma.c in SQLite through 3.30.1 mishandles NOT NULL in an integrity_check PRAGMA command in certain cases of generated columns."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-20907"</td>
+      <td>"High"</td>
+      <td>"In Lib/tarfile.py in Python through 3.8.3, an attacker is able to craft a TAR archive leading to an infinite loop when opened by tarfile.open, because _proc_pax lacks header validation."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"pip"</td>
+      <td>"9.0.1"</td>
+      <td>"python"</td>
+      <td>"CVE-2019-20916"</td>
+      <td>"High"</td>
+      <td>"The pip package before 19.2 for Python allows Directory Traversal when a URL is given in an install command, because a Content-Disposition header can have ../ in a filename, as demonstrated by overwriting the /root/.ssh/authorized_keys file. This occurs in _download_http_url in _internal/download.py."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-5010"</td>
+      <td>"High"</td>
+      <td>"An exploitable denial-of-service vulnerability exists in the X509 certificate parser of Python.org Python 2.7.11 / 3.6.6. A specially crafted X509 certificate can cause a NULL pointer dereference, resulting in a denial of service. An attacker can initiate or accept TLS connections using crafted certificates to trigger this vulnerability."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-5747"</td>
+      <td>"High"</td>
+      <td>"An issue was discovered in BusyBox through 1.30.0. An out of bounds read in udhcp components (consumed by the DHCP client, server, and/or relay) might allow a remote attacker to leak sensitive information from the stack by sending a crafted DHCP message. This is related to assurance of a 4-byte length when decoding DHCP_SUBNET. NOTE: this issue exists because of an incomplete fix for CVE-2018-20679."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libpng"</td>
+      <td>"1.6.34-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-7317"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.6.37-r0]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-8457"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[3.25.3-r1]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-9636"</td>
+      <td>"Critical"</td>
+      <td>"Python 2.7.x through 2.7.16 and 3.x through 3.7.2 is affected by: Improper Handling of Unicode Encoding (with an incorrect netloc) during NFKC normalization. The impact is: Information disclosure (credentials, cookies, etc. that are cached against a given hostname). The components are: urllib.parse.urlsplit, urllib.parse.urlparse. The attack vector is: A specially crafted URL could be incorrectly parsed to locate cookies or authentication data and send that information to a different host than when parsed correctly. This is fixed in: v2.7.17, v2.7.17rc1, v2.7.18, v2.7.18rc1; v3.5.10, v3.5.10rc1, v3.5.7, v3.5.8, v3.5.8rc1, v3.5.8rc2, v3.5.9; v3.6.10, v3.6.10rc1, v3.6.11, v3.6.11rc1, v3.6.12, v3.6.9, v3.6.9rc1; v3.7.3, v3.7.3rc1, v3.7.4, v3.7.4rc1, v3.7.4rc2, v3.7.5, v3.7.5rc1, v3.7.6, v3.7.6rc1, v3.7.7, v3.7.7rc1, v3.7.8, v3.7.8rc1, v3.7.9."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-9674"</td>
+      <td>"High"</td>
+      <td>"Lib/zipfile.py in Python through 3.7.2 allows remote attackers to cause a denial of service (resource consumption) via a ZIP bomb."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-9740"</td>
+      <td>"Medium"</td>
+      <td>"An issue was discovered in urllib2 in Python 2.x through 2.7.16 and urllib in Python 3.x through 3.7.3. CRLF injection is possible if the attacker controls a url parameter, as demonstrated by the first argument to urllib.request.urlopen with \r\n (specifically in the query string after a ? character) followed by an HTTP header or a Redis command. This is fixed in: v2.7.17, v2.7.17rc1, v2.7.18, v2.7.18rc1; v3.5.10, v3.5.10rc1, v3.5.8, v3.5.8rc1, v3.5.8rc2, v3.5.9; v3.6.10, v3.6.10rc1, v3.6.11, v3.6.11rc1, v3.6.12, v3.6.9, v3.6.9rc1; v3.7.4, v3.7.4rc1, v3.7.4rc2, v3.7.5, v3.7.5rc1, v3.7.6, v3.7.6rc1, v3.7.7, v3.7.7rc1, v3.7.8, v3.7.8rc1, v3.7.9."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-9947"</td>
+      <td>"Medium"</td>
+      <td>"An issue was discovered in urllib2 in Python 2.x through 2.7.16 and urllib in Python 3.x through 3.7.3. CRLF injection is possible if the attacker controls a url parameter, as demonstrated by the first argument to urllib.request.urlopen with \r\n (specifically in the path component of a URL that lacks a ? character) followed by an HTTP header or a Redis command. This is similar to the CVE-2019-9740 query string issue. This is fixed in: v2.7.17, v2.7.17rc1, v2.7.18, v2.7.18rc1; v3.5.10, v3.5.10rc1, v3.5.8, v3.5.8rc1, v3.5.8rc2, v3.5.9; v3.6.10, v3.6.10rc1, v3.6.11, v3.6.11rc1, v3.6.12, v3.6.9, v3.6.9rc1; v3.7.4, v3.7.4rc1, v3.7.4rc2, v3.7.5, v3.7.5rc1, v3.7.6, v3.7.6rc1, v3.7.7, v3.7.7rc1, v3.7.8, v3.7.8rc1, v3.7.9."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-9948"</td>
+      <td>"Critical"</td>
+      <td>"urllib in Python 2.x through 2.7.16 supports the local_file: scheme, which makes it easier for remote attackers to bypass protection mechanisms that blacklist file: URIs, as demonstrated by triggering a urllib.urlopen('local_file:///etc/passwd') call."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2020-10735"</td>
+      <td>"High"</td>
+      <td>"A flaw was found in python. In algorithms with quadratic time complexity using non-binary bases, when using int("text"), a system could take 50ms to parse an int string with 100,000 digits and 5s for 1,000,000 digits (float, decimal, int.from_bytes(), and int() for binary bases 2, 4, 8, 16, and 32 are not affected). The highest threat from this vulnerability is to system availability."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-11655"</td>
+      <td>"High"</td>
+      <td>"SQLite through 3.31.1 allows attackers to cause a denial of service (segmentation fault) via a malformed window-function query because the AggInfo object's initialization is mishandled."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-11656"</td>
+      <td>"Critical"</td>
+      <td>"In SQLite through 3.31.1, the ALTER TABLE implementation has a use-after-free, as demonstrated by an ORDER BY clause that belongs to a compound SELECT statement."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-13434"</td>
+      <td>"Medium"</td>
+      <td>"SQLite through 3.32.0 has an integer overflow in sqlite3_str_vappendf in printf.c."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-13435"</td>
+      <td>"Medium"</td>
+      <td>"SQLite through 3.32.0 has a segmentation fault in sqlite3ExprCodeTarget in expr.c."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-13630"</td>
+      <td>"High"</td>
+      <td>"ext/fts3/fts3.c in SQLite before 3.32.0 has a use-after-free in fts3EvalNextRow, related to the snippet feature."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-13631"</td>
+      <td>"Medium"</td>
+      <td>"SQLite before 3.32.0 allows a virtual table to be renamed to the name of one of its shadow tables, related to alter.c and build.c."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-13632"</td>
+      <td>"Medium"</td>
+      <td>"ext/fts3/fts3_snippet.c in SQLite before 3.32.0 has a NULL pointer dereference via a crafted matchinfo() query."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2020-14422"</td>
+      <td>"Medium"</td>
+      <td>"Lib/ipaddress.py in Python through 3.8.3 improperly computes hash values in the IPv4Interface and IPv6Interface classes, which might allow a remote attacker to cause a denial of service if an application is affected by the performance of a dictionary containing IPv4Interface or IPv6Interface objects, and this attacker can cause many dictionary entries to be created. This is fixed in: v3.5.10, v3.5.10rc1; v3.6.12; v3.7.9; v3.8.4, v3.8.4rc1, v3.8.5, v3.8.6, v3.8.6rc1; v3.9.0, v3.9.0b4, v3.9.0b5, v3.9.0rc1, v3.9.0rc2."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-15358"</td>
+      <td>"Medium"</td>
+      <td>"In SQLite before 3.32.3, select.c mishandles query-flattener optimization, leading to a multiSelectOrderBy heap overflow because of misuse of transitive properties for constant propagation."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2020-15523"</td>
+      <td>"High"</td>
+      <td>"In Python 3.6 through 3.6.10, 3.7 through 3.7.8, 3.8 through 3.8.4rc1, and 3.9 through 3.9.0b4 on Windows, a Trojan horse python3.dll might be used in cases where CPython is embedded in a native application. This occurs because python3X.dll may use an invalid search path for python3.dll loading (after Py_SetPath has been used). NOTE: this issue CANNOT occur when using python.exe from a standard (non-embedded) Python installation on Windows."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2020-15801"</td>
+      <td>"Critical"</td>
+      <td>"In Python 3.8.4, sys.path restrictions specified in a python38._pth file are ignored, allowing code to be loaded from arbitrary locations. The <executable-name>._pth file (e.g., the python._pth file) is not affected."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"freetype"</td>
+      <td>"2.8.1-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-15999"</td>
+      <td>"Medium"</td>
+      <td>"Heap buffer overflow in Freetype in Google Chrome prior to 86.0.4240.111 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2020-26116"</td>
+      <td>"High"</td>
+      <td>"http.client in Python 3.x before 3.5.10, 3.6.x before 3.6.12, 3.7.x before 3.7.9, and 3.8.x before 3.8.5 allows CRLF injection if the attacker controls the HTTP request method, as demonstrated by inserting CR and LF control characters in the first argument of HTTPConnection.request."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2020-27619"</td>
+      <td>"Critical"</td>
+      <td>"In Python 3 through 3.9.0, the Lib/test/multibytecodec_support.py CJK codec tests call eval() on content retrieved via HTTP."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"musl"</td>
+      <td>"1.1.18-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-28928"</td>
+      <td>"Medium"</td>
+      <td>"In musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of destination buffer size and source character limit, as demonstrated by an invalid write access (buffer overflow)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2020-8315"</td>
+      <td>"Medium"</td>
+      <td>"In Python (CPython) 3.6 through 3.6.10, 3.7 through 3.7.6, and 3.8 through 3.8.1, an insecure dependency load upon launch on Windows 7 may result in an attacker's copy of api-ms-win-core-path-l1-1-0.dll being loaded and used instead of the system's copy. Windows 8 and later are unaffected."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2020-8492"</td>
+      <td>"Medium"</td>
+      <td>"Python 2.7 through 2.7.17, 3.5 through 3.5.9, 3.6 through 3.6.10, 3.7 through 3.7.6, and 3.8 through 3.8.1 allows an HTTP server to conduct Regular Expression Denial of Service (ReDoS) attacks against a client because of urllib.request.AbstractBasicAuthHandler catastrophic backtracking."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2021-23336"</td>
+      <td>"Medium"</td>
+      <td>"The package python/cpython from 0 and before 3.6.13, from 3.7.0 and before 3.7.10, from 3.8.0 and before 3.8.8, from 3.9.0 and before 3.9.2 are vulnerable to Web Cache Poisoning via urllib.parse.parse_qsl and urllib.parse.parse_qs by using a vector called parameter cloaking. When the attacker can separate query parameters using a semicolon (;), they can cause a difference in the interpretation of the request between the proxy (running with default configuration) and the server. This can result in malicious requests being cached as completely safe ones, as the proxy would usually not see the semicolon as a separator, and therefore would not include it in a cache key of an unkeyed parameter."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2021-28861"</td>
+      <td>"High"</td>
+      <td>"** DISPUTED ** Python 3.x through 3.10 has an open redirection vulnerability in lib/http/server.py due to no protection against multiple (/) at the beginning of URI path which may leads to information disclosure. NOTE: this is disputed by a third party because the http.server.html documentation page states "Warning: http.server is not recommended for production. It only implements basic security checks.""</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2021-3177"</td>
+      <td>"Critical"</td>
+      <td>"Python 3.x through 3.9.1 has a buffer overflow in PyCArg_repr in _ctypes/callproc.c, which may lead to remote code execution in certain Python applications that accept floating-point numbers as untrusted input, as demonstrated by a 1e300 argument to c_double.from_param. This occurs because sprintf is used unsafely."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2021-3426"</td>
+      <td>"Medium"</td>
+      <td>"There's a flaw in Python 3's pydoc. A local or adjacent attacker who discovers or is able to convince another local or adjacent user to start a pydoc server could access the server and use it to disclose sensitive information belonging to the other user that they would not normally be able to access. The highest risk of this flaw is to data confidentiality. This flaw affects Python versions before 3.8.9, Python versions before 3.9.3 and Python versions before 3.10.0a7."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"pip"</td>
+      <td>"9.0.1"</td>
+      <td>"python"</td>
+      <td>"CVE-2021-3572"</td>
+      <td>"Medium"</td>
+      <td>"A flaw was found in python-pip in the way it handled Unicode separators in git references. A remote attacker could possibly use this issue to install a different revision on a repository. The highest threat from this vulnerability is to data integrity. This is fixed in python-pip version 21.1."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2021-3733"</td>
+      <td>"Medium"</td>
+      <td>"There's a flaw in urllib's AbstractBasicAuthHandler class. An attacker who controls a malicious HTTP server that an HTTP client (such as web browser) connects to, could trigger a Regular Expression Denial of Service (ReDOS) during an authentication request with a specially crafted payload that is sent by the server to the client. The greatest threat that this flaw poses is to application availability."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2021-3737"</td>
+      <td>"High"</td>
+      <td>"A flaw was found in python. An improperly handled HTTP response in the HTTP client code of python may allow a remote attacker, who controls the HTTP server, to make the client script enter an infinite loop, consuming CPU time. The highest threat from this vulnerability is to system availability."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2021-4189"</td>
+      <td>"Medium"</td>
+      <td>"A flaw was found in Python, specifically in the FTP (File Transfer Protocol) client library in PASV (passive) mode. The issue is how the FTP client trusts the host from the PASV response by default. This flaw allows an attacker to set up a malicious FTP server that can trick FTP clients into connecting back to a given IP address and port. This vulnerability could lead to FTP client scanning ports, which otherwise would not have been possible."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42374"</td>
+      <td>"Medium"</td>
+      <td>"An out-of-bounds heap read in Busybox's unlzma applet leads to information leak and denial of service when crafted LZMA-compressed input is decompressed. This can be triggered by any applet/format that"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42376"</td>
+      <td>"Medium"</td>
+      <td>"A NULL pointer dereference in Busybox's hush applet leads to denial of service when processing a crafted shell command, due to missing validation after a \x03 delimiter character. This may be used for DoS under very rare conditions of filtered command input."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42378"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the getvar_i function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42379"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the next_input_file function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42381"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the hash_init function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42382"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the getvar_s function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42384"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the handle_special function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42385"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the evaluate function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42386"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the nvalloc function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-0391"</td>
+      <td>"High"</td>
+      <td>"A flaw was found in Python, specifically within the urllib.parse module. This module helps break Uniform Resource Locator (URL) strings into components. The issue involves how the urlparse method does not sanitize input and allows characters like '\r' and '\n' in the URL path. This flaw allows an attacker to input a crafted URL, leading to injection attacks. This flaw affects Python versions prior to 3.10.0b1, 3.9.5, 3.8.11, 3.7.11 and 3.6.14."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-26488"</td>
+      <td>"High"</td>
+      <td>"In Python before 3.10.3 on Windows, local users can gain privileges because the search path is inadequately secured. The installer may allow a local attacker to add user-writable directories to the system search path. To exploit, an administrator must have installed Python for all users and enabled PATH entries. A non-administrative user can trigger a repair that incorrectly adds user-writable paths into PATH, enabling search-path hijacking of other users and system services. This affects Python (CPython) through 3.7.12, 3.8.x through 3.8.12, 3.9.x through 3.9.10, and 3.10.x through 3.10.2."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"freetype"</td>
+      <td>"2.8.1-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-27404"</td>
+      <td>"Critical"</td>
+      <td>"FreeType commit 1e2eb65048f75c64b68708efed6ce904c31f3b2f was discovered to contain a heap buffer overflow via the function sfnt_init_face."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"freetype"</td>
+      <td>"2.8.1-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-27405"</td>
+      <td>"High"</td>
+      <td>"FreeType commit 53dfdcd8198d2b3201a23c4bad9190519ba918db was discovered to contain a segmentation violation via the function FNT_Size_Request."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"freetype"</td>
+      <td>"2.8.1-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-27406"</td>
+      <td>"High"</td>
+      <td>"FreeType commit 22a0cccb4d9d002f33c1ba7a4b36812c7d4f46b5 was discovered to contain a segmentation violation via the function FT_Request_Size."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.27.2-r6"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-28391"</td>
+      <td>"High"</td>
+      <td>"BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"sqlite-libs"</td>
+      <td>"3.21.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-35737"</td>
+      <td>"High"</td>
+      <td>"SQLite 1.0.12 through 3.39.x before 3.39.2 sometimes allows an array-bounds overflow if billions of bytes are used in a string argument to a C API."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"zlib"</td>
+      <td>"1.2.11-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-37434"</td>
+      <td>"Critical"</td>
+      <td>"zlib through 1.2.12 has a heap-based buffer over-read or buffer overflow in inflate in inflate.c via a large gzip header extra field. NOTE: only applications that call inflateGetHeader are affected. Some common applications bundle the affected zlib source code but may be unable to call inflateGetHeader (e.g., see the nodejs/node reference)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-37454"</td>
+      <td>"Critical"</td>
+      <td>"The Keccak XKCP SHA-3 reference implementation before fdc6fef has an integer overflow and resultant buffer overflow that allows attackers to execute arbitrary code or eliminate expected cryptographic properties. This occurs in the sponge function interface."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"setuptools"</td>
+      <td>"38.2.4"</td>
+      <td>"python"</td>
+      <td>"CVE-2022-40897"</td>
+      <td>"Medium"</td>
+      <td>"Python Packaging Authority (PyPA) setuptools before 65.5.1 allows remote attackers to cause a denial of service via HTML in a crafted package or custom PackageIndex page. There is a Regular Expression Denial of Service (ReDoS) in package_index.py."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-45061"</td>
+      <td>"High"</td>
+      <td>"An issue was discovered in Python before 3.11.1. An unnecessary quadratic algorithm exists in one path when processing some inputs to the IDNA (RFC 3490) decoder, such that a crafted, unreasonably long name being presented to the decoder could lead to a CPU denial of service. Hostnames are often supplied by remote servers that could be controlled by a malicious actor; in such a scenario, they could trigger excessive CPU consumption on the client attempting to make use of an attacker-supplied supposed hostname. For example, the attack payload could be placed in the Location header of an HTTP response with status code 302. A fix is planned in 3.11.1, 3.10.9, 3.9.16, 3.8.16, and 3.7.16."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"python"</td>
+      <td>"3.7.0a3"</td>
+      <td>"binary"</td>
+      <td>"CVE-2023-24329"</td>
+      <td>"High"</td>
+      <td>"An issue in the urllib.parse component of Python before v3.11 allows attackers to bypass blocklisting methods by supplying a URL that starts with blank characters."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"pip"</td>
+      <td>"9.0.1"</td>
+      <td>"python"</td>
+      <td>"GHSA-5xp3-jfq3-5q8x"</td>
+      <td>"Medium"</td>
+      <td>"Improper Input Validation in pip"</td>
+      <td>"fixed"</td>
+      <td>"[21.1]"</td>
+    </tr>
+    <tr>
+      <td>"pip"</td>
+      <td>"9.0.1"</td>
+      <td>"python"</td>
+      <td>"GHSA-gpvv-69j7-gwj8"</td>
+      <td>"High"</td>
+      <td>"Path Traversal in pip"</td>
+      <td>"fixed"</td>
+      <td>"[19.2]"</td>
+    </tr>
+    <tr>
+      <td>"wheel"</td>
+      <td>"0.30.0"</td>
+      <td>"python"</td>
+      <td>"GHSA-qwmp-2cf2-g9g6"</td>
+      <td>"High"</td>
+      <td>"pypa/wheel vulnerable to Regular Expression denial of service (ReDoS)"</td>
+      <td>"fixed"</td>
+      <td>"[0.38.1]"</td>
+    </tr>
+    <tr>
+      <td>"setuptools"</td>
+      <td>"38.2.4"</td>
+      <td>"python"</td>
+      <td>"GHSA-r9hx-vwmv-q579"</td>
+      <td>"High"</td>
+      <td>"pypa/setuptools vulnerable to Regular Expression Denial of Service (ReDoS)"</td>
+      <td>"fixed"</td>
+      <td>"[65.5.1]"</td>
+    </tr>
+  </table>
+</body>
+
+</html>

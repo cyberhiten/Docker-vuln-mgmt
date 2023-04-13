@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="ISO-8859-1">
+  <title>Grype</title>
+  <script>
+    function myFunction() {
+      // Declare variables 
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who do not match the search query
+      for (i = 1; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+          var tdata = td[j];
+          if (tdata) {
+            if (tdata.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+              break;
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style type="text/css">
+    table,
+    th,
+    td {
+      border: 1px solid black; // changing-colors
+      // word-wrap: break-word;
+    }
+
+    tr:first-child {
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background: #eef
+    }
+
+    // changing-colors
+    tr:nth-child(odd) {
+      background: #fee
+    }
+
+    // changing-colors
+
+    * {
+      box-sizing: border-box;
+    }
+
+    #myInput {
+      background-image: url("search.png");
+      background-position: left center;
+      background-repeat: no-repeat;
+      width: 94%;
+      font-size: 16px;
+      padding: 8px 20px 8px 40px;
+      border: 2px solid Tomato; // changing-colors
+      margin-bottom: 18px;
+    }
+
+    #myTable {
+      border-collapse: collapse;
+      border: 1px solid #ddd; // changing-colors
+      width: 100%;
+      margin-top: 18px;
+      // Remove the // in front of the below two lines, to get fixed-width
+      // table-layout: fixed;
+      // word-wrap: break-word;
+      // font-size: 18px;
+    }
+
+    #myTable th,
+    #myTable td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    #myTable tr {
+      border-bottom: 1px solid #ddd; // changing-colors
+    }
+
+    #myTable tr:first-child:hover,
+    #myTable tr:hover {
+      background-color: rgb(4, 112, 155); // changing-colors
+    }
+
+    #myTable tr:first-child {
+      background-color: rgb(4, 112, 155); // changing-colors
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 style="text-align:center;background-color:DodgerBlue;color:White;">Identified Vulnerabilites</h2>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search in all Fields...."
+    title="Type in a Search String" autofocus="autofocus">
+  <table id="myTable">
+    <tr>
+      <th>NAME</th>
+      <th>INSTALLED</th>
+      <th>TYPE</th>
+      <th>VULNERABILITY</th>
+      <th>SEVERITY</th>
+      <th>DESCRIPTION</th>
+      <th>STATE</th>
+      <th>FIXED IN</th>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-1999-0236"</td>
+      <td>"High"</td>
+      <td>"ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-1999-0289"</td>
+      <td>"Medium"</td>
+      <td>"The Apache web server for Win32 may provide access to restricted files when a . (dot) is appended to a requested URL."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-1999-0678"</td>
+      <td>"Medium"</td>
+      <td>"A default configuration of Apache on Debian GNU/Linux sets the ServerRoot to /usr/doc, which allows remote users to read documentation files for the entire server."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-1999-1237"</td>
+      <td>"High"</td>
+      <td>"Multiple buffer overflows in smbvalid/smbval SMB authentication library, as used in Apache::AuthenSmb and possibly other modules, allows remote attackers to execute arbitrary commands via (1) a long username, (2) a long password, and (3) other unspecified methods."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-1999-1412"</td>
+      <td>"Medium"</td>
+      <td>"A possible interaction between Apple MacOS X release 1.0 and Apache HTTP server allows remote attackers to cause a denial of service (crash) via a flood of HTTP GET requests to CGI programs, which generates a large number of processes."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2006-20001"</td>
+      <td>"High"</td>
+      <td>"A carefully crafted If: request header can cause a memory read, or write of a single zero byte, in a pool (heap) memory location beyond the header value sent. This could cause the process to crash. This issue affects Apache HTTP Server 2.4.54 and earlier."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2007-0086"</td>
+      <td>"High"</td>
+      <td>"** DISPUTED **  The Apache HTTP Server, when accessed through a TCP connection with a large window size, allows remote attackers to cause a denial of service (network bandwidth consumption) via a Range header that specifies multiple copies of the same fragment.  NOTE: the severity of this issue has been disputed by third parties, who state that the large window size required by the attack is not normally supported or configured by the server, or that a DDoS-style attack would accomplish the same goal."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2007-0450"</td>
+      <td>"Medium"</td>
+      <td>"Directory traversal vulnerability in Apache HTTP Server and Tomcat 5.x before 5.5.22 and 6.x before 6.0.10, when using certain proxy modules (mod_proxy, mod_rewrite, mod_jk), allows remote attackers to read arbitrary files via a .. (dot dot) sequence with combinations of (1) "/" (slash), (2) "\" (backslash), and (3) URL-encoded backslash (%5C) characters in the URL, which are valid separators in Tomcat but not in Apache."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libldap"</td>
+      <td>"2.6.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2015-3276"</td>
+      <td>"Medium"</td>
+      <td>"The nss_parse_ciphers function in libraries/libldap/tls_m.c in OpenLDAP does not properly parse OpenSSL-style multi-keyword mode cipher strings, which might cause a weaker than intended cipher to be used and allow remote attackers to have unspecified impact via unknown vectors."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"apr"</td>
+      <td>"1.7.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-35940"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.7.0-r1]"</td>
+    </tr>
+    <tr>
+      <td>"xz-libs"</td>
+      <td>"5.2.5-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-1271"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[5.2.5-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-2097"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1q-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-2097"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1q-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-22576"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libxml2"</td>
+      <td>"2.9.13-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-2309"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.9.14-r1]"</td>
+    </tr>
+    <tr>
+      <td>"apr"</td>
+      <td>"1.7.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-24963"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.7.1-r0]"</td>
+    </tr>
+    <tr>
+      <td>"apr"</td>
+      <td>"1.7.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-25147"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.7.1-r0]"</td>
+    </tr>
+    <tr>
+      <td>"apr-util"</td>
+      <td>"1.6.1-r11"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-25147"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.6.3-r0]"</td>
+    </tr>
+    <tr>
+      <td>"apr-util-ldap"</td>
+      <td>"1.6.1-r11"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-25147"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.6.3-r0]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-26377"</td>
+      <td>"High"</td>
+      <td>"Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling') vulnerability in mod_proxy_ajp of Apache HTTP Server allows an attacker to smuggle requests to the AJP server it forwards requests to. This issue affects Apache HTTP Server Apache HTTP Server 2.4 version 2.4.53 and prior versions."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-27774"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-27775"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-27776"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-27780"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-27781"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-27782"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r2]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-28330"</td>
+      <td>"Medium"</td>
+      <td>"Apache HTTP Server 2.4.53 and earlier on Windows may read beyond bounds when configured to process requests with the mod_isapi module."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"apr"</td>
+      <td>"1.7.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-28331"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.7.1-r0]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-28614"</td>
+      <td>"Medium"</td>
+      <td>"The ap_rwrite() function in Apache HTTP Server 2.4.53 and earlier may read unintended memory if an attacker can cause the server to reflect very large input using ap_rwrite() or ap_rputs(), such as with mod_luas r:puts() function. Modules compiled and distributed separately from Apache HTTP Server that use the 'ap_rputs' function and may pass it a very large (INT_MAX or larger) string must be compiled against current headers to resolve the issue."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-28615"</td>
+      <td>"Critical"</td>
+      <td>"Apache HTTP Server 2.4.53 and earlier may crash or disclose information due to a read beyond bounds in ap_strcmp_match() when provided with an extremely large input buffer. While no code distributed with the server can be coerced into such a call, third-party modules or lua scripts that use ap_strcmp_match() may hypothetically be affected."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libldap"</td>
+      <td>"2.6.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-29155"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.6.2-r0]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-29404"</td>
+      <td>"High"</td>
+      <td>"In Apache HTTP Server 2.4.53 and earlier, a malicious request to a lua script that calls r:parsebody(0) may cause a denial of service due to no default limit on possible input size."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libxml2"</td>
+      <td>"2.9.13-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-29824"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.9.14-r0]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-30522"</td>
+      <td>"High"</td>
+      <td>"If Apache HTTP Server 2.4.53 is configured to do transformations with mod_sed in contexts where the input to mod_sed may be very large, mod_sed may make excessively large memory allocations and trigger an abort."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-30556"</td>
+      <td>"High"</td>
+      <td>"Apache HTTP Server 2.4.53 and earlier may return lengths to applications calling r:wsread() that point past the end of the storage allocated for the buffer."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-31813"</td>
+      <td>"Critical"</td>
+      <td>"Apache HTTP Server 2.4.53 and earlier may not send the X-Forwarded-* headers to the origin server based on client side Connection header hop-by-hop mechanism. This may be used to bypass IP based authentication on the origin server/application."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-32205"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-32206"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-32207"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-32208"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-32221"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r4]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-35252"</td>
+      <td>"Low"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r3]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-36760"</td>
+      <td>"Critical"</td>
+      <td>"Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling') vulnerability in mod_proxy_ajp of Apache HTTP Server allows an attacker to smuggle requests to the AJP server it forwards requests to. This issue affects Apache HTTP Server Apache HTTP Server 2.4 version 2.4.54 and prior versions."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"zlib"</td>
+      <td>"1.2.12-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-37434"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.2.12-r2]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-37436"</td>
+      <td>"Medium"</td>
+      <td>"Prior to Apache HTTP Server 2.4.55, a malicious backend can cause the response headers to be truncated early, resulting in some headers being incorporated into the response body. If the later headers have any security purpose, they will not be interpreted by the client."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libxml2"</td>
+      <td>"2.9.13-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-40303"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.9.14-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libxml2"</td>
+      <td>"2.9.13-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-40304"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.9.14-r2]"</td>
+    </tr>
+    <tr>
+      <td>"expat"</td>
+      <td>"2.4.7-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-40674"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.4.9-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-42915"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r4]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-42916"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r4]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-4304"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-4304"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-43551"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r5]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-43552"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r5]"</td>
+    </tr>
+    <tr>
+      <td>"expat"</td>
+      <td>"2.4.7-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-43680"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[2.5.0-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-4450"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-4450"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0215"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0215"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0286"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0286"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0464"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0464"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0465"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r3]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0465"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.1t-r3]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0466"</td>
+      <td>"Medium"</td>
+      <td>"The function X509_VERIFY_PARAM_add0_policy() is documented to implicitly enable the certificate policy check when doing certificate verification. However the implementation of the function does not enable the check which allows certificates with invalid or incorrect policies to pass the certificate verification. As suddenly enabling the policy check could break existing deployments it was decided to keep the existing behavior of the X509_VERIFY_PARAM_add0_policy() function. Instead the applications that require OpenSSL to perform certificate policy check need to use X509_VERIFY_PARAM_set1_policies() or explicitly enable the policy check by calling X509_VERIFY_PARAM_set_flags() with the X509_V_FLAG_POLICY_CHECK flag argument. Certificate policy checks are disabled by default in OpenSSL and are not commonly used by applications."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.1"</td>
+      <td>"1.1.1n-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0466"</td>
+      <td>"Medium"</td>
+      <td>"The function X509_VERIFY_PARAM_add0_policy() is documented to implicitly enable the certificate policy check when doing certificate verification. However the implementation of the function does not enable the check which allows certificates with invalid or incorrect policies to pass the certificate verification. As suddenly enabling the policy check could break existing deployments it was decided to keep the existing behavior of the X509_VERIFY_PARAM_add0_policy() function. Instead the applications that require OpenSSL to perform certificate policy check need to use X509_VERIFY_PARAM_set1_policies() or explicitly enable the policy check by calling X509_VERIFY_PARAM_set_flags() with the X509_V_FLAG_POLICY_CHECK flag argument. Certificate policy checks are disabled by default in OpenSSL and are not commonly used by applications."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-23914"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r6]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-23915"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r6]"</td>
+    </tr>
+    <tr>
+      <td>"libcurl"</td>
+      <td>"7.80.0-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-23916"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[7.80.0-r6]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2023-25690"</td>
+      <td>"Critical"</td>
+      <td>"Some mod_proxy configurations on Apache HTTP Server versions 2.4.0 through 2.4.55 allow a HTTP Request Smuggling attack. Configurations are affected when mod_proxy is enabled along with some form of RewriteRule or ProxyPassMatch in which a non-specific pattern matches some portion of the user-supplied request-target (URL) data and is then re-inserted into the proxied request-target using variable substitution. For example, something like: RewriteEngine on RewriteRule "^/here/(.*)" "http://example.com:8080/elsewhere?$1"; [P] ProxyPassReverse /here/ http://example.com:8080/ Request splitting/smuggling could result in bypass of access controls in the proxy server, proxying unintended URLs to existing origin servers, and cache poisoning. Users are recommended to update to at least version 2.4.56 of Apache HTTP Server."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"httpd"</td>
+      <td>"2.4.53"</td>
+      <td>"binary"</td>
+      <td>"CVE-2023-27522"</td>
+      <td>"High"</td>
+      <td>"HTTP Response Smuggling vulnerability in Apache HTTP Server via mod_proxy_uwsgi. This issue affects Apache HTTP Server: from 2.4.30 through 2.4.55. Special characters in the origin response header can truncate/split the response forwarded to the client."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+  </table>
+</body>
+
+</html>

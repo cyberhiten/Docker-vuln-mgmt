@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="ISO-8859-1">
+  <title>Grype</title>
+  <script>
+    function myFunction() {
+      // Declare variables 
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who do not match the search query
+      for (i = 1; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+          var tdata = td[j];
+          if (tdata) {
+            if (tdata.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+              break;
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style type="text/css">
+    table,
+    th,
+    td {
+      border: 1px solid black; // changing-colors
+      // word-wrap: break-word;
+    }
+
+    tr:first-child {
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background: #eef
+    }
+
+    // changing-colors
+    tr:nth-child(odd) {
+      background: #fee
+    }
+
+    // changing-colors
+
+    * {
+      box-sizing: border-box;
+    }
+
+    #myInput {
+      background-image: url("search.png");
+      background-position: left center;
+      background-repeat: no-repeat;
+      width: 94%;
+      font-size: 16px;
+      padding: 8px 20px 8px 40px;
+      border: 2px solid Tomato; // changing-colors
+      margin-bottom: 18px;
+    }
+
+    #myTable {
+      border-collapse: collapse;
+      border: 1px solid #ddd; // changing-colors
+      width: 100%;
+      margin-top: 18px;
+      // Remove the // in front of the below two lines, to get fixed-width
+      // table-layout: fixed;
+      // word-wrap: break-word;
+      // font-size: 18px;
+    }
+
+    #myTable th,
+    #myTable td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    #myTable tr {
+      border-bottom: 1px solid #ddd; // changing-colors
+    }
+
+    #myTable tr:first-child:hover,
+    #myTable tr:hover {
+      background-color: rgb(4, 112, 155); // changing-colors
+    }
+
+    #myTable tr:first-child {
+      background-color: rgb(4, 112, 155); // changing-colors
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 style="text-align:center;background-color:DodgerBlue;color:White;">Identified Vulnerabilites</h2>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search in all Fields...."
+    title="Type in a Search String" autofocus="autofocus">
+  <table id="myTable">
+    <tr>
+      <th>NAME</th>
+      <th>INSTALLED</th>
+      <th>TYPE</th>
+      <th>VULNERABILITY</th>
+      <th>SEVERITY</th>
+      <th>DESCRIPTION</th>
+      <th>STATE</th>
+      <th>FIXED IN</th>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2013-7458"</td>
+      <td>"Low"</td>
+      <td>"linenoise, as used in Redis before 3.2.3, uses world-readable permissions for .rediscli_history, which allows local users to obtain sensitive information by reading the file."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2015-3197"</td>
+      <td>"Medium"</td>
+      <td>"ssl/s2_srvr.c in OpenSSL 1.0.1 before 1.0.1r and 1.0.2 before 1.0.2f does not prevent use of disabled ciphers, which makes it easier for man-in-the-middle attackers to defeat cryptographic protection mechanisms by performing computations on SSLv2 traffic, related to the get_client_master_key and get_client_hello functions."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2015-3197"</td>
+      <td>"Medium"</td>
+      <td>"ssl/s2_srvr.c in OpenSSL 1.0.1 before 1.0.1r and 1.0.2 before 1.0.2f does not prevent use of disabled ciphers, which makes it easier for man-in-the-middle attackers to defeat cryptographic protection mechanisms by performing computations on SSLv2 traffic, related to the get_client_master_key and get_client_hello functions."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2015-9261"</td>
+      <td>"Medium"</td>
+      <td>"huft_build in archival/libarchive/decompress_gunzip.c in BusyBox before 1.27.2 misuses a pointer, causing segfaults and an application crash during an unzip operation on a specially crafted ZIP file."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0701"</td>
+      <td>"Low"</td>
+      <td>"The DH_check_pub_key function in crypto/dh/dh_check.c in OpenSSL 1.0.2 before 1.0.2f does not ensure that prime numbers are appropriate for Diffie-Hellman (DH) key exchange, which makes it easier for remote attackers to discover a private DH exponent by making multiple handshakes with a peer that chose an inappropriate number, as demonstrated by a number in an X9.42 file."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0701"</td>
+      <td>"Low"</td>
+      <td>"The DH_check_pub_key function in crypto/dh/dh_check.c in OpenSSL 1.0.2 before 1.0.2f does not ensure that prime numbers are appropriate for Diffie-Hellman (DH) key exchange, which makes it easier for remote attackers to discover a private DH exponent by making multiple handshakes with a peer that chose an inappropriate number, as demonstrated by a number in an X9.42 file."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0702"</td>
+      <td>"Medium"</td>
+      <td>"The MOD_EXP_CTIME_COPY_FROM_PREBUF function in crypto/bn/bn_exp.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g does not properly consider cache-bank access times during modular exponentiation, which makes it easier for local users to discover RSA keys by running a crafted application on the same Intel Sandy Bridge CPU core as a victim and leveraging cache-bank conflicts, aka a "CacheBleed" attack."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0702"</td>
+      <td>"Medium"</td>
+      <td>"The MOD_EXP_CTIME_COPY_FROM_PREBUF function in crypto/bn/bn_exp.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g does not properly consider cache-bank access times during modular exponentiation, which makes it easier for local users to discover RSA keys by running a crafted application on the same Intel Sandy Bridge CPU core as a victim and leveraging cache-bank conflicts, aka a "CacheBleed" attack."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0705"</td>
+      <td>"Critical"</td>
+      <td>"Double free vulnerability in the dsa_priv_decode function in crypto/dsa/dsa_ameth.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allows remote attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact via a malformed DSA private key."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0705"</td>
+      <td>"Critical"</td>
+      <td>"Double free vulnerability in the dsa_priv_decode function in crypto/dsa/dsa_ameth.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allows remote attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact via a malformed DSA private key."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0797"</td>
+      <td>"High"</td>
+      <td>"Multiple integer overflows in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allow remote attackers to cause a denial of service (heap memory corruption or NULL pointer dereference) or possibly have unspecified other impact via a long digit string that is mishandled by the (1) BN_dec2bn or (2) BN_hex2bn function, related to crypto/bn/bn.h and crypto/bn/bn_print.c."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0797"</td>
+      <td>"High"</td>
+      <td>"Multiple integer overflows in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allow remote attackers to cause a denial of service (heap memory corruption or NULL pointer dereference) or possibly have unspecified other impact via a long digit string that is mishandled by the (1) BN_dec2bn or (2) BN_hex2bn function, related to crypto/bn/bn.h and crypto/bn/bn_print.c."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0798"</td>
+      <td>"High"</td>
+      <td>"Memory leak in the SRP_VBASE_get_by_user implementation in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allows remote attackers to cause a denial of service (memory consumption) by providing an invalid username in a connection attempt, related to apps/s_server.c and crypto/srp/srp_vfy.c."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0798"</td>
+      <td>"High"</td>
+      <td>"Memory leak in the SRP_VBASE_get_by_user implementation in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allows remote attackers to cause a denial of service (memory consumption) by providing an invalid username in a connection attempt, related to apps/s_server.c and crypto/srp/srp_vfy.c."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0799"</td>
+      <td>"Critical"</td>
+      <td>"The fmtstr function in crypto/bio/b_print.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g improperly calculates string lengths, which allows remote attackers to cause a denial of service (overflow and out-of-bounds read) or possibly have unspecified other impact via a long string, as demonstrated by a large amount of ASN.1 data, a different vulnerability than CVE-2016-2842."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0799"</td>
+      <td>"Critical"</td>
+      <td>"The fmtstr function in crypto/bio/b_print.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g improperly calculates string lengths, which allows remote attackers to cause a denial of service (overflow and out-of-bounds read) or possibly have unspecified other impact via a long string, as demonstrated by a large amount of ASN.1 data, a different vulnerability than CVE-2016-2842."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0800"</td>
+      <td>"Medium"</td>
+      <td>"The SSLv2 protocol, as used in OpenSSL before 1.0.1s and 1.0.2 before 1.0.2g and other products, requires a server to send a ServerVerify message before establishing that a client possesses certain plaintext RSA data, which makes it easier for remote attackers to decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding oracle, aka a "DROWN" attack."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-0800"</td>
+      <td>"Medium"</td>
+      <td>"The SSLv2 protocol, as used in OpenSSL before 1.0.1s and 1.0.2 before 1.0.2g and other products, requires a server to send a ServerVerify message before establishing that a client possesses certain plaintext RSA data, which makes it easier for remote attackers to decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding oracle, aka a "DROWN" attack."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2016-10517"</td>
+      <td>"High"</td>
+      <td>"networking.c in Redis before 3.2.7 allows "Cross Protocol Scripting" because it lacks a check for POST and Host: strings, which are not valid in the Redis protocol (but commonly occur when an attack triggers an HTTP request to the Redis TCP port)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2105"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2105"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2106"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2106"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2107"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2107"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2109"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2109"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r0]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2147"</td>
+      <td>"High"</td>
+      <td>"Integer overflow in the DHCP client (udhcpc) in BusyBox before 1.25.0 allows remote attackers to cause a denial of service (crash) via a malformed RFC1035-encoded domain name, which triggers an out-of-bounds heap write."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2148"</td>
+      <td>"Critical"</td>
+      <td>"Heap-based buffer overflow in the DHCP client (udhcpc) in BusyBox before 1.25.0 allows remote attackers to have unspecified impact via vectors involving OPTION_6RD parsing."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2176"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2176"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2177"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2177"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2178"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2178"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2179"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r3]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2179"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r3]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2180"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2180"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2181"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r4]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2181"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r4]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2182"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r3]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2182"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r3]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2183"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2i-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2183"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2i-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2842"</td>
+      <td>"Critical"</td>
+      <td>"The doapr_outch function in crypto/bio/b_print.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g does not verify that a certain memory allocation succeeds, which allows remote attackers to cause a denial of service (out-of-bounds write or memory consumption) or possibly have unspecified other impact via a long string, as demonstrated by a large amount of ASN.1 data, a different vulnerability than CVE-2016-0799."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-2842"</td>
+      <td>"Critical"</td>
+      <td>"The doapr_outch function in crypto/bio/b_print.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g does not verify that a certain memory allocation succeeds, which allows remote attackers to cause a denial of service (out-of-bounds write or memory consumption) or possibly have unspecified other impact via a long string, as demonstrated by a large amount of ASN.1 data, a different vulnerability than CVE-2016-0799."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-6301"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.24.2-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-6302"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r3]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-6302"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r3]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-6303"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r3]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-6303"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2h-r3]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-6304"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2i-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-6304"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2i-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-6306"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2i-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-6306"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2i-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-7052"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2j-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-7052"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2j-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-7055"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2k-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-7055"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2k-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-8610"</td>
+      <td>"High"</td>
+      <td>"A denial of service flaw was found in OpenSSL 0.9.8, 1.0.1, 1.0.2 through 1.0.2h, and 1.1.0 in the way the TLS/SSL protocol defined processing of ALERT packets during a connection handshake. A remote attacker could use this flaw to make a TLS/SSL server consume an excessive amount of CPU and fail to accept connections from other clients."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-8610"</td>
+      <td>"High"</td>
+      <td>"A denial of service flaw was found in OpenSSL 0.9.8, 1.0.1, 1.0.2 through 1.0.2h, and 1.1.0 in the way the TLS/SSL protocol defined processing of ALERT packets during a connection handshake. A remote attacker could use this flaw to make a TLS/SSL server consume an excessive amount of CPU and fail to accept connections from other clients."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"musl"</td>
+      <td>"1.1.12-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-8859"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.12-r6]"</td>
+    </tr>
+    <tr>
+      <td>"musl-utils"</td>
+      <td>"1.1.12-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-8859"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.12-r6]"</td>
+    </tr>
+    <tr>
+      <td>"zlib"</td>
+      <td>"1.2.8-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-9840"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.2.11-r0]"</td>
+    </tr>
+    <tr>
+      <td>"zlib"</td>
+      <td>"1.2.8-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-9841"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.2.11-r0]"</td>
+    </tr>
+    <tr>
+      <td>"zlib"</td>
+      <td>"1.2.8-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-9842"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.2.11-r0]"</td>
+    </tr>
+    <tr>
+      <td>"zlib"</td>
+      <td>"1.2.8-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2016-9843"</td>
+      <td>"Critical"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.2.11-r0]"</td>
+    </tr>
+    <tr>
+      <td>"musl"</td>
+      <td>"1.1.12-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-15650"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.12-r8]"</td>
+    </tr>
+    <tr>
+      <td>"musl-utils"</td>
+      <td>"1.1.12-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-15650"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.1.12-r8]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-15873"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.24.2-r2]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-16544"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.24.2-r2]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3731"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2k-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3731"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2k-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3732"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2k-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3732"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2k-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3735"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2m-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3735"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2m-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3736"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2m-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3736"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2m-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3737"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2n-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3737"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2n-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3738"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2n-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2017-3738"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2n-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0732"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2o-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0732"</td>
+      <td>"High"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2o-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0733"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2o-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0733"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2o-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0734"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2q-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0734"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2q-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0737"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2o-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0737"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2o-r1]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0739"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2o-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-0739"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2o-r0]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-1000500"</td>
+      <td>"High"</td>
+      <td>"Busybox contains a Missing SSL certificate validation vulnerability in The "busybox wget" applet that can result in arbitrary code execution. This attack appear to be exploitable via Simply download any file over HTTPS using "busybox wget https://compromised-domain.com/important-file"."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-1000517"</td>
+      <td>"Critical"</td>
+      <td>"BusyBox project BusyBox wget version prior to commit 8e2174e9bd836e53c8b9c6e00d1bc6e2a718686e contains a Buffer Overflow vulnerability in Busybox wget that can result in heap buffer overflow. This attack appear to be exploitable via network connectivity. This vulnerability appears to have been fixed in after commit 8e2174e9bd836e53c8b9c6e00d1bc6e2a718686e."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2018-11218"</td>
+      <td>"Critical"</td>
+      <td>"Memory Corruption was discovered in the cmsgpack library in the Lua subsystem in Redis before 3.2.12, 4.x before 4.0.10, and 5.x before 5.0 RC2 because of stack-based buffer overflows."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2018-11219"</td>
+      <td>"Critical"</td>
+      <td>"An Integer Overflow issue was discovered in the struct library in the Lua subsystem in Redis before 3.2.12, 4.x before 4.0.10, and 5.x before 5.0 RC2, leading to a failure of bounds checking."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2018-12326"</td>
+      <td>"High"</td>
+      <td>"Buffer overflow in redis-cli of Redis before 4.0.10 and 5.x before 5.0 RC3 allows an attacker to achieve code execution and escalate to higher privileges via a crafted command line. NOTE: It is unclear whether there are any common situations in which redis-cli is used with, for example, a -h (aka hostname) argument from an untrusted source."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2018-12453"</td>
+      <td>"High"</td>
+      <td>"Type confusion in the xgroupCommand function in t_stream.c in redis-server in Redis before 5.0 allows remote attackers to cause denial-of-service via an XGROUP command in which the key is not a stream."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-20679"</td>
+      <td>"High"</td>
+      <td>"An issue was discovered in BusyBox before 1.30.0. An out of bounds read in udhcp components (consumed by the DHCP server, client, and relay) allows a remote attacker to leak sensitive information from the stack by sending a crafted DHCP message. This is related to verification in udhcp_get_option() in networking/udhcp/common.c that 4-byte options are indeed 4 bytes."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"zlib"</td>
+      <td>"1.2.8-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-25032"</td>
+      <td>"High"</td>
+      <td>"zlib before 1.2.12 allows memory corruption when deflating (i.e., when compressing) if the input has many distant matches."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-5407"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2q-r0]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2018-5407"</td>
+      <td>"Medium"</td>
+      <td>""</td>
+      <td>"fixed"</td>
+      <td>"[1.0.2q-r0]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-10192"</td>
+      <td>"High"</td>
+      <td>"A heap-buffer overflow vulnerability was found in the Redis hyperloglog data structure versions 3.x before 3.2.13, 4.x before 4.0.14 and 5.x before 5.0.4. By carefully corrupting a hyperloglog using the SETRANGE command, an attacker could trick Redis interpretation of dense HLL encoding to write up to 3 bytes beyond the end of a heap-allocated buffer."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2019-10193"</td>
+      <td>"High"</td>
+      <td>"A stack-buffer overflow vulnerability was found in the Redis hyperloglog data structure versions 3.x before 3.2.13, 4.x before 4.0.14 and 5.x before 5.0.4. By corrupting a hyperloglog using the SETRANGE command, an attacker could cause Redis to perform controlled increments of up to 12 bytes past the end of a stack-allocated buffer."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"musl"</td>
+      <td>"1.1.12-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-14697"</td>
+      <td>"Critical"</td>
+      <td>"musl libc through 1.1.23 has an x87 floating-point stack adjustment imbalance, related to the math/i386/ directory. In some cases, use of this library could introduce out-of-bounds writes that are not present in an application's source code."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-1547"</td>
+      <td>"Medium"</td>
+      <td>"Normally in OpenSSL EC groups always have a co-factor present and this is used in side channel resistant code paths. However, in some cases, it is possible to construct a group using explicit parameters (instead of using a named curve). In those cases it is possible that such a group does not have the cofactor present. This can occur even where all the parameters match a known named curve. If such a curve is used then OpenSSL falls back to non-side channel resistant code paths which may result in full key recovery during an ECDSA signature operation. In order to be vulnerable an attacker would have to have the ability to time the creation of a large number of signatures where explicit parameters with no co-factor present are in use by an application using libcrypto. For the avoidance of doubt libssl is not vulnerable because explicit parameters are never used. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-1547"</td>
+      <td>"Medium"</td>
+      <td>"Normally in OpenSSL EC groups always have a co-factor present and this is used in side channel resistant code paths. However, in some cases, it is possible to construct a group using explicit parameters (instead of using a named curve). In those cases it is possible that such a group does not have the cofactor present. This can occur even where all the parameters match a known named curve. If such a curve is used then OpenSSL falls back to non-side channel resistant code paths which may result in full key recovery during an ECDSA signature operation. In order to be vulnerable an attacker would have to have the ability to time the creation of a large number of signatures where explicit parameters with no co-factor present are in use by an application using libcrypto. For the avoidance of doubt libssl is not vulnerable because explicit parameters are never used. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-1551"</td>
+      <td>"Medium"</td>
+      <td>"There is an overflow bug in the x64_64 Montgomery squaring procedure used in exponentiation with 512-bit moduli. No EC algorithms are affected. Analysis suggests that attacks against 2-prime RSA1024, 3-prime RSA1536, and DSA1024 as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH512 are considered just feasible. However, for an attack the target would have to re-use the DH512 private key, which is not recommended anyway. Also applications directly using the low level API BN_mod_exp may be affected if they use BN_FLG_CONSTTIME. Fixed in OpenSSL 1.1.1e (Affected 1.1.1-1.1.1d). Fixed in OpenSSL 1.0.2u (Affected 1.0.2-1.0.2t)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-1551"</td>
+      <td>"Medium"</td>
+      <td>"There is an overflow bug in the x64_64 Montgomery squaring procedure used in exponentiation with 512-bit moduli. No EC algorithms are affected. Analysis suggests that attacks against 2-prime RSA1024, 3-prime RSA1536, and DSA1024 as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH512 are considered just feasible. However, for an attack the target would have to re-use the DH512 private key, which is not recommended anyway. Also applications directly using the low level API BN_mod_exp may be affected if they use BN_FLG_CONSTTIME. Fixed in OpenSSL 1.1.1e (Affected 1.1.1-1.1.1d). Fixed in OpenSSL 1.0.2u (Affected 1.0.2-1.0.2t)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-1552"</td>
+      <td>"Low"</td>
+      <td>"OpenSSL has internal defaults for a directory tree where it can find a configuration file as well as certificates used for verification in TLS. This directory is most commonly referred to as OPENSSLDIR, and is configurable with the --prefix / --openssldir configuration options. For OpenSSL versions 1.1.0 and 1.1.1, the mingw configuration targets assume that resulting programs and libraries are installed in a Unix-like environment and the default prefix for program installation as well as for OPENSSLDIR should be '/usr/local'. However, mingw programs are Windows programs, and as such, find themselves looking at sub-directories of 'C:/usr/local', which may be world writable, which enables untrusted users to modify OpenSSL's default configuration, insert CA certificates, modify (or even replace) existing engine modules, etc. For OpenSSL 1.0.2, '/usr/local/ssl' is used as default for OPENSSLDIR on all Unix and Windows targets, including Visual C builds. However, some build instructions for the diverse Windows targets on 1.0.2 encourage you to specify your own --prefix. OpenSSL versions 1.1.1, 1.1.0 and 1.0.2 are affected by this issue. Due to the limited scope of affected deployments this has been assessed as low severity and therefore we are not creating new releases at this time. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-1552"</td>
+      <td>"Low"</td>
+      <td>"OpenSSL has internal defaults for a directory tree where it can find a configuration file as well as certificates used for verification in TLS. This directory is most commonly referred to as OPENSSLDIR, and is configurable with the --prefix / --openssldir configuration options. For OpenSSL versions 1.1.0 and 1.1.1, the mingw configuration targets assume that resulting programs and libraries are installed in a Unix-like environment and the default prefix for program installation as well as for OPENSSLDIR should be '/usr/local'. However, mingw programs are Windows programs, and as such, find themselves looking at sub-directories of 'C:/usr/local', which may be world writable, which enables untrusted users to modify OpenSSL's default configuration, insert CA certificates, modify (or even replace) existing engine modules, etc. For OpenSSL 1.0.2, '/usr/local/ssl' is used as default for OPENSSLDIR on all Unix and Windows targets, including Visual C builds. However, some build instructions for the diverse Windows targets on 1.0.2 encourage you to specify your own --prefix. OpenSSL versions 1.1.1, 1.1.0 and 1.0.2 are affected by this issue. Due to the limited scope of affected deployments this has been assessed as low severity and therefore we are not creating new releases at this time. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-1559"</td>
+      <td>"Medium"</td>
+      <td>"If an application encounters a fatal protocol error and then calls SSL_shutdown() twice (once to send a close_notify, and once to receive one) then OpenSSL can respond differently to the calling application if a 0 byte record is received with invalid padding compared to if a 0 byte record is received with an invalid MAC. If the application then behaves differently based on that in a way that is detectable to the remote peer, then this amounts to a padding oracle that could be used to decrypt data. In order for this to be exploitable "non-stitched" ciphersuites must be in use. Stitched ciphersuites are optimised implementations of certain commonly used ciphersuites. Also the application must call SSL_shutdown() twice even if a protocol error has occurred (applications should not do this but some do anyway). Fixed in OpenSSL 1.0.2r (Affected 1.0.2-1.0.2q)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-1559"</td>
+      <td>"Medium"</td>
+      <td>"If an application encounters a fatal protocol error and then calls SSL_shutdown() twice (once to send a close_notify, and once to receive one) then OpenSSL can respond differently to the calling application if a 0 byte record is received with invalid padding compared to if a 0 byte record is received with an invalid MAC. If the application then behaves differently based on that in a way that is detectable to the remote peer, then this amounts to a padding oracle that could be used to decrypt data. In order for this to be exploitable "non-stitched" ciphersuites must be in use. Stitched ciphersuites are optimised implementations of certain commonly used ciphersuites. Also the application must call SSL_shutdown() twice even if a protocol error has occurred (applications should not do this but some do anyway). Fixed in OpenSSL 1.0.2r (Affected 1.0.2-1.0.2q)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-1563"</td>
+      <td>"Low"</td>
+      <td>"In situations where an attacker receives automated notification of the success or failure of a decryption attempt an attacker, after sending a very large number of messages to be decrypted, can recover a CMS/PKCS7 transported encryption key or decrypt any RSA encrypted message that was encrypted with the public RSA key, using a Bleichenbacher padding oracle attack. Applications are not affected if they use a certificate together with the private RSA key to the CMS_decrypt or PKCS7_decrypt functions to select the correct recipient info to decrypt. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-1563"</td>
+      <td>"Low"</td>
+      <td>"In situations where an attacker receives automated notification of the success or failure of a decryption attempt an attacker, after sending a very large number of messages to be decrypted, can recover a CMS/PKCS7 transported encryption key or decrypt any RSA encrypted message that was encrypted with the public RSA key, using a Bleichenbacher padding oracle attack. Applications are not affected if they use a certificate together with the private RSA key to the CMS_decrypt or PKCS7_decrypt functions to select the correct recipient info to decrypt. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2019-5747"</td>
+      <td>"High"</td>
+      <td>"An issue was discovered in BusyBox through 1.30.0. An out of bounds read in udhcp components (consumed by the DHCP client, server, and/or relay) might allow a remote attacker to leak sensitive information from the stack by sending a crafted DHCP message. This is related to assurance of a 4-byte length when decoding DHCP_SUBNET. NOTE: this issue exists because of an incomplete fix for CVE-2018-20679."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2020-14147"</td>
+      <td>"High"</td>
+      <td>"An integer overflow in the getnum function in lua_struct.c in Redis before 6.0.3 allows context-dependent attackers with permission to run Lua code in a Redis session to cause a denial of service (memory corruption and application crash) or possibly bypass intended sandbox restrictions via a large number, which triggers a stack-based buffer overflow. NOTE: this issue exists because of a CVE-2015-8080 regression."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-1968"</td>
+      <td>"Low"</td>
+      <td>"The Raccoon attack exploits a flaw in the TLS specification which can lead to an attacker being able to compute the pre-master secret in connections which have used a Diffie-Hellman (DH) based ciphersuite. In such a case this would result in the attacker being able to eavesdrop on all encrypted communications sent over that TLS connection. The attack can only be exploited if an implementation re-uses a DH secret across multiple TLS connections. Note that this issue only impacts DH ciphersuites and not ECDH ciphersuites. This issue affects OpenSSL 1.0.2 which is out of support and no longer receiving public updates. OpenSSL 1.1.1 is not vulnerable to this issue. Fixed in OpenSSL 1.0.2w (Affected 1.0.2-1.0.2v)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-1968"</td>
+      <td>"Low"</td>
+      <td>"The Raccoon attack exploits a flaw in the TLS specification which can lead to an attacker being able to compute the pre-master secret in connections which have used a Diffie-Hellman (DH) based ciphersuite. In such a case this would result in the attacker being able to eavesdrop on all encrypted communications sent over that TLS connection. The attack can only be exploited if an implementation re-uses a DH secret across multiple TLS connections. Note that this issue only impacts DH ciphersuites and not ECDH ciphersuites. This issue affects OpenSSL 1.0.2 which is out of support and no longer receiving public updates. OpenSSL 1.1.1 is not vulnerable to this issue. Fixed in OpenSSL 1.0.2w (Affected 1.0.2-1.0.2v)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-1971"</td>
+      <td>"Medium"</td>
+      <td>"The X.509 GeneralName type is a generic type for representing different types of names. One of those name types is known as EDIPartyName. OpenSSL provides a function GENERAL_NAME_cmp which compares different instances of a GENERAL_NAME to see if they are equal or not. This function behaves incorrectly when both GENERAL_NAMEs contain an EDIPARTYNAME. A NULL pointer dereference and a crash may occur leading to a possible denial of service attack. OpenSSL itself uses the GENERAL_NAME_cmp function for two purposes: 1) Comparing CRL distribution point names between an available CRL and a CRL distribution point embedded in an X509 certificate 2) When verifying that a timestamp response token signer matches the timestamp authority name (exposed via the API functions TS_RESP_verify_response and TS_RESP_verify_token) If an attacker can control both items being compared then that attacker could trigger a crash. For example if the attacker can trick a client or server into checking a malicious certificate against a malicious CRL then this may occur. Note that some applications automatically download CRLs based on a URL embedded in a certificate. This checking happens prior to the signatures on the certificate and CRL being verified. OpenSSL's s_server, s_client and verify tools have support for the "-crl_download" option which implements automatic CRL downloading and this attack has been demonstrated to work against those tools. Note that an unrelated bug means that affected versions of OpenSSL cannot parse or construct correct encodings of EDIPARTYNAME. However it is possible to construct a malformed EDIPARTYNAME that OpenSSL's parser will accept and hence trigger this attack. All OpenSSL 1.1.1 and 1.0.2 versions are affected by this issue. Other OpenSSL releases are out of support and have not been checked. Fixed in OpenSSL 1.1.1i (Affected 1.1.1-1.1.1h). Fixed in OpenSSL 1.0.2x (Affected 1.0.2-1.0.2w)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-1971"</td>
+      <td>"Medium"</td>
+      <td>"The X.509 GeneralName type is a generic type for representing different types of names. One of those name types is known as EDIPartyName. OpenSSL provides a function GENERAL_NAME_cmp which compares different instances of a GENERAL_NAME to see if they are equal or not. This function behaves incorrectly when both GENERAL_NAMEs contain an EDIPARTYNAME. A NULL pointer dereference and a crash may occur leading to a possible denial of service attack. OpenSSL itself uses the GENERAL_NAME_cmp function for two purposes: 1) Comparing CRL distribution point names between an available CRL and a CRL distribution point embedded in an X509 certificate 2) When verifying that a timestamp response token signer matches the timestamp authority name (exposed via the API functions TS_RESP_verify_response and TS_RESP_verify_token) If an attacker can control both items being compared then that attacker could trigger a crash. For example if the attacker can trick a client or server into checking a malicious certificate against a malicious CRL then this may occur. Note that some applications automatically download CRLs based on a URL embedded in a certificate. This checking happens prior to the signatures on the certificate and CRL being verified. OpenSSL's s_server, s_client and verify tools have support for the "-crl_download" option which implements automatic CRL downloading and this attack has been demonstrated to work against those tools. Note that an unrelated bug means that affected versions of OpenSSL cannot parse or construct correct encodings of EDIPARTYNAME. However it is possible to construct a malformed EDIPARTYNAME that OpenSSL's parser will accept and hence trigger this attack. All OpenSSL 1.1.1 and 1.0.2 versions are affected by this issue. Other OpenSSL releases are out of support and have not been checked. Fixed in OpenSSL 1.1.1i (Affected 1.1.1-1.1.1h). Fixed in OpenSSL 1.0.2x (Affected 1.0.2-1.0.2w)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"musl"</td>
+      <td>"1.1.12-r1"</td>
+      <td>"apk"</td>
+      <td>"CVE-2020-28928"</td>
+      <td>"Medium"</td>
+      <td>"In musl libc through 1.2.1, wcsnrtombs mishandles particular combinations of destination buffer size and source character limit, as demonstrated by an invalid write access (buffer overflow)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-23840"</td>
+      <td>"High"</td>
+      <td>"Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow the output length argument in some cases where the input length is close to the maximum permissable length for an integer on the platform. In such cases the return value from the function call will be 1 (indicating success), but the output length value will be negative. This could cause applications to behave incorrectly or crash. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-23840"</td>
+      <td>"High"</td>
+      <td>"Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow the output length argument in some cases where the input length is close to the maximum permissable length for an integer on the platform. In such cases the return value from the function call will be 1 (indicating success), but the output length value will be negative. This could cause applications to behave incorrectly or crash. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-23841"</td>
+      <td>"Medium"</td>
+      <td>"The OpenSSL public API function X509_issuer_and_serial_hash() attempts to create a unique hash value based on the issuer and serial number data contained within an X509 certificate. However it fails to correctly handle any errors that may occur while parsing the issuer field (which might occur if the issuer field is maliciously constructed). This may subsequently result in a NULL pointer deref and a crash leading to a potential denial of service attack. The function X509_issuer_and_serial_hash() is never directly called by OpenSSL itself so applications are only vulnerable if they use this function directly and they use it on certificates that may have been obtained from untrusted sources. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-23841"</td>
+      <td>"Medium"</td>
+      <td>"The OpenSSL public API function X509_issuer_and_serial_hash() attempts to create a unique hash value based on the issuer and serial number data contained within an X509 certificate. However it fails to correctly handle any errors that may occur while parsing the issuer field (which might occur if the issuer field is maliciously constructed). This may subsequently result in a NULL pointer deref and a crash leading to a potential denial of service attack. The function X509_issuer_and_serial_hash() is never directly called by OpenSSL itself so applications are only vulnerable if they use this function directly and they use it on certificates that may have been obtained from untrusted sources. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2021-32626"</td>
+      <td>"High"</td>
+      <td>"Redis is an open source, in-memory database that persists on disk. In affected versions specially crafted Lua scripts executing in Redis can cause the heap-based Lua stack to be overflowed, due to incomplete checks for this condition. This can result with heap corruption and potentially remote code execution. This problem exists in all versions of Redis with Lua scripting support, starting from 2.6. The problem is fixed in versions 6.2.6, 6.0.16 and 5.0.14. For users unable to update an additional workaround to mitigate the problem without patching the redis-server executable is to prevent users from executing Lua scripts. This can be done using ACL to restrict EVAL and EVALSHA commands."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2021-32761"</td>
+      <td>"High"</td>
+      <td>"Redis is an in-memory database that persists on disk. A vulnerability involving out-of-bounds read and integer overflow to buffer overflow exists starting with version 2.2 and prior to versions 5.0.13, 6.0.15, and 6.2.5. On 32-bit systems, Redis `*BIT*` command are vulnerable to integer overflow that can potentially be exploited to corrupt the heap, leak arbitrary heap contents or trigger remote code execution. The vulnerability involves changing the default `proto-max-bulk-len` configuration parameter to a very large value and constructing specially crafted commands bit commands. This problem only affects Redis on 32-bit platforms, or compiled as a 32-bit binary. Redis versions 5.0.`3m 6.0.15, and 6.2.5 contain patches for this issue. An additional workaround to mitigate the problem without patching the `redis-server` executable is to prevent users from modifying the `proto-max-bulk-len` configuration parameter. This can be done using ACL to restrict unprivileged users from using the CONFIG SET command."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2021-3470"</td>
+      <td>"Medium"</td>
+      <td>"A heap overflow issue was found in Redis in versions before 5.0.10, before 6.0.9 and before 6.2.0 when using a heap allocator other than jemalloc or glibc's malloc, leading to potential out of bound write or process crash. Effectively this flaw does not affect the vast majority of users, who use jemalloc or glibc malloc."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-3712"</td>
+      <td>"High"</td>
+      <td>"ASN.1 strings are represented internally within OpenSSL as an ASN1_STRING structure which contains a buffer holding the string data and a field holding the buffer length. This contrasts with normal C strings which are repesented as a buffer for the string data which is terminated with a NUL (0) byte. Although not a strict requirement, ASN.1 strings that are parsed using OpenSSL's own "d2i" functions (and other similar parsing functions) as well as any string whose value has been set with the ASN1_STRING_set() function will additionally NUL terminate the byte array in the ASN1_STRING structure. However, it is possible for applications to directly construct valid ASN1_STRING structures which do not NUL terminate the byte array by directly setting the "data" and "length" fields in the ASN1_STRING array. This can also happen by using the ASN1_STRING_set0() function. Numerous OpenSSL functions that print ASN.1 data have been found to assume that the ASN1_STRING byte array will be NUL terminated, even though this is not guaranteed for strings that have been directly constructed. Where an application requests an ASN.1 structure to be printed, and where that ASN.1 structure contains ASN1_STRINGs that have been directly constructed by the application without NUL terminating the "data" field, then a read buffer overrun can occur. The same thing can also occur during name constraints processing of certificates (for example if a certificate has been directly constructed by the application instead of loading it via the OpenSSL parsing functions, and the certificate contains non NUL terminated ASN1_STRING structures). It can also occur in the X509_get1_email(), X509_REQ_get1_email() and X509_get1_ocsp() functions. If a malicious actor can cause an application to directly construct an ASN1_STRING and then process it through one of the affected OpenSSL functions then this issue could be hit. This might result in a crash (causing a Denial of Service attack). It could also result in the disclosure of private memory contents (such as private keys, or sensitive plaintext). Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k). Fixed in OpenSSL 1.0.2za (Affected 1.0.2-1.0.2y)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-3712"</td>
+      <td>"High"</td>
+      <td>"ASN.1 strings are represented internally within OpenSSL as an ASN1_STRING structure which contains a buffer holding the string data and a field holding the buffer length. This contrasts with normal C strings which are repesented as a buffer for the string data which is terminated with a NUL (0) byte. Although not a strict requirement, ASN.1 strings that are parsed using OpenSSL's own "d2i" functions (and other similar parsing functions) as well as any string whose value has been set with the ASN1_STRING_set() function will additionally NUL terminate the byte array in the ASN1_STRING structure. However, it is possible for applications to directly construct valid ASN1_STRING structures which do not NUL terminate the byte array by directly setting the "data" and "length" fields in the ASN1_STRING array. This can also happen by using the ASN1_STRING_set0() function. Numerous OpenSSL functions that print ASN.1 data have been found to assume that the ASN1_STRING byte array will be NUL terminated, even though this is not guaranteed for strings that have been directly constructed. Where an application requests an ASN.1 structure to be printed, and where that ASN.1 structure contains ASN1_STRINGs that have been directly constructed by the application without NUL terminating the "data" field, then a read buffer overrun can occur. The same thing can also occur during name constraints processing of certificates (for example if a certificate has been directly constructed by the application instead of loading it via the OpenSSL parsing functions, and the certificate contains non NUL terminated ASN1_STRING structures). It can also occur in the X509_get1_email(), X509_REQ_get1_email() and X509_get1_ocsp() functions. If a malicious actor can cause an application to directly construct an ASN1_STRING and then process it through one of the affected OpenSSL functions then this issue could be hit. This might result in a crash (causing a Denial of Service attack). It could also result in the disclosure of private memory contents (such as private keys, or sensitive plaintext). Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k). Fixed in OpenSSL 1.0.2za (Affected 1.0.2-1.0.2y)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-4160"</td>
+      <td>"Medium"</td>
+      <td>"There is a carry propagation bug in the MIPS32 and MIPS64 squaring procedure. Many EC algorithms are affected, including some of the TLS 1.3 default curves. Impact was not analyzed in detail, because the pre-requisites for attack are considered unlikely and include reusing private keys. Analysis suggests that attacks against RSA and DSA as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH are considered just feasible (although very difficult) because most of the work necessary to deduce information about a private key may be performed offline. The amount of resources required for such an attack would be significant. However, for an attack on TLS to be meaningful, the server would have to share the DH private key among multiple clients, which is no longer an option since CVE-2016-0701. This issue affects OpenSSL versions 1.0.2, 1.1.1 and 3.0.0. It was addressed in the releases of 1.1.1m and 3.0.1 on the 15th of December 2021. For the 1.0.2 release it is addressed in git commit 6fc1aaaf3 that is available to premium support customers only. It will be made available in 1.0.2zc when it is released. The issue only affects OpenSSL on MIPS platforms. Fixed in OpenSSL 3.0.1 (Affected 3.0.0). Fixed in OpenSSL 1.1.1m (Affected 1.1.1-1.1.1l). Fixed in OpenSSL 1.0.2zc-dev (Affected 1.0.2-1.0.2zb)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-4160"</td>
+      <td>"Medium"</td>
+      <td>"There is a carry propagation bug in the MIPS32 and MIPS64 squaring procedure. Many EC algorithms are affected, including some of the TLS 1.3 default curves. Impact was not analyzed in detail, because the pre-requisites for attack are considered unlikely and include reusing private keys. Analysis suggests that attacks against RSA and DSA as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH are considered just feasible (although very difficult) because most of the work necessary to deduce information about a private key may be performed offline. The amount of resources required for such an attack would be significant. However, for an attack on TLS to be meaningful, the server would have to share the DH private key among multiple clients, which is no longer an option since CVE-2016-0701. This issue affects OpenSSL versions 1.0.2, 1.1.1 and 3.0.0. It was addressed in the releases of 1.1.1m and 3.0.1 on the 15th of December 2021. For the 1.0.2 release it is addressed in git commit 6fc1aaaf3 that is available to premium support customers only. It will be made available in 1.0.2zc when it is released. The issue only affects OpenSSL on MIPS platforms. Fixed in OpenSSL 3.0.1 (Affected 3.0.0). Fixed in OpenSSL 1.1.1m (Affected 1.1.1-1.1.1l). Fixed in OpenSSL 1.0.2zc-dev (Affected 1.0.2-1.0.2zb)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42376"</td>
+      <td>"Medium"</td>
+      <td>"A NULL pointer dereference in Busybox's hush applet leads to denial of service when processing a crafted shell command, due to missing validation after a \x03 delimiter character. This may be used for DoS under very rare conditions of filtered command input."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42378"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the getvar_i function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42379"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the next_input_file function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42381"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the hash_init function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42384"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the handle_special function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42385"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the evaluate function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2021-42386"</td>
+      <td>"High"</td>
+      <td>"A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the nvalloc function"</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-0543"</td>
+      <td>"Critical"</td>
+      <td>"It was discovered, that redis, a persistent key-value database, due to a packaging issue, is prone to a (Debian-specific) Lua sandbox escape, which could result in remote code execution."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-0778"</td>
+      <td>"High"</td>
+      <td>"The BN_mod_sqrt() function, which computes a modular square root, contains a bug that can cause it to loop forever for non-prime moduli. Internally this function is used when parsing certificates that contain elliptic curve public keys in compressed form or explicit elliptic curve parameters with a base point encoded in compressed form. It is possible to trigger the infinite loop by crafting a certificate that has invalid explicit curve parameters. Since certificate parsing happens prior to verification of the certificate signature, any process that parses an externally supplied certificate may thus be subject to a denial of service attack. The infinite loop can also be reached when parsing crafted private keys as they can contain explicit elliptic curve parameters. Thus vulnerable situations include: - TLS clients consuming server certificates - TLS servers consuming client certificates - Hosting providers taking certificates or private keys from customers - Certificate authorities parsing certification requests from subscribers - Anything else which parses ASN.1 elliptic curve parameters Also any other applications that use the BN_mod_sqrt() where the attacker can control the parameter values are vulnerable to this DoS issue. In the OpenSSL 1.0.2 version the public key is not parsed during initial parsing of the certificate which makes it slightly harder to trigger the infinite loop. However any operation which requires the public key from the certificate will trigger the infinite loop. In particular the attacker can use a self-signed certificate to trigger the loop during verification of the certificate signature. This issue affects OpenSSL versions 1.0.2, 1.1.1 and 3.0. It was addressed in the releases of 1.1.1n and 3.0.2 on the 15th March 2022. Fixed in OpenSSL 3.0.2 (Affected 3.0.0,3.0.1). Fixed in OpenSSL 1.1.1n (Affected 1.1.1-1.1.1m). Fixed in OpenSSL 1.0.2zd (Affected 1.0.2-1.0.2zc)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-0778"</td>
+      <td>"High"</td>
+      <td>"The BN_mod_sqrt() function, which computes a modular square root, contains a bug that can cause it to loop forever for non-prime moduli. Internally this function is used when parsing certificates that contain elliptic curve public keys in compressed form or explicit elliptic curve parameters with a base point encoded in compressed form. It is possible to trigger the infinite loop by crafting a certificate that has invalid explicit curve parameters. Since certificate parsing happens prior to verification of the certificate signature, any process that parses an externally supplied certificate may thus be subject to a denial of service attack. The infinite loop can also be reached when parsing crafted private keys as they can contain explicit elliptic curve parameters. Thus vulnerable situations include: - TLS clients consuming server certificates - TLS servers consuming client certificates - Hosting providers taking certificates or private keys from customers - Certificate authorities parsing certification requests from subscribers - Anything else which parses ASN.1 elliptic curve parameters Also any other applications that use the BN_mod_sqrt() where the attacker can control the parameter values are vulnerable to this DoS issue. In the OpenSSL 1.0.2 version the public key is not parsed during initial parsing of the certificate which makes it slightly harder to trigger the infinite loop. However any operation which requires the public key from the certificate will trigger the infinite loop. In particular the attacker can use a self-signed certificate to trigger the loop during verification of the certificate signature. This issue affects OpenSSL versions 1.0.2, 1.1.1 and 3.0. It was addressed in the releases of 1.1.1n and 3.0.2 on the 15th March 2022. Fixed in OpenSSL 3.0.2 (Affected 3.0.0,3.0.1). Fixed in OpenSSL 1.1.1n (Affected 1.1.1-1.1.1m). Fixed in OpenSSL 1.0.2zd (Affected 1.0.2-1.0.2zc)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-1292"</td>
+      <td>"Critical"</td>
+      <td>"The c_rehash script does not properly sanitise shell metacharacters to prevent command injection. This script is distributed by some operating systems in a manner where it is automatically executed. On such operating systems, an attacker could execute arbitrary commands with the privileges of the script. Use of the c_rehash script is considered obsolete and should be replaced by the OpenSSL rehash command line tool. Fixed in OpenSSL 3.0.3 (Affected 3.0.0,3.0.1,3.0.2). Fixed in OpenSSL 1.1.1o (Affected 1.1.1-1.1.1n). Fixed in OpenSSL 1.0.2ze (Affected 1.0.2-1.0.2zd)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-1292"</td>
+      <td>"Critical"</td>
+      <td>"The c_rehash script does not properly sanitise shell metacharacters to prevent command injection. This script is distributed by some operating systems in a manner where it is automatically executed. On such operating systems, an attacker could execute arbitrary commands with the privileges of the script. Use of the c_rehash script is considered obsolete and should be replaced by the OpenSSL rehash command line tool. Fixed in OpenSSL 3.0.3 (Affected 3.0.0,3.0.1,3.0.2). Fixed in OpenSSL 1.1.1o (Affected 1.1.1-1.1.1n). Fixed in OpenSSL 1.0.2ze (Affected 1.0.2-1.0.2zd)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-2068"</td>
+      <td>"Critical"</td>
+      <td>"In addition to the c_rehash shell command injection identified in CVE-2022-1292, further circumstances where the c_rehash script does not properly sanitise shell metacharacters to prevent command injection were found by code review. When the CVE-2022-1292 was fixed it was not discovered that there are other places in the script where the file names of certificates being hashed were possibly passed to a command executed through the shell. This script is distributed by some operating systems in a manner where it is automatically executed. On such operating systems, an attacker could execute arbitrary commands with the privileges of the script. Use of the c_rehash script is considered obsolete and should be replaced by the OpenSSL rehash command line tool. Fixed in OpenSSL 3.0.4 (Affected 3.0.0,3.0.1,3.0.2,3.0.3). Fixed in OpenSSL 1.1.1p (Affected 1.1.1-1.1.1o). Fixed in OpenSSL 1.0.2zf (Affected 1.0.2-1.0.2ze)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-2068"</td>
+      <td>"Critical"</td>
+      <td>"In addition to the c_rehash shell command injection identified in CVE-2022-1292, further circumstances where the c_rehash script does not properly sanitise shell metacharacters to prevent command injection were found by code review. When the CVE-2022-1292 was fixed it was not discovered that there are other places in the script where the file names of certificates being hashed were possibly passed to a command executed through the shell. This script is distributed by some operating systems in a manner where it is automatically executed. On such operating systems, an attacker could execute arbitrary commands with the privileges of the script. Use of the c_rehash script is considered obsolete and should be replaced by the OpenSSL rehash command line tool. Fixed in OpenSSL 3.0.4 (Affected 3.0.0,3.0.1,3.0.2,3.0.3). Fixed in OpenSSL 1.1.1p (Affected 1.1.1-1.1.1o). Fixed in OpenSSL 1.0.2zf (Affected 1.0.2-1.0.2ze)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-24735"</td>
+      <td>"High"</td>
+      <td>"Redis is an in-memory database that persists on disk. By exploiting weaknesses in the Lua script execution environment, an attacker with access to Redis prior to version 7.0.0 or 6.2.7 can inject Lua code that will execute with the (potentially higher) privileges of another Redis user. The Lua script execution environment in Redis provides some measures that prevent a script from creating side effects that persist and can affect the execution of the same, or different script, at a later time. Several weaknesses of these measures have been publicly known for a long time, but they had no security impact as the Redis security model did not endorse the concept of users or privileges. With the introduction of ACLs in Redis 6.0, these weaknesses can be exploited by a less privileged users to inject Lua code that will execute at a later time, when a privileged user executes a Lua script. The problem is fixed in Redis versions 7.0.0 and 6.2.7. An additional workaround to mitigate this problem without patching the redis-server executable, if Lua scripting is not being used, is to block access to `SCRIPT LOAD` and `EVAL` commands using ACL rules."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-24736"</td>
+      <td>"Medium"</td>
+      <td>"Redis is an in-memory database that persists on disk. Prior to versions 6.2.7 and 7.0.0, an attacker attempting to load a specially crafted Lua script can cause NULL pointer dereference which will result with a crash of the redis-server process. The problem is fixed in Redis versions 7.0.0 and 6.2.7. An additional workaround to mitigate this problem without patching the redis-server executable, if Lua scripting is not being used, is to block access to `SCRIPT LOAD` and `EVAL` commands using ACL rules."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"busybox"</td>
+      <td>"1.24.1-r7"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-28391"</td>
+      <td>"High"</td>
+      <td>"BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-36021"</td>
+      <td>"Medium"</td>
+      <td>"Redis is an in-memory database that persists on disk. Authenticated users can use string matching commands (like `SCAN` or `KEYS`) with a specially crafted pattern to trigger a denial-of-service attack on Redis, causing it to hang and consume 100% CPU time. The problem is fixed in Redis versions 6.0.18, 6.2.11, 7.0.9."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-3647"</td>
+      <td>"Low"</td>
+      <td>"** DISPUTED ** A vulnerability, which was classified as problematic, was found in Redis. Affected is the function sigsegvHandler of the file debug.c of the component Crash Report. The manipulation leads to denial of service. The real existence of this vulnerability is still doubted at the moment. The name of the patch is 0bf90d944313919eb8e63d3588bf63a367f020a3. It is recommended to apply a patch to fix this issue. VDB-211962 is the identifier assigned to this vulnerability. NOTE: The vendor claims that this is not a DoS because it applies to the crash logging mechanism which is triggered after a crash has occurred."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2022-3734"</td>
+      <td>"Critical"</td>
+      <td>"** DISPUTED ** A vulnerability was found in a port or fork of Redis. It has been declared as critical. This vulnerability affects unknown code in the library C:/Program Files/Redis/dbghelp.dll. The manipulation leads to uncontrolled search path. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The real existence of this vulnerability is still doubted at the moment. The identifier of this vulnerability is VDB-212416. NOTE: The official Redis release is not affected. This issue might affect an unofficial fork or port on Windows only."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"zlib"</td>
+      <td>"1.2.8-r2"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-37434"</td>
+      <td>"Critical"</td>
+      <td>"zlib through 1.2.12 has a heap-based buffer over-read or buffer overflow in inflate in inflate.c via a large gzip header extra field. NOTE: only applications that call inflateGetHeader are affected. Some common applications bundle the affected zlib source code but may be unable to call inflateGetHeader (e.g., see the nodejs/node reference)."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-4304"</td>
+      <td>"Medium"</td>
+      <td>"A timing based side channel exists in the OpenSSL RSA Decryption implementation which could be sufficient to recover a plaintext across a network in a Bleichenbacher style attack. To achieve a successful decryption an attacker would have to be able to send a very large number of trial messages for decryption. The vulnerability affects all RSA padding modes: PKCS#1 v1.5, RSA-OEAP and RSASVE. For example, in a TLS connection, RSA is commonly used by a client to send an encrypted pre-master secret to the server. An attacker that had observed a genuine connection between a client and a server could use this flaw to send trial messages to the server and record the time taken to process them. After a sufficiently large number of messages the attacker could recover the pre-master secret used for the original connection and thus be able to decrypt the application data sent over that connection."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2022-4304"</td>
+      <td>"Medium"</td>
+      <td>"A timing based side channel exists in the OpenSSL RSA Decryption implementation which could be sufficient to recover a plaintext across a network in a Bleichenbacher style attack. To achieve a successful decryption an attacker would have to be able to send a very large number of trial messages for decryption. The vulnerability affects all RSA padding modes: PKCS#1 v1.5, RSA-OEAP and RSASVE. For example, in a TLS connection, RSA is commonly used by a client to send an encrypted pre-master secret to the server. An attacker that had observed a genuine connection between a client and a server could use this flaw to send trial messages to the server and record the time taken to process them. After a sufficiently large number of messages the attacker could recover the pre-master secret used for the original connection and thus be able to decrypt the application data sent over that connection."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0215"</td>
+      <td>"High"</td>
+      <td>"The public API function BIO_new_NDEF is a helper function used for streaming ASN.1 data via a BIO. It is primarily used internally to OpenSSL to support the SMIME, CMS and PKCS7 streaming capabilities, but may also be called directly by end user applications. The function receives a BIO from the caller, prepends a new BIO_f_asn1 filter BIO onto the front of it to form a BIO chain, and then returns the new head of the BIO chain to the caller. Under certain conditions, for example if a CMS recipient public key is invalid, the new filter BIO is freed and the function returns a NULL result indicating a failure. However, in this case, the BIO chain is not properly cleaned up and the BIO passed by the caller still retains internal pointers to the previously freed filter BIO. If the caller then goes on to call BIO_pop() on the BIO then a use-after-free will occur. This will most likely result in a crash. This scenario occurs directly in the internal function B64_write_ASN1() which may cause BIO_new_NDEF() to be called and will subsequently call BIO_pop() on the BIO. This internal function is in turn called by the public API functions PEM_write_bio_ASN1_stream, PEM_write_bio_CMS_stream, PEM_write_bio_PKCS7_stream, SMIME_write_ASN1, SMIME_write_CMS and SMIME_write_PKCS7. Other public API functions that may be impacted by this include i2d_ASN1_bio_stream, BIO_new_CMS, BIO_new_PKCS7, i2d_CMS_bio_stream and i2d_PKCS7_bio_stream. The OpenSSL cms and smime command line applications are similarly affected."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0215"</td>
+      <td>"High"</td>
+      <td>"The public API function BIO_new_NDEF is a helper function used for streaming ASN.1 data via a BIO. It is primarily used internally to OpenSSL to support the SMIME, CMS and PKCS7 streaming capabilities, but may also be called directly by end user applications. The function receives a BIO from the caller, prepends a new BIO_f_asn1 filter BIO onto the front of it to form a BIO chain, and then returns the new head of the BIO chain to the caller. Under certain conditions, for example if a CMS recipient public key is invalid, the new filter BIO is freed and the function returns a NULL result indicating a failure. However, in this case, the BIO chain is not properly cleaned up and the BIO passed by the caller still retains internal pointers to the previously freed filter BIO. If the caller then goes on to call BIO_pop() on the BIO then a use-after-free will occur. This will most likely result in a crash. This scenario occurs directly in the internal function B64_write_ASN1() which may cause BIO_new_NDEF() to be called and will subsequently call BIO_pop() on the BIO. This internal function is in turn called by the public API functions PEM_write_bio_ASN1_stream, PEM_write_bio_CMS_stream, PEM_write_bio_PKCS7_stream, SMIME_write_ASN1, SMIME_write_CMS and SMIME_write_PKCS7. Other public API functions that may be impacted by this include i2d_ASN1_bio_stream, BIO_new_CMS, BIO_new_PKCS7, i2d_CMS_bio_stream and i2d_PKCS7_bio_stream. The OpenSSL cms and smime command line applications are similarly affected."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0286"</td>
+      <td>"High"</td>
+      <td>"There is a type confusion vulnerability relating to X.400 address processing inside an X.509 GeneralName. X.400 addresses were parsed as an ASN1_STRING but the public structure definition for GENERAL_NAME incorrectly specified the type of the x400Address field as ASN1_TYPE. This field is subsequently interpreted by the OpenSSL function GENERAL_NAME_cmp as an ASN1_TYPE rather than an ASN1_STRING. When CRL checking is enabled (i.e. the application sets the X509_V_FLAG_CRL_CHECK flag), this vulnerability may allow an attacker to pass arbitrary pointers to a memcmp call, enabling them to read memory contents or enact a denial of service. In most cases, the attack requires the attacker to provide both the certificate chain and CRL, neither of which need to have a valid signature. If the attacker only controls one of these inputs, the other input must already contain an X.400 address as a CRL distribution point, which is uncommon. As such, this vulnerability is most likely to only affect applications which have implemented their own functionality for retrieving CRLs over a network."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0286"</td>
+      <td>"High"</td>
+      <td>"There is a type confusion vulnerability relating to X.400 address processing inside an X.509 GeneralName. X.400 addresses were parsed as an ASN1_STRING but the public structure definition for GENERAL_NAME incorrectly specified the type of the x400Address field as ASN1_TYPE. This field is subsequently interpreted by the OpenSSL function GENERAL_NAME_cmp as an ASN1_TYPE rather than an ASN1_STRING. When CRL checking is enabled (i.e. the application sets the X509_V_FLAG_CRL_CHECK flag), this vulnerability may allow an attacker to pass arbitrary pointers to a memcmp call, enabling them to read memory contents or enact a denial of service. In most cases, the attack requires the attacker to provide both the certificate chain and CRL, neither of which need to have a valid signature. If the attacker only controls one of these inputs, the other input must already contain an X.400 address as a CRL distribution point, which is uncommon. As such, this vulnerability is most likely to only affect applications which have implemented their own functionality for retrieving CRLs over a network."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0464"</td>
+      <td>"High"</td>
+      <td>"A security vulnerability has been identified in all supported versions of OpenSSL related to the verification of X.509 certificate chains that include policy constraints. Attackers may be able to exploit this vulnerability by creating a malicious certificate chain that triggers exponential use of computational resources, leading to a denial-of-service (DoS) attack on affected systems. Policy processing is disabled by default but can be enabled by passing the `-policy' argument to the command line utilities or by calling the `X509_VERIFY_PARAM_set1_policies()' function."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0464"</td>
+      <td>"High"</td>
+      <td>"A security vulnerability has been identified in all supported versions of OpenSSL related to the verification of X.509 certificate chains that include policy constraints. Attackers may be able to exploit this vulnerability by creating a malicious certificate chain that triggers exponential use of computational resources, leading to a denial-of-service (DoS) attack on affected systems. Policy processing is disabled by default but can be enabled by passing the `-policy' argument to the command line utilities or by calling the `X509_VERIFY_PARAM_set1_policies()' function."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0465"</td>
+      <td>"Medium"</td>
+      <td>"Applications that use a non-default option when verifying certificates may be vulnerable to an attack from a malicious CA to circumvent certain checks. Invalid certificate policies in leaf certificates are silently ignored by OpenSSL and other certificate policy checks are skipped for that certificate. A malicious CA could use this to deliberately assert invalid certificate policies in order to circumvent policy checking on the certificate altogether. Policy processing is disabled by default but can be enabled by passing the `-policy' argument to the command line utilities or by calling the `X509_VERIFY_PARAM_set1_policies()' function."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0465"</td>
+      <td>"Medium"</td>
+      <td>"Applications that use a non-default option when verifying certificates may be vulnerable to an attack from a malicious CA to circumvent certain checks. Invalid certificate policies in leaf certificates are silently ignored by OpenSSL and other certificate policy checks are skipped for that certificate. A malicious CA could use this to deliberately assert invalid certificate policies in order to circumvent policy checking on the certificate altogether. Policy processing is disabled by default but can be enabled by passing the `-policy' argument to the command line utilities or by calling the `X509_VERIFY_PARAM_set1_policies()' function."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libcrypto1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0466"</td>
+      <td>"Medium"</td>
+      <td>"The function X509_VERIFY_PARAM_add0_policy() is documented to implicitly enable the certificate policy check when doing certificate verification. However the implementation of the function does not enable the check which allows certificates with invalid or incorrect policies to pass the certificate verification. As suddenly enabling the policy check could break existing deployments it was decided to keep the existing behavior of the X509_VERIFY_PARAM_add0_policy() function. Instead the applications that require OpenSSL to perform certificate policy check need to use X509_VERIFY_PARAM_set1_policies() or explicitly enable the policy check by calling X509_VERIFY_PARAM_set_flags() with the X509_V_FLAG_POLICY_CHECK flag argument. Certificate policy checks are disabled by default in OpenSSL and are not commonly used by applications."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"libssl1.0"</td>
+      <td>"1.0.2e-r0"</td>
+      <td>"apk"</td>
+      <td>"CVE-2023-0466"</td>
+      <td>"Medium"</td>
+      <td>"The function X509_VERIFY_PARAM_add0_policy() is documented to implicitly enable the certificate policy check when doing certificate verification. However the implementation of the function does not enable the check which allows certificates with invalid or incorrect policies to pass the certificate verification. As suddenly enabling the policy check could break existing deployments it was decided to keep the existing behavior of the X509_VERIFY_PARAM_add0_policy() function. Instead the applications that require OpenSSL to perform certificate policy check need to use X509_VERIFY_PARAM_set1_policies() or explicitly enable the policy check by calling X509_VERIFY_PARAM_set_flags() with the X509_V_FLAG_POLICY_CHECK flag argument. Certificate policy checks are disabled by default in OpenSSL and are not commonly used by applications."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+    <tr>
+      <td>"redis"</td>
+      <td>"3.0.6"</td>
+      <td>"binary"</td>
+      <td>"CVE-2023-25155"</td>
+      <td>"Medium"</td>
+      <td>"Redis is an in-memory database that persists on disk. Authenticated users issuing specially crafted `SRANDMEMBER`, `ZRANDMEMBER`, and `HRANDFIELD` commands can trigger an integer overflow, resulting in a runtime assertion and termination of the Redis server process. This problem affects all Redis versions. Patches were released in Redis version(s) 6.0.18, 6.2.11 and 7.0.9."</td>
+      <td>"unknown"</td>
+      <td>"[]"</td>
+    </tr>
+  </table>
+</body>
+
+</html>
