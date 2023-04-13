@@ -4,7 +4,10 @@ I have performed a POC of vulnerability scan on 30+ Docker images using Trivy (d
 
 ##### _This is not a how-to doc , but I will share the bash commands & my history file_
 
-Trivy scans have been completed and the reports are available in the [Trivy folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/trivy-reports).
+Trivy scans have been completed - [Trivy reports folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/trivy-reports)
+
+
+Grype scans have been completed -  [Grype reports folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/grype-reports)
 
 ##### I will also be adding scans of SBOMs ######
 
