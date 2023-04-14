@@ -7,7 +7,7 @@ I have done Vunerability scans of 30+ Docker images using Trivy & Grype (Anchore
 Trivy scans reports [Trivy reports folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/trivy-reports)
 
 Grype scans reports & _template file html.tmpl_ [Grype reports folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/grype-reports)
-
+Syft reports - software bill of materials (SBOM) [Grype reports folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/syft-reports)
 
 #### below are the commands I have used to bulk process all images available on local host (Grype, Syft , sfyt with output cycloned-json, trivy default
 ```
@@ -36,7 +36,7 @@ Below are some of the pointers
 
 
 
-##### I will also be adding scans of SBOMs ######
+
 
 (Software Bill of Materials) soon. SBOMs are important for vulnerability and patch management of Docker images as they provide transparency into the software supply chain and enable better identification of vulnerabilities and dependencies. With a complete SBOM for a Docker image, it becomes easier to track and manage dependencies, identify potential vulnerabilities, prioritize and patch vulnerabilities, as well as identify alternative components or versions that may be less susceptible to attack. 
 
