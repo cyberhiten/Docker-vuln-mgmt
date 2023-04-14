@@ -4,11 +4,9 @@ I have done Vunerability scans of 30+ Docker images using Trivy & Grype (Anchore
 
 ##### _This is not a how-to doc , but I will share the bash commands & my history file_
 
-Trivy scans reports [Trivy reports](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/trivy-reports)
-
-Grype scans reports & _template file html.tmpl_ [Grype reports](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/grype-reports)
-
-Syft reports - software bill of materials (SBOM) [syft reports](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/syft-reports)
+* Trivy scans reports [Trivy reports](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/trivy-reports)
+* Grype scans reports & _template file html.tmpl_ [Grype reports](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/grype-reports)
+* Syft reports - software bill of materials (SBOM) [syft reports](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/syft-reports)
 
 #### below are the commands I have used to bulk process all images available on local host (Grype, Syft , sfyt with output cycloned-json, trivy default
 ```
