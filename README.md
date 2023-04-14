@@ -1,6 +1,6 @@
-## Docker vulnerability management using OSS tools 
+## Docker vulnerability management  & SBOM using OSS tools 
 
-I have done Vunerability scans of 30+ Docker images using Trivy & Grype (Anchore CLI earlier) . My current goal is to perform similar scans using various OSS tools like Trivy, Anchore, Clair among others. 
+I have done Vunerability scans of 30+ Docker images using Trivy & Grype (Anchore CLI earlier) . My current goal is to perform similar scans using various OSS tools like Trivy, Grype & syft for SBOM
 
 ##### _This is not a how-to doc , but I will share the bash commands & my history file_
 
