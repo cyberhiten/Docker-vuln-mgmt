@@ -9,7 +9,7 @@ Trivy scans reports [Trivy reports folder](https://github.com/cyberhiten/Docker-
 Grype scans reports & _template file html.tmpl_ [Grype reports folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/grype-reports)
 
 
-#### below are the commands I have used to bulk process all images available on local host (Grype, Syft , sfyt with output cycloned-json, trivy default, history to save formatted history
+#### below are the commands I have used to bulk process all images available on local host (Grype, Syft , sfyt with output cycloned-json, trivy default
 ```
 ###############grype command default table output
 $ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype ${image} -o template -t html.tmpl  >  "${image}.html" ; done
@@ -24,8 +24,6 @@ $ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "lo
 done
  ############ trivy command 
  $ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo trivy image -f table -o "${image}.txt" $image; done 
- history command 
- $ history | cut -c 8- | sed -e 's/^/$ /' -e '$a\ ' | awk '!a[$0]++' | grep -i grype  >> history222.txt
 ```
 
 #### Resolving docker vulnerabilities 
