@@ -9,11 +9,23 @@ Trivy scans reports [Trivy reports folder](https://github.com/cyberhiten/Docker-
 Grype scans reports & _template file html.tmpl_ [Grype reports folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/grype-reports)
 
 
-#### below are the commands I have used to bulk process grype for all images available on local host 
+#### below are the commands I have used to bulk process all images available on local host (Grype, Syft , sfyt with output cycloned-json, trivy default, history to save formatted history
 ```
+###############grype command default table output
 $ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype ${image} -o template -t html.tmpl  >  "${image}.html" ; done
-$ docker images > docker_images.txt
-$ history | cut -c 8- | sed -e 's/^/$ /' -e '$a\ ' | awk '!a[$0]++' | grep -i grype  >> history222.txt
+
+##########syft command run for bulk scanning of all images hosted on localhost , default output 
+$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do
+    syft packages "$image" -o table > "${image//:/_}.txt"
+done
+##########sfyt command run for bulk scanning of all images hosted on localhost output cycloned-json 
+$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do
+    syft packages "$image" -o cyclonedx-json  > "${image//:/_}.cyclonedx-json"
+done
+ ############ trivy command 
+ $ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo trivy image -f table -o "${image}.txt" $image; done 
+ history command 
+ $ history | cut -c 8- | sed -e 's/^/$ /' -e '$a\ ' | awk '!a[$0]++' | grep -i grype  >> history222.txt
 ```
 
 #### Resolving docker vulnerabilities 
