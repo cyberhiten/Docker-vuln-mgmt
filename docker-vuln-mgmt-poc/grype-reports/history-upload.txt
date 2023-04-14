@@ -1,8 +1,0 @@
-
-
-$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype image -v  -o  table "${image}.txt" $image; done
-$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype -v  -o  table "${image}.txt" $image; done
-$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype -o  table "${image}.txt" $image; done
-$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype  "${image}.txt" $image; done\n
-$ history |grep grype 
-$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype ${image} -o template -t html.tmpl  >  "${image}.html" ; done
