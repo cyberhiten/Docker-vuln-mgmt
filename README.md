@@ -1,24 +1,27 @@
 ## Docker vulnerability management using OSS tools 
 
-I have done Vunerability scan of 30+ Docker images using Trivy & Grype (Anchore CLI earlier) . My current goal is to perform similar scans using various OSS tools like Trivy, Anchore, Clair among others. 
+I have done Vunerability scans of 30+ Docker images using Trivy & Grype (Anchore CLI earlier) . My current goal is to perform similar scans using various OSS tools like Trivy, Anchore, Clair among others. 
 
 ##### _This is not a how-to doc , but I will share the bash commands & my history file_
 
 Trivy scans reports [Trivy reports folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/trivy-reports)
-
-
 Grype scans reports & _template file html.tmpl_ [Grype reports folder](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/grype-reports)
+
 
 #### below are the commands I have used to bulk process grype for all images available on local host 
 ```
 $ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do sudo grype ${image} -o template -t html.tmpl  >  "${image}.html" ; done
-
 $ docker images > docker_images.txt
-
 $ history | cut -c 8- | sed -e 's/^/$ /' -e '$a\ ' | awk '!a[$0]++' | grep -i grype  >> history222.txt
 ```
 
+#### Resolving docker vulnerabilities 
+Fixing docker vulnerabilities depends more on re-building and using newer images (considering the fact - docker is immutable by design)
+So the legacy VM processes we have for hosts does not work for docker images, the process have to be defined from goundsup, in most cases its easier to go in enforce mode , where older builds are taken offline 
+Below are some of the pointers 
 
+* Check if older images can be removed / locked from being used for new projects 
+* Ensure newer builds are available for core software (python, java, node, nginx , apache etc)
 
 
 
