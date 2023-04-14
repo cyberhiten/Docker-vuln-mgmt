@@ -35,10 +35,6 @@ Below are some of the pointers
 * Check if older images can be removed / locked from being used for new projects 
 * Ensure newer builds are available for core software (python, java, node, nginx , apache etc)
 
-
-
-
-
 (Software Bill of Materials) soon. SBOMs are important for vulnerability and patch management of Docker images as they provide transparency into the software supply chain and enable better identification of vulnerabilities and dependencies. With a complete SBOM for a Docker image, it becomes easier to track and manage dependencies, identify potential vulnerabilities, prioritize and patch vulnerabilities, as well as identify alternative components or versions that may be less susceptible to attack. 
 
 SBOMs also help ensure compliance with regulatory requirements and security best practices, such as the NIST Cybersecurity Framework, which emphasizes the importance of supply chain risk management. In the context of Docker images, which can be composed of many different layers and components, a complete SBOM can be especially useful for vulnerability and patch management. By knowing exactly what is included in a Docker image, developers and security professionals can make informed decisions about how to secure and maintain it. This can ultimately help reduce the risk of security incidents and ensure the ongoing security of the software supply chain.
