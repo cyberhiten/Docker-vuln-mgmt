@@ -1,0 +1,14 @@
+NAME               VERSION    TYPE   
+alpine-baselayout  2.3.2-r10  apk     
+alpine-keys        1.1-r0     apk     
+apk-tools          2.6.5-r1   apk     
+busybox            1.24.1     binary  
+busybox            1.24.1-r7  apk     
+libc-utils         0.7-r0     apk     
+libcrypto1.0       1.0.2e-r0  apk     
+libssl1.0          1.0.2e-r0  apk     
+musl               1.1.12-r1  apk     
+musl-utils         1.1.12-r1  apk     
+redis              3.0.6      binary  
+scanelf            0.9.1-r0   apk     
+zlib               1.2.8-r2   apk     

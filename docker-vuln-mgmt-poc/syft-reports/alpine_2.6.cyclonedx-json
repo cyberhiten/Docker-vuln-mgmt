@@ -1,0 +1,1275 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:f0161e48-8f35-4b48-9d2e-f767dd8743df",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-04-14T21:31:29+05:30",
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft",
+        "version": "0.77.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "7f98172fca5ff1c4",
+      "type": "container",
+      "name": "alpine:2.6",
+      "version": "sha256:f9825ad28f7a7f7d8bebf91ac68899680ee761b320099212e8af41b30a39b8d4"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:apk/busybox/alpine-base@2.6.6-r0?arch=x86_64&distro=busybox-1.21.1&package-id=d0760c1091a94f2d",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "alpine-base",
+      "version": "2.6.6-r0",
+      "description": "Meta package for minimal alpine base",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:alpine-base:alpine-base:2.6.6-r0:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/alpine-base@2.6.6-r0?arch=x86_64&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://alpinelinux.org",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine-base:alpine_base:2.6.6-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine_base:alpine-base:2.6.6-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine_base:alpine_base:2.6.6-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine:alpine-base:2.6.6-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine:alpine_base:2.6.6-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "ad978e80016abec277bb0a11c7de41bd16334b8e"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "16384"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "alpine-base"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1hTtC3hjj43RyIAatETCjnQV7F30="
+        },
+        {
+          "name": "syft:metadata:pullDependencies:0",
+          "value": "alpine-baselayout"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:1",
+          "value": "alpine-conf"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:2",
+          "value": "apk-tools"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:3",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:4",
+          "value": "busybox-initscripts"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:5",
+          "value": "openrc"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:6",
+          "value": "libc-utils"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:7",
+          "value": "alpine-keys"
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "1203"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/alpine-baselayout@2.2.0-r6?arch=x86_64&distro=busybox-1.21.1&package-id=5978ed2fa633035c",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "alpine-baselayout",
+      "version": "2.2.0-r6",
+      "description": "Alpine base dir structure and init scripts",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:alpine-baselayout:alpine-baselayout:2.2.0-r6:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/alpine-baselayout@2.2.0-r6?arch=x86_64&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://git.alpinelinux.org/cgit/alpine-baselayout",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine-baselayout:alpine_baselayout:2.2.0-r6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine_baselayout:alpine-baselayout:2.2.0-r6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine_baselayout:alpine_baselayout:2.2.0-r6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine:alpine-baselayout:2.2.0-r6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine:alpine_baselayout:2.2.0-r6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "8b2da88e8e533e78dfec86f9d1ed4e5cadfa4ca8"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "364544"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "alpine-baselayout"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1/t9VsD185aBCfyu/PhzcWmdCJEM="
+        },
+        {
+          "name": "syft:metadata:pullDependencies:0",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:1",
+          "value": "so:libc.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "22964"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/alpine-conf@2.12.0-r6?arch=x86_64&distro=busybox-1.21.1&package-id=8716a040baf7d088",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "alpine-conf",
+      "version": "2.12.0-r6",
+      "description": "Alpine configuration management scripts",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:alpine-conf:alpine-conf:2.12.0-r6:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/alpine-conf@2.12.0-r6?arch=x86_64&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://git.alpinelinux.org/cgit/alpine-conf",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine-conf:alpine_conf:2.12.0-r6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine_conf:alpine-conf:2.12.0-r6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine_conf:alpine_conf:2.12.0-r6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine:alpine-conf:2.12.0-r6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine:alpine_conf:2.12.0-r6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "909606ff2be492d24dbaa11e5d440ffcd7af1df9"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "192512"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "alpine-conf"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1Fx0MMfUwYduRz6qevpUznWEExkQ="
+        },
+        {
+          "name": "syft:metadata:pullDependencies:0",
+          "value": "openrc"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:1",
+          "value": "so:libc.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "37942"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/alpine-keys@1.0-r0?arch=x86_64&distro=busybox-1.21.1&package-id=c1d012c04f509adb",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "alpine-keys",
+      "version": "1.0-r0",
+      "description": "Public keys for Alpine Linux packages",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:alpine-keys:alpine-keys:1.0-r0:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/alpine-keys@1.0-r0?arch=x86_64&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://alpinelinux.org",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine-keys:alpine_keys:1.0-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine_keys:alpine-keys:1.0-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine_keys:alpine_keys:1.0-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine:alpine-keys:1.0-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:alpine:alpine_keys:1.0-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "903786409f6268bcbad60a1dc97da8ae6bb1fb40"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "24576"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "alpine-keys"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1ArbHXlz3nqNvw9agmLO6Cpe1Dog="
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "1800"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/apk-tools@2.4.0-r1?arch=x86_64&distro=busybox-1.21.1&package-id=bdf2603dcfb83fab",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "apk-tools",
+      "version": "2.4.0-r1",
+      "description": "Alpine Package Keeper - package manager for alpine",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:apk-tools:apk-tools:2.4.0-r1:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/apk-tools@2.4.0-r1?arch=x86_64&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://git.alpinelinux.org/cgit/apk-tools/",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apk-tools:apk_tools:2.4.0-r1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apk_tools:apk-tools:2.4.0-r1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apk_tools:apk_tools:2.4.0-r1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apk:apk-tools:2.4.0-r1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apk:apk_tools:2.4.0-r1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "0dd5628d31b3fa085e1fdc5fa73a69ecf6585df0"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "200704"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "apk-tools"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1RrJ62aTYQb4ksjXA/R0I8ZfyKlU="
+        },
+        {
+          "name": "syft:metadata:pullDependencies:0",
+          "value": "so:libc.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:1",
+          "value": "so:libcrypto.so.1.0.0"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:2",
+          "value": "so:libz.so.1"
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "70487"
+        }
+      ]
+    },
+    {
+      "bom-ref": "256b3540f19b1dcf",
+      "type": "application",
+      "name": "busybox",
+      "version": "1.21.1",
+      "cpe": "cpe:2.3:a:busybox:busybox:1.21.1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "binary-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "BinaryMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "binary"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:busybox:busybox:1.21.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin/busybox"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/busybox@1.21.1-r2?arch=x86_64&distro=busybox-1.21.1&package-id=620dc4015ca7b79d",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "busybox",
+      "version": "1.21.1-r2",
+      "description": "Size optimized toolbox of many common UNIX utilities",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:busybox:busybox:1.21.1-r2:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/busybox@1.21.1-r2?arch=x86_64&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://busybox.net",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "623c0906aa469523f04146e10b8ad7ab8cdc35f2"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "925696"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1ss1QevKkpBLkk9igt602ceRInyY="
+        },
+        {
+          "name": "syft:metadata:pullDependencies:0",
+          "value": "so:libc.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:1",
+          "value": "so:libcrypt.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:2",
+          "value": "so:libm.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "480392"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/busybox-initscripts@2.2-r15?arch=x86_64&distro=busybox-1.21.1&package-id=d64d686edd33b602",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "busybox-initscripts",
+      "version": "2.2-r15",
+      "description": "Init scripts for busybox daemons",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:busybox-initscripts:busybox-initscripts:2.2-r15:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/busybox-initscripts@2.2-r15?arch=x86_64&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://git.alpinelinux.org/cgit/aports/tree/core/busybox-initscripts",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:busybox-initscripts:busybox_initscripts:2.2-r15:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:busybox_initscripts:busybox-initscripts:2.2-r15:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:busybox_initscripts:busybox_initscripts:2.2-r15:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:busybox:busybox-initscripts:2.2-r15:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:busybox:busybox_initscripts:2.2-r15:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "9169f49c9770b5ae9c405240826c4874f4dca5e3"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "143360"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "busybox-initscripts"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1nroQt8g529LZV0hZjbPIjmN60Q4="
+        },
+        {
+          "name": "syft:metadata:pullDependencies:0",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:1",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "7013"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/libc@0.9.33.2-r22?arch=x86_64&upstream=libc0.9.32&distro=busybox-1.21.1&package-id=bc41bec957a9f5c",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "libc",
+      "version": "0.9.33.2-r22",
+      "description": "uClibc standard C libraries",
+      "licenses": [
+        {
+          "license": {
+            "id": "LGPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libc:libc:0.9.33.2-r22:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/libc@0.9.33.2-r22?arch=x86_64&upstream=libc0.9.32&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://uclibc.org",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "5a5016a597c2d8932dc8153eb6415390dd1b1c4e"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "655360"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "libc0.9.32"
+        },
+        {
+          "name": "syft:metadata:provides:0",
+          "value": "so:ld64-uClibc.so.0.9.32=0"
+        },
+        {
+          "name": "syft:metadata:provides:1",
+          "value": "so:libc.so.0.9.32=0"
+        },
+        {
+          "name": "syft:metadata:provides:2",
+          "value": "so:libcrypt.so.0.9.32=0"
+        },
+        {
+          "name": "syft:metadata:provides:3",
+          "value": "so:libdl.so.0.9.32=0"
+        },
+        {
+          "name": "syft:metadata:provides:4",
+          "value": "so:libm.so.0.9.32=0"
+        },
+        {
+          "name": "syft:metadata:provides:5",
+          "value": "so:libresolv.so.0.9.32=0"
+        },
+        {
+          "name": "syft:metadata:provides:6",
+          "value": "so:libubacktrace.so.0.9.32=0"
+        },
+        {
+          "name": "syft:metadata:provides:7",
+          "value": "so:libutil.so.0.9.32=0"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1qYKghR2e30vUbQ1DKV0J9HHzALY="
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "293265"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/libc-utils@0.1-r0?arch=x86_64&upstream=libc&distro=busybox-1.21.1&package-id=f976325d1cafdef5",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "libc-utils",
+      "version": "0.1-r0",
+      "description": "Meta package to pull in correct libc",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libc-utils:libc-utils:0.1-r0:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/libc-utils@0.1-r0?arch=x86_64&upstream=libc&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://alpinelinux.org",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libc-utils:libc_utils:0.1-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libc_utils:libc-utils:0.1-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libc_utils:libc_utils:0.1-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libc:libc-utils:0.1-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libc:libc_utils:0.1-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "e4082d2b009e77637a1500344cf3cea6826456a3"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "4096"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "libc"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1w7KG5f3pdmbg04I8vPwMjhuqNc8="
+        },
+        {
+          "name": "syft:metadata:pullDependencies:0",
+          "value": "uclibc-utils"
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "1000"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/libcrypto1.0@1.0.1m-r0?arch=x86_64&upstream=openssl&distro=busybox-1.21.1&package-id=4a30e802420ed2cc",
+      "type": "library",
+      "publisher": "Timo Teras <timo.teras@iki.fi>",
+      "name": "libcrypto1.0",
+      "version": "1.0.1m-r0",
+      "description": "Crypto library from openssl",
+      "licenses": [
+        {
+          "license": {
+            "id": "OpenSSL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libcrypto1.0:libcrypto1.0:1.0.1m-r0:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/libcrypto1.0@1.0.1m-r0?arch=x86_64&upstream=openssl&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://openssl.org",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libcrypto1.0:libcrypto:1.0.1m-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libcrypto:libcrypto1.0:1.0.1m-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libcrypto:libcrypto:1.0.1m-r0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "87d2e400facc8da0681a7872a67de56bccd50c6c"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "2203648"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "openssl"
+        },
+        {
+          "name": "syft:metadata:provides:0",
+          "value": "so:libcrypto.so.1.0.0=1.0.0"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1mZiVzi8DIPd39jtdqQMzazUvgAY="
+        },
+        {
+          "name": "syft:metadata:pullDependencies:0",
+          "value": "so:libc.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:1",
+          "value": "so:libdl.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:2",
+          "value": "so:libz.so.1"
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "803216"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/openrc@0.11.8-r0?arch=x86_64&distro=busybox-1.21.1&package-id=8a47e7aa2540d736",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "openrc",
+      "version": "0.11.8-r0",
+      "description": "OpenRC manages the services, startup and shutdown of a host",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:openrc:openrc:0.11.8-r0:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/openrc@0.11.8-r0?arch=x86_64&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://git.overlays.gentoo.org/gitweb/?p=proj/openrc.git",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "a6f592662cdbe1a3c88187ed6c5f58bf17a94a92"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "552960"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "openrc"
+        },
+        {
+          "name": "syft:metadata:provides:0",
+          "value": "so:libeinfo.so.1=1"
+        },
+        {
+          "name": "syft:metadata:provides:1",
+          "value": "so:librc.so.1=1"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1QeDzKtNl0ivgPCAUlx11cmfd7xc="
+        },
+        {
+          "name": "syft:metadata:pullDependencies:0",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:1",
+          "value": "so:libc.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:2",
+          "value": "so:libdl.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:3",
+          "value": "so:libutil.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "113955"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/uclibc-utils@0.9.33.2-r22?arch=x86_64&upstream=libc0.9.32&distro=busybox-1.21.1&package-id=71c456d2545ba7fc",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "uclibc-utils",
+      "version": "0.9.33.2-r22",
+      "description": "uClibc utility programs",
+      "licenses": [
+        {
+          "license": {
+            "id": "LGPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:uclibc-utils:uclibc-utils:0.9.33.2-r22:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/uclibc-utils@0.9.33.2-r22?arch=x86_64&upstream=libc0.9.32&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://uclibc.org",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:uclibc-utils:uclibc_utils:0.9.33.2-r22:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:uclibc_utils:uclibc-utils:0.9.33.2-r22:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:uclibc_utils:uclibc_utils:0.9.33.2-r22:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:uclibc:uclibc-utils:0.9.33.2-r22:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:uclibc:uclibc_utils:0.9.33.2-r22:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "5a5016a597c2d8932dc8153eb6415390dd1b1c4e"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "167936"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "libc0.9.32"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1XVjHQGK6QpV3f2xxCcFJImtvQhc="
+        },
+        {
+          "name": "syft:metadata:pullDependencies:0",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:metadata:pullDependencies:1",
+          "value": "so:libc.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "63933"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/busybox/zlib@1.2.8-r0?arch=x86_64&distro=busybox-1.21.1&package-id=b75966105d9351d",
+      "type": "library",
+      "publisher": "Natanael Copa <ncopa@alpinelinux.org>",
+      "name": "zlib",
+      "version": "1.2.8-r0",
+      "description": "A compression/decompression Library",
+      "licenses": [
+        {
+          "license": {
+            "name": "custom:zlib"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:zlib:zlib:1.2.8-r0:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/busybox/zlib@1.2.8-r0?arch=x86_64&distro=busybox-1.21.1",
+      "externalReferences": [
+        {
+          "url": "http://zlib.net",
+          "type": "distribution"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "apkdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "ApkMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "apk"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:27febb3ceff77486349658d0c6f1c00bc9459f39ea41dfc14fd42a37895a4e87"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/lib/apk/db/installed"
+        },
+        {
+          "name": "syft:metadata:gitCommitOfApkPort",
+          "value": "96546dc07fe34af6eb2faf1e7b9a4fb33a0a6dd0"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "102400"
+        },
+        {
+          "name": "syft:metadata:originPackage",
+          "value": "zlib"
+        },
+        {
+          "name": "syft:metadata:provides:0",
+          "value": "so:libz.so.1=1.2.8"
+        },
+        {
+          "name": "syft:metadata:pullChecksum",
+          "value": "Q1Lpm6ELql2IQMFndAn6Q+KJ3+m8w="
+        },
+        {
+          "name": "syft:metadata:pullDependencies:0",
+          "value": "so:libc.so.0.9.32"
+        },
+        {
+          "name": "syft:metadata:size",
+          "value": "48950"
+        }
+      ]
+    },
+    {
+      "type": "operating-system",
+      "name": "busybox",
+      "version": "1.21.1",
+      "description": "BusyBox v1.21.1",
+      "swid": {
+        "tagId": "busybox",
+        "name": "busybox",
+        "version": "1.21.1"
+      },
+      "properties": [
+        {
+          "name": "syft:distro:id",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:distro:idLike:0",
+          "value": "busybox"
+        },
+        {
+          "name": "syft:distro:prettyName",
+          "value": "BusyBox v1.21.1"
+        },
+        {
+          "name": "syft:distro:versionID",
+          "value": "1.21.1"
+        }
+      ]
+    }
+  ]
+}

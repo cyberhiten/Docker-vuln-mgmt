@@ -1,0 +1,23 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:7b68d860-4fea-4a45-a812-60b0104cf208",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-04-14T21:30:32+05:30",
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft",
+        "version": "0.77.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "34ceac8c201f5a71",
+      "type": "container",
+      "name": "hello-world:latest",
+      "version": "sha256:03a75d703fcd471cc09ed0dfffde55b74d95598343411e7fa3bcebc18d91bb8b"
+    }
+  },
+  "components": []
+}

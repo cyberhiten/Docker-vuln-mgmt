@@ -1,0 +1,15 @@
+NAME                 VERSION       TYPE   
+alpine-base          2.6.6-r0      apk     
+alpine-baselayout    2.2.0-r6      apk     
+alpine-conf          2.12.0-r6     apk     
+alpine-keys          1.0-r0        apk     
+apk-tools            2.4.0-r1      apk     
+busybox              1.21.1        binary  
+busybox              1.21.1-r2     apk     
+busybox-initscripts  2.2-r15       apk     
+libc                 0.9.33.2-r22  apk     
+libc-utils           0.1-r0        apk     
+libcrypto1.0         1.0.1m-r0     apk     
+openrc               0.11.8-r0     apk     
+uclibc-utils         0.9.33.2-r22  apk     
+zlib                 1.2.8-r0      apk     

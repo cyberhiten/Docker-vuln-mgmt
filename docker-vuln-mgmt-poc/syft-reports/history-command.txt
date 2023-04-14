@@ -1,0 +1,12 @@
+
+
+
+
+##########sfyt command run for bulk scanning of all images hosted on localhost 
+
+$ for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v "localhost:5000"); do
+    syft packages "$image" -o table > "${image//:/_}.txt"
+done
+
+
+

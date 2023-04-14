@@ -1,0 +1,5238 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:6bdcb5cc-2738-4574-b142-da0be82035e6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-04-14T21:31:28+05:30",
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft",
+        "version": "0.77.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "3ebc8f1db7fe0cbc",
+      "type": "container",
+      "name": "debian:6.0",
+      "version": "sha256:4b1a88b9ea05d944e74f01b7a48489550913a254441e6354ff06a4b55369cb15"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "c4aa11e4392c9e80",
+      "type": "library",
+      "publisher": "APT Development Team <deity@lists.debian.org>",
+      "name": "apt",
+      "version": "0.8.10.3+squeeze7",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "name": "GPLv2+"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:apt:apt:0.8.10.3\\+squeeze7:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/apt/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/apt.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/apt.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "6188"
+        }
+      ]
+    },
+    {
+      "bom-ref": "32d723bb691889ea",
+      "type": "library",
+      "publisher": "Santiago Vila <sanvila@debian.org>",
+      "name": "base-files",
+      "version": "6.0squeeze10",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:base-files:base-files:6.0squeeze10:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:base-files:base_files:6.0squeeze10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:base_files:base-files:6.0squeeze10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:base_files:base_files:6.0squeeze10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:base:base-files:6.0squeeze10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:base:base_files:6.0squeeze10:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/base-files/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/base-files.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/base-files.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "394"
+        }
+      ]
+    },
+    {
+      "bom-ref": "5d987d4b1fb1dfb",
+      "type": "library",
+      "publisher": "Colin Watson <cjwatson@debian.org>",
+      "name": "base-passwd",
+      "version": "3.5.22",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "name": "PD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:base-passwd:base-passwd:3.5.22:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:base-passwd:base_passwd:3.5.22:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:base_passwd:base-passwd:3.5.22:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:base_passwd:base_passwd:3.5.22:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:base:base-passwd:3.5.22:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:base:base_passwd:3.5.22:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/base-passwd/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/base-passwd.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "184"
+        }
+      ]
+    },
+    {
+      "bom-ref": "3d3d2fa7ec7b05",
+      "type": "library",
+      "publisher": "Matthias Klose <doko@debian.org>",
+      "name": "bash",
+      "version": "4.1-3+deb6u2",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:bash:bash:4.1-3\\+deb6u2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/bash/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/bash.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/bash.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "3592"
+        }
+      ]
+    },
+    {
+      "bom-ref": "903ed6f40cd1f268",
+      "type": "library",
+      "publisher": "LaMont Jones <lamont@debian.org>",
+      "name": "bsdutils",
+      "version": "1:2.17.2-9",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:bsdutils:bsdutils:1\\:2.17.2-9:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/bsdutils/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/bsdutils.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "200"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "util-linux"
+        },
+        {
+          "name": "syft:metadata:sourceVersion",
+          "value": "2.17.2-9"
+        }
+      ]
+    },
+    {
+      "bom-ref": "ada5788ffc66d14d",
+      "type": "library",
+      "publisher": "Michael Stone <mstone@debian.org>",
+      "name": "coreutils",
+      "version": "8.5-1",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:coreutils:coreutils:8.5-1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/coreutils/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/coreutils.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "13828"
+        }
+      ]
+    },
+    {
+      "bom-ref": "6d34737738321351",
+      "type": "library",
+      "publisher": "Gerrit Pape <pape@smarden.org>",
+      "name": "dash",
+      "version": "0.5.5.1-7.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:dash:dash:0.5.5.1-7.4:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/dash/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/dash.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "248"
+        }
+      ]
+    },
+    {
+      "bom-ref": "a4a0a0a1217a94d4",
+      "type": "library",
+      "publisher": "Debconf Developers <debconf-devel@lists.alioth.debian.org>",
+      "name": "debconf",
+      "version": "1.5.36.1",
+      "cpe": "cpe:2.3:a:debconf:debconf:1.5.36.1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/debconf/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/debconf.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/debconf.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1032"
+        }
+      ]
+    },
+    {
+      "bom-ref": "e4f0357247981851",
+      "type": "library",
+      "publisher": "Debconf Developers <debconf-devel@lists.alioth.debian.org>",
+      "name": "debconf-i18n",
+      "version": "1.5.36.1",
+      "cpe": "cpe:2.3:a:debconf-i18n:debconf-i18n:1.5.36.1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debconf-i18n:debconf_i18n:1.5.36.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debconf_i18n:debconf-i18n:1.5.36.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debconf_i18n:debconf_i18n:1.5.36.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debconf:debconf-i18n:1.5.36.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debconf:debconf_i18n:1.5.36.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/debconf/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/debconf-i18n.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1208"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "debconf"
+        }
+      ]
+    },
+    {
+      "bom-ref": "2a3499497dfb88f3",
+      "type": "library",
+      "publisher": "Debian Release Team <packages@release.debian.org>",
+      "name": "debian-archive-keyring",
+      "version": "2010.08.28+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:debian-archive-keyring:debian-archive-keyring:2010.08.28\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debian-archive-keyring:debian_archive_keyring:2010.08.28\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debian_archive_keyring:debian-archive-keyring:2010.08.28\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debian_archive_keyring:debian_archive_keyring:2010.08.28\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debian-archive:debian-archive-keyring:2010.08.28\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debian-archive:debian_archive_keyring:2010.08.28\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debian_archive:debian-archive-keyring:2010.08.28\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debian_archive:debian_archive_keyring:2010.08.28\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debian:debian-archive-keyring:2010.08.28\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:debian:debian_archive_keyring:2010.08.28\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/debian-archive-keyring/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/debian-archive-keyring.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "72"
+        }
+      ]
+    },
+    {
+      "bom-ref": "a447f97c3918c691",
+      "type": "library",
+      "publisher": "Clint Adams <schizo@debian.org>",
+      "name": "debianutils",
+      "version": "3.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:debianutils:debianutils:3.4:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/debianutils/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/debianutils.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "220"
+        }
+      ]
+    },
+    {
+      "bom-ref": "4bc2300624660a5b",
+      "type": "library",
+      "publisher": "Santiago Vila <sanvila@debian.org>",
+      "name": "diffutils",
+      "version": "1:3.0-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:diffutils:diffutils:1\\:3.0-1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/diffutils/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/diffutils.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1424"
+        }
+      ]
+    },
+    {
+      "bom-ref": "2622bb513f6eed30",
+      "type": "library",
+      "publisher": "Dpkg Developers <debian-dpkg@lists.debian.org>",
+      "name": "dpkg",
+      "version": "1.15.12",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:dpkg:dpkg:1.15.12:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/dpkg/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/dpkg.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/dpkg.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "6284"
+        }
+      ]
+    },
+    {
+      "bom-ref": "afaa68bf89bf83d1",
+      "type": "library",
+      "publisher": "Theodore Y. Ts'o <tytso@mit.edu>",
+      "name": "e2fslibs",
+      "version": "1.41.12-4+deb6u2",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:e2fslibs:e2fslibs:1.41.12-4\\+deb6u2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/e2fslibs/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/e2fslibs.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "324"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "e2fsprogs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "b2622cfc3bf82384",
+      "type": "library",
+      "publisher": "Theodore Y. Ts'o <tytso@mit.edu>",
+      "name": "e2fsprogs",
+      "version": "1.41.12-4+deb6u2",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:e2fsprogs:e2fsprogs:1.41.12-4\\+deb6u2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/e2fsprogs/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/e2fsprogs.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/e2fsprogs.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "2096"
+        }
+      ]
+    },
+    {
+      "bom-ref": "2c323d016b64d281",
+      "type": "library",
+      "publisher": "Andreas Metzler <ametzler@debian.org>",
+      "name": "findutils",
+      "version": "4.4.2-1+b1",
+      "licenses": [
+        {
+          "license": {
+            "id": "GFDL-1.2-only"
+          }
+        },
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:findutils:findutils:4.4.2-1\\+b1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/findutils/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/findutils.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1516"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "findutils"
+        },
+        {
+          "name": "syft:metadata:sourceVersion",
+          "value": "4.4.2-1"
+        }
+      ]
+    },
+    {
+      "bom-ref": "5b9c65128a4a9eaa",
+      "type": "library",
+      "publisher": "Debian GCC Maintainers <debian-gcc@lists.debian.org>",
+      "name": "gcc-4.4-base",
+      "version": "4.4.5-8",
+      "licenses": [
+        {
+          "license": {
+            "name": "Artistic"
+          }
+        },
+        {
+          "license": {
+            "id": "GFDL-1.2-only"
+          }
+        },
+        {
+          "license": {
+            "name": "GPL"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:gcc-4.4-base:gcc-4.4-base:4.4.5-8:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:gcc-4.4-base:gcc_4.4_base:4.4.5-8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:gcc_4.4_base:gcc-4.4-base:4.4.5-8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:gcc_4.4_base:gcc_4.4_base:4.4.5-8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:gcc-4.4:gcc-4.4-base:4.4.5-8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:gcc-4.4:gcc_4.4_base:4.4.5-8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:gcc_4.4:gcc-4.4-base:4.4.5-8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:gcc_4.4:gcc_4.4_base:4.4.5-8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:gcc:gcc-4.4-base:4.4.5-8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:gcc:gcc_4.4_base:4.4.5-8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/gcc-4.4-base/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/gcc-4.4-base.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "136"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "gcc-4.4"
+        }
+      ]
+    },
+    {
+      "bom-ref": "1ad4c8330225db55",
+      "type": "library",
+      "publisher": "Debian GnuPG-Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>",
+      "name": "gnupg",
+      "version": "1.4.10-4+squeeze7",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:gnupg:gnupg:1.4.10-4\\+squeeze7:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/gnupg/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/gnupg.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "5160"
+        }
+      ]
+    },
+    {
+      "bom-ref": "e1b36ce849fa272f",
+      "type": "library",
+      "publisher": "Debian GnuPG-Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>",
+      "name": "gpgv",
+      "version": "1.4.10-4+squeeze7",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:gpgv:gpgv:1.4.10-4\\+squeeze7:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/gpgv/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/gpgv.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "432"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "gnupg"
+        }
+      ]
+    },
+    {
+      "bom-ref": "7a49dec8bba5d51",
+      "type": "library",
+      "publisher": "Anibal Monsalve Salazar <anibal@debian.org>",
+      "name": "grep",
+      "version": "2.6.3-3+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:grep:grep:2.6.3-3\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/grep/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/grep.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1148"
+        }
+      ]
+    },
+    {
+      "bom-ref": "cc3b0f581521168c",
+      "type": "library",
+      "publisher": "Bdale Garbee <bdale@gag.com>",
+      "name": "gzip",
+      "version": "1.3.12-9+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:gzip:gzip:1.3.12-9\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/gzip/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/gzip.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "284"
+        }
+      ]
+    },
+    {
+      "bom-ref": "7c25399a5d9c8626",
+      "type": "library",
+      "publisher": "Debian Hostname Team <hostname-devel@lists.alioth.debian.org>",
+      "name": "hostname",
+      "version": "3.04",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:hostname:hostname:3.04:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/hostname/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/hostname.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "92"
+        }
+      ]
+    },
+    {
+      "bom-ref": "452a810528224d3",
+      "type": "library",
+      "publisher": "Guillem Jover <guillem@debian.org>",
+      "name": "inetutils-ping",
+      "version": "2:1.6-3.1+squeeze2",
+      "licenses": [
+        {
+          "license": {
+            "id": "GFDL-1.2-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:inetutils-ping:inetutils-ping:2\\:1.6-3.1\\+squeeze2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:inetutils-ping:inetutils_ping:2\\:1.6-3.1\\+squeeze2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:inetutils_ping:inetutils-ping:2\\:1.6-3.1\\+squeeze2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:inetutils_ping:inetutils_ping:2\\:1.6-3.1\\+squeeze2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:inetutils:inetutils-ping:2\\:1.6-3.1\\+squeeze2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:inetutils:inetutils_ping:2\\:1.6-3.1\\+squeeze2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/inetutils-ping/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/inetutils-ping.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "268"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "inetutils"
+        }
+      ]
+    },
+    {
+      "bom-ref": "ef1b341c790ba02c",
+      "type": "library",
+      "publisher": "Debian sysvinit maintainers <pkg-sysvinit-devel@lists.alioth.debian.org>",
+      "name": "initscripts",
+      "version": "2.88dsf-13.1+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:initscripts:initscripts:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/initscripts/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/initscripts.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/initscripts.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "396"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "sysvinit"
+        }
+      ]
+    },
+    {
+      "bom-ref": "1577ddd1eb497303",
+      "type": "library",
+      "publisher": "Petter Reinholdtsen <pere@debian.org>",
+      "name": "insserv",
+      "version": "1.14.0-2",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:insserv:insserv:1.14.0-2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/insserv/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/insserv.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/insserv.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "292"
+        }
+      ]
+    },
+    {
+      "bom-ref": "efd0e7026858a319",
+      "type": "library",
+      "publisher": "Debian iproute maintainers <ah-iproute@debian.org>",
+      "name": "iproute",
+      "version": "20100519-3",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:iproute:iproute:20100519-3:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/iproute/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/iproute.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/iproute.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1044"
+        }
+      ]
+    },
+    {
+      "bom-ref": "ef426a12d4028644",
+      "type": "library",
+      "publisher": "Nathan Scott <nathans@debian.org>",
+      "name": "libacl1",
+      "version": "2.2.49-4",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libacl1:libacl1:2.2.49-4:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libacl1/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libacl1.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "92"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "acl"
+        }
+      ]
+    },
+    {
+      "bom-ref": "a246d6ad3a900836",
+      "type": "library",
+      "publisher": "Nathan Scott <nathans@debian.org>",
+      "name": "libattr1",
+      "version": "1:2.4.44-2",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libattr1:libattr1:1\\:2.4.44-2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libattr1/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libattr1.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "68"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "attr"
+        }
+      ]
+    },
+    {
+      "bom-ref": "ecc026ecf5113c93",
+      "type": "library",
+      "publisher": "LaMont Jones <lamont@debian.org>",
+      "name": "libblkid1",
+      "version": "2.17.2-9",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libblkid1:libblkid1:2.17.2-9:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libblkid1/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libblkid1.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "232"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "util-linux"
+        }
+      ]
+    },
+    {
+      "bom-ref": "3f15b065207228fa",
+      "type": "library",
+      "publisher": "Anibal Monsalve Salazar <anibal@debian.org>",
+      "name": "libbz2-1.0",
+      "version": "1.0.5-6+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libbz2-1.0:libbz2-1.0:1.0.5-6\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libbz2-1.0:libbz2_1.0:1.0.5-6\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libbz2_1.0:libbz2-1.0:1.0.5-6\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libbz2_1.0:libbz2_1.0:1.0.5-6\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libbz2:libbz2-1.0:1.0.5-6\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libbz2:libbz2_1.0:1.0.5-6\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libbz2-1.0/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libbz2-1.0.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "124"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "bzip2"
+        }
+      ]
+    },
+    {
+      "bom-ref": "3e088237164d7976",
+      "type": "library",
+      "publisher": "GNU Libc Maintainers <debian-glibc@lists.debian.org>",
+      "name": "libc-bin",
+      "version": "2.11.3-4+deb6u11",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libc-bin:libc-bin:2.11.3-4\\+deb6u11:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libc-bin:libc_bin:2.11.3-4\\+deb6u11:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libc_bin:libc-bin:2.11.3-4\\+deb6u11:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libc_bin:libc_bin:2.11.3-4\\+deb6u11:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libc:libc-bin:2.11.3-4\\+deb6u11:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libc:libc_bin:2.11.3-4\\+deb6u11:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libc-bin/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libc-bin.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/libc-bin.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1644"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "eglibc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "740c7faa6ebfc087",
+      "type": "library",
+      "publisher": "GNU Libc Maintainers <debian-glibc@lists.debian.org>",
+      "name": "libc6",
+      "version": "2.11.3-4+deb6u11",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libc6:libc6:2.11.3-4\\+deb6u11:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libc6/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libc6.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/libc6.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "9908"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "eglibc"
+        }
+      ]
+    },
+    {
+      "bom-ref": "ef006df2c615afc8",
+      "type": "library",
+      "publisher": "Theodore Y. Ts'o <tytso@mit.edu>",
+      "name": "libcomerr2",
+      "version": "1.41.12-4+deb6u2",
+      "cpe": "cpe:2.3:a:libcomerr2:libcomerr2:1.41.12-4\\+deb6u2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libcomerr2/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libcomerr2.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "108"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "e2fsprogs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "2bca3cd1cae1e655",
+      "type": "library",
+      "publisher": "Clint Adams <schizo@debian.org>",
+      "name": "libdb4.8",
+      "version": "4.8.30-2",
+      "cpe": "cpe:2.3:a:libdb4.8:libdb4.8:4.8.30-2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libdb4.8/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libdb4.8.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1572"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "db4.8"
+        }
+      ]
+    },
+    {
+      "bom-ref": "b39fe4c8bd7bb6b1",
+      "type": "library",
+      "publisher": "Debian GCC Maintainers <debian-gcc@lists.debian.org>",
+      "name": "libgcc1",
+      "version": "1:4.4.5-8",
+      "licenses": [
+        {
+          "license": {
+            "name": "Artistic"
+          }
+        },
+        {
+          "license": {
+            "id": "GFDL-1.2-only"
+          }
+        },
+        {
+          "license": {
+            "name": "GPL"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libgcc1:libgcc1:1\\:4.4.5-8:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/gcc-4.4-base/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libgcc1.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "104"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "gcc-4.4"
+        },
+        {
+          "name": "syft:metadata:sourceVersion",
+          "value": "4.4.5-8"
+        }
+      ]
+    },
+    {
+      "bom-ref": "7a0c94b966bd2fb6",
+      "type": "library",
+      "publisher": "Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>",
+      "name": "liblocale-gettext-perl",
+      "version": "1.05-6",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:liblocale-gettext-perl:liblocale-gettext-perl:1.05-6:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:liblocale-gettext-perl:liblocale_gettext_perl:1.05-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:liblocale_gettext_perl:liblocale-gettext-perl:1.05-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:liblocale_gettext_perl:liblocale_gettext_perl:1.05-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:liblocale-gettext:liblocale-gettext-perl:1.05-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:liblocale-gettext:liblocale_gettext_perl:1.05-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:liblocale_gettext:liblocale-gettext-perl:1.05-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:liblocale_gettext:liblocale_gettext_perl:1.05-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:liblocale:liblocale-gettext-perl:1.05-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:liblocale:liblocale_gettext_perl:1.05-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/liblocale-gettext-perl/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/liblocale-gettext-perl.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "48"
+        }
+      ]
+    },
+    {
+      "bom-ref": "971b57e2c678e038",
+      "type": "library",
+      "publisher": "Jonathan Nieder <jrnieder@gmail.com>",
+      "name": "liblzma2",
+      "version": "5.0.0-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Autoconf"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-or-later"
+          }
+        },
+        {
+          "license": {
+            "name": "PD"
+          }
+        },
+        {
+          "license": {
+            "name": "PD-debian"
+          }
+        },
+        {
+          "license": {
+            "name": "config-h"
+          }
+        },
+        {
+          "license": {
+            "name": "noderivs"
+          }
+        },
+        {
+          "license": {
+            "name": "permissive"
+          }
+        },
+        {
+          "license": {
+            "name": "permissive-nowarranty"
+          }
+        },
+        {
+          "license": {
+            "name": "probably-PD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:liblzma2:liblzma2:5.0.0-2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/liblzma2/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/liblzma2.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "324"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "xz-utils"
+        }
+      ]
+    },
+    {
+      "bom-ref": "ebfde8f5e600b390",
+      "type": "library",
+      "publisher": "Craig Small <csmall@debian.org>",
+      "name": "libncurses5",
+      "version": "5.7+20100313-5",
+      "cpe": "cpe:2.3:a:libncurses5:libncurses5:5.7\\+20100313-5:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libncurses5/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libncurses5.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "684"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "ncurses"
+        }
+      ]
+    },
+    {
+      "bom-ref": "a072af4f12b9d3d6",
+      "type": "library",
+      "publisher": "Steve Langasek <vorlon@debian.org>",
+      "name": "libpam-modules",
+      "version": "1.1.1-6.1+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libpam-modules:libpam-modules:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libpam-modules:libpam_modules:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libpam_modules:libpam-modules:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libpam_modules:libpam_modules:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libpam:libpam-modules:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libpam:libpam_modules:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libpam-modules/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libpam-modules.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/libpam-modules.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1100"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "pam"
+        }
+      ]
+    },
+    {
+      "bom-ref": "eefa06f05cd20e4f",
+      "type": "library",
+      "publisher": "Steve Langasek <vorlon@debian.org>",
+      "name": "libpam-runtime",
+      "version": "1.1.1-6.1+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libpam-runtime:libpam-runtime:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libpam-runtime:libpam_runtime:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libpam_runtime:libpam-runtime:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libpam_runtime:libpam_runtime:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libpam:libpam-runtime:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libpam:libpam_runtime:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libpam-runtime/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libpam-runtime.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/libpam-runtime.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1248"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "pam"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c4a49a74070edbb8",
+      "type": "library",
+      "publisher": "Steve Langasek <vorlon@debian.org>",
+      "name": "libpam0g",
+      "version": "1.1.1-6.1+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libpam0g:libpam0g:1.1.1-6.1\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libpam0g/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libpam0g.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "256"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "pam"
+        }
+      ]
+    },
+    {
+      "bom-ref": "b6577efcf0cf35a5",
+      "type": "library",
+      "publisher": "Matthias Klose <doko@debian.org>",
+      "name": "libreadline6",
+      "version": "6.1-3",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libreadline6:libreadline6:6.1-3:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libreadline6/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libreadline6.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "380"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "readline6"
+        }
+      ]
+    },
+    {
+      "bom-ref": "9a38cf2fd3cb127b",
+      "type": "library",
+      "publisher": "Manoj Srivastava <srivasta@debian.org>",
+      "name": "libselinux1",
+      "version": "2.0.96-1",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libselinux1:libselinux1:2.0.96-1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libselinux1/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libselinux1.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "304"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "libselinux"
+        }
+      ]
+    },
+    {
+      "bom-ref": "639230610ce16a65",
+      "type": "library",
+      "publisher": "Manoj Srivastava <srivasta@debian.org>",
+      "name": "libsepol1",
+      "version": "2.0.41-1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        },
+        {
+          "license": {
+            "name": "LGPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libsepol1:libsepol1:2.0.41-1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libsepol1/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libsepol1.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "328"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "libsepol"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f7c15ae523fbc522",
+      "type": "library",
+      "publisher": "Alastair McKinstry <mckinstry@debian.org>",
+      "name": "libslang2",
+      "version": "2.2.2-4",
+      "cpe": "cpe:2.3:a:libslang2:libslang2:2.2.2-4:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libslang2/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libslang2.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1484"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "slang2"
+        }
+      ]
+    },
+    {
+      "bom-ref": "dc277ea0cdf86c25",
+      "type": "library",
+      "publisher": "Theodore Y. Ts'o <tytso@mit.edu>",
+      "name": "libss2",
+      "version": "1.41.12-4+deb6u2",
+      "cpe": "cpe:2.3:a:libss2:libss2:1.41.12-4\\+deb6u2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libss2/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libss2.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "116"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "e2fsprogs"
+        }
+      ]
+    },
+    {
+      "bom-ref": "4669e34315ec12f5",
+      "type": "library",
+      "publisher": "Debian GCC Maintainers <debian-gcc@lists.debian.org>",
+      "name": "libstdc++6",
+      "version": "4.4.5-8",
+      "licenses": [
+        {
+          "license": {
+            "name": "Artistic"
+          }
+        },
+        {
+          "license": {
+            "id": "GFDL-1.2-only"
+          }
+        },
+        {
+          "license": {
+            "name": "GPL"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libstdc\\+\\+6:libstdc\\+\\+6:4.4.5-8:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/gcc-4.4-base/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libstdc++6.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "1236"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "gcc-4.4"
+        }
+      ]
+    },
+    {
+      "bom-ref": "8173ad0bc77ee286",
+      "type": "library",
+      "publisher": "Anibal Monsalve Salazar <anibal@debian.org>",
+      "name": "libtext-charwidth-perl",
+      "version": "0.04-6",
+      "licenses": [
+        {
+          "license": {
+            "name": "Artistic"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libtext-charwidth-perl:libtext-charwidth-perl:0.04-6:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext-charwidth-perl:libtext_charwidth_perl:0.04-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_charwidth_perl:libtext-charwidth-perl:0.04-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_charwidth_perl:libtext_charwidth_perl:0.04-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext-charwidth:libtext-charwidth-perl:0.04-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext-charwidth:libtext_charwidth_perl:0.04-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_charwidth:libtext-charwidth-perl:0.04-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_charwidth:libtext_charwidth_perl:0.04-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext:libtext-charwidth-perl:0.04-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext:libtext_charwidth_perl:0.04-6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libtext-charwidth-perl/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libtext-charwidth-perl.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "36"
+        }
+      ]
+    },
+    {
+      "bom-ref": "2f4eabf48d3bf8f7",
+      "type": "library",
+      "publisher": "Anibal Monsalve Salazar <anibal@debian.org>",
+      "name": "libtext-iconv-perl",
+      "version": "1.7-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Artistic"
+          }
+        },
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libtext-iconv-perl:libtext-iconv-perl:1.7-2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext-iconv-perl:libtext_iconv_perl:1.7-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_iconv_perl:libtext-iconv-perl:1.7-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_iconv_perl:libtext_iconv_perl:1.7-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext-iconv:libtext-iconv-perl:1.7-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext-iconv:libtext_iconv_perl:1.7-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_iconv:libtext-iconv-perl:1.7-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_iconv:libtext_iconv_perl:1.7-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext:libtext-iconv-perl:1.7-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext:libtext_iconv_perl:1.7-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libtext-iconv-perl/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libtext-iconv-perl.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "48"
+        }
+      ]
+    },
+    {
+      "bom-ref": "6104c6da88e81ba1",
+      "type": "library",
+      "publisher": "Anibal Monsalve Salazar <anibal@debian.org>",
+      "name": "libtext-wrapi18n-perl",
+      "version": "0.06-7",
+      "licenses": [
+        {
+          "license": {
+            "name": "Artistic"
+          }
+        },
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libtext-wrapi18n-perl:libtext-wrapi18n-perl:0.06-7:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext-wrapi18n-perl:libtext_wrapi18n_perl:0.06-7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_wrapi18n_perl:libtext-wrapi18n-perl:0.06-7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_wrapi18n_perl:libtext_wrapi18n_perl:0.06-7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext-wrapi18n:libtext-wrapi18n-perl:0.06-7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext-wrapi18n:libtext_wrapi18n_perl:0.06-7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_wrapi18n:libtext-wrapi18n-perl:0.06-7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext_wrapi18n:libtext_wrapi18n_perl:0.06-7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext:libtext-wrapi18n-perl:0.06-7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libtext:libtext_wrapi18n_perl:0.06-7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libtext-wrapi18n-perl/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libtext-wrapi18n-perl.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "28"
+        }
+      ]
+    },
+    {
+      "bom-ref": "45beb4c6b6b8f323",
+      "type": "library",
+      "publisher": "Aurelien Jarno <aurel32@debian.org>",
+      "name": "libusb-0.1-4",
+      "version": "2:0.1.12-16",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:libusb-0.1-4:libusb-0.1-4:2\\:0.1.12-16:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libusb-0.1-4:libusb_0.1_4:2\\:0.1.12-16:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libusb_0.1_4:libusb-0.1-4:2\\:0.1.12-16:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libusb_0.1_4:libusb_0.1_4:2\\:0.1.12-16:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libusb-0.1:libusb-0.1-4:2\\:0.1.12-16:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libusb-0.1:libusb_0.1_4:2\\:0.1.12-16:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libusb_0.1:libusb-0.1-4:2\\:0.1.12-16:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libusb_0.1:libusb_0.1_4:2\\:0.1.12-16:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libusb:libusb-0.1-4:2\\:0.1.12-16:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:libusb:libusb_0.1_4:2\\:0.1.12-16:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libusb-0.1-4/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libusb-0.1-4.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "64"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "libusb"
+        }
+      ]
+    },
+    {
+      "bom-ref": "aeb4c2f719d82912",
+      "type": "library",
+      "publisher": "LaMont Jones <lamont@debian.org>",
+      "name": "libuuid1",
+      "version": "2.17.2-9",
+      "cpe": "cpe:2.3:a:libuuid1:libuuid1:2.17.2-9:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/libuuid1/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/libuuid1.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "116"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "util-linux"
+        }
+      ]
+    },
+    {
+      "bom-ref": "6188b198e1593417",
+      "type": "library",
+      "publisher": "Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>",
+      "name": "login",
+      "version": "1:4.1.4.2+svn3283-2+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:login:login:1\\:4.1.4.2\\+svn3283-2\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/login/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/login.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/login.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "2560"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "shadow"
+        }
+      ]
+    },
+    {
+      "bom-ref": "2caa5e322f18fa09",
+      "type": "library",
+      "publisher": "Chris Lawrence <lawrencc@debian.org>",
+      "name": "lsb-base",
+      "version": "3.2-23.2squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:lsb-base:lsb-base:3.2-23.2squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:lsb-base:lsb_base:3.2-23.2squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:lsb_base:lsb-base:3.2-23.2squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:lsb_base:lsb_base:3.2-23.2squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:lsb:lsb-base:3.2-23.2squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:lsb:lsb_base:3.2-23.2squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/lsb-base/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/lsb-base.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "32"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "lsb"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f346aa85ea435b85",
+      "type": "library",
+      "publisher": "Steve Langasek <vorlon@debian.org>",
+      "name": "mawk",
+      "version": "1.3.3-15",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:mawk:mawk:1.3.3-15:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/mawk/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "244"
+        }
+      ]
+    },
+    {
+      "bom-ref": "c1616a71d86dd122",
+      "type": "library",
+      "publisher": "LaMont Jones <lamont@debian.org>",
+      "name": "mount",
+      "version": "2.17.2-9",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:mount:mount:2.17.2-9:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/mount/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/mount.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "388"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "util-linux"
+        }
+      ]
+    },
+    {
+      "bom-ref": "cc9fa578ffac9a70",
+      "type": "library",
+      "publisher": "Craig Small <csmall@debian.org>",
+      "name": "ncurses-base",
+      "version": "5.7+20100313-5",
+      "cpe": "cpe:2.3:a:ncurses-base:ncurses-base:5.7\\+20100313-5:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ncurses-base:ncurses_base:5.7\\+20100313-5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ncurses_base:ncurses-base:5.7\\+20100313-5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ncurses_base:ncurses_base:5.7\\+20100313-5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ncurses:ncurses-base:5.7\\+20100313-5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ncurses:ncurses_base:5.7\\+20100313-5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/ncurses-base/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/ncurses-base.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/ncurses-base.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "452"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "ncurses"
+        }
+      ]
+    },
+    {
+      "bom-ref": "a8061826a99ac4a0",
+      "type": "library",
+      "publisher": "Craig Small <csmall@debian.org>",
+      "name": "ncurses-bin",
+      "version": "5.7+20100313-5",
+      "cpe": "cpe:2.3:a:ncurses-bin:ncurses-bin:5.7\\+20100313-5:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ncurses-bin:ncurses_bin:5.7\\+20100313-5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ncurses_bin:ncurses-bin:5.7\\+20100313-5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ncurses_bin:ncurses_bin:5.7\\+20100313-5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ncurses:ncurses-bin:5.7\\+20100313-5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ncurses:ncurses_bin:5.7\\+20100313-5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/ncurses-bin/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/ncurses-bin.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "524"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "ncurses"
+        }
+      ]
+    },
+    {
+      "bom-ref": "586d9c8b1acd86ea",
+      "type": "library",
+      "publisher": "Marco d'Itri <md@linux.it>",
+      "name": "netbase",
+      "version": "4.45",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:netbase:netbase:4.45:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/netbase/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/netbase.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "96"
+        }
+      ]
+    },
+    {
+      "bom-ref": "8e6e71cff8aed363",
+      "type": "library",
+      "publisher": "Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>",
+      "name": "passwd",
+      "version": "1:4.1.4.2+svn3283-2+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:passwd:passwd:1\\:4.1.4.2\\+svn3283-2\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/passwd/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/passwd.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/passwd.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "2740"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "shadow"
+        }
+      ]
+    },
+    {
+      "bom-ref": "b786e262e33e8c4f",
+      "type": "library",
+      "publisher": "Niko Tyni <ntyni@debian.org>",
+      "name": "perl-base",
+      "version": "5.10.1-17squeeze6",
+      "licenses": [
+        {
+          "license": {
+            "name": "Artistic"
+          }
+        },
+        {
+          "license": {
+            "name": "BSD"
+          }
+        },
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:perl-base:perl-base:5.10.1-17squeeze6:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:perl-base:perl_base:5.10.1-17squeeze6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:perl_base:perl-base:5.10.1-17squeeze6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:perl_base:perl_base:5.10.1-17squeeze6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:perl:perl-base:5.10.1-17squeeze6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:perl:perl_base:5.10.1-17squeeze6:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/perl/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/perl-base.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "4804"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "perl"
+        }
+      ]
+    },
+    {
+      "bom-ref": "9c28d8d5b8e7b7b4",
+      "type": "library",
+      "publisher": "Matthias Klose <doko@debian.org>",
+      "name": "readline-common",
+      "version": "6.1-3",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:readline-common:readline-common:6.1-3:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:readline-common:readline_common:6.1-3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:readline_common:readline-common:6.1-3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:readline_common:readline_common:6.1-3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:readline:readline-common:6.1-3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:readline:readline_common:6.1-3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/readline-common/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/readline-common.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "92"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "readline6"
+        }
+      ]
+    },
+    {
+      "bom-ref": "37ec70708babaec8",
+      "type": "library",
+      "publisher": "Clint Adams <schizo@debian.org>",
+      "name": "sed",
+      "version": "4.2.1-7",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:sed:sed:4.2.1-7:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/sed/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/sed.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "968"
+        }
+      ]
+    },
+    {
+      "bom-ref": "afc41508a49a071d",
+      "type": "library",
+      "publisher": "Clint Adams <schizo@debian.org>",
+      "name": "sensible-utils",
+      "version": "0.0.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:sensible-utils:sensible-utils:0.0.4:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sensible-utils:sensible_utils:0.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sensible_utils:sensible-utils:0.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sensible_utils:sensible_utils:0.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sensible:sensible-utils:0.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sensible:sensible_utils:0.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/sensible-utils/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/sensible-utils.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "112"
+        }
+      ]
+    },
+    {
+      "bom-ref": "1d17226d61b700bb",
+      "type": "library",
+      "publisher": "Debian sysvinit maintainers <pkg-sysvinit-devel@lists.alioth.debian.org>",
+      "name": "sysv-rc",
+      "version": "2.88dsf-13.1+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:sysv-rc:sysv-rc:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sysv-rc:sysv_rc:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sysv_rc:sysv-rc:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sysv_rc:sysv_rc:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sysv:sysv-rc:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sysv:sysv_rc:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/sysv-rc/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/sysv-rc.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "300"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "sysvinit"
+        }
+      ]
+    },
+    {
+      "bom-ref": "3b2d51debed594d7",
+      "type": "library",
+      "publisher": "Debian sysvinit maintainers <pkg-sysvinit-devel@lists.alioth.debian.org>",
+      "name": "sysvinit",
+      "version": "2.88dsf-13.1+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:sysvinit:sysvinit:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/sysvinit/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/sysvinit.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "268"
+        }
+      ]
+    },
+    {
+      "bom-ref": "ed21dea746d30c81",
+      "type": "library",
+      "publisher": "Debian sysvinit maintainers <pkg-sysvinit-devel@lists.alioth.debian.org>",
+      "name": "sysvinit-utils",
+      "version": "2.88dsf-13.1+squeeze1",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:sysvinit-utils:sysvinit-utils:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sysvinit-utils:sysvinit_utils:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sysvinit_utils:sysvinit-utils:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sysvinit_utils:sysvinit_utils:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sysvinit:sysvinit-utils:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:sysvinit:sysvinit_utils:2.88dsf-13.1\\+squeeze1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/sysvinit-utils/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/sysvinit-utils.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "280"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "sysvinit"
+        }
+      ]
+    },
+    {
+      "bom-ref": "5d2e62a1a9f0a3a6",
+      "type": "library",
+      "publisher": "Bdale Garbee <bdale@gag.com>",
+      "name": "tar",
+      "version": "1.23-3",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:tar:tar:1.23-3:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/tar/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/tar.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/tar.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "2108"
+        }
+      ]
+    },
+    {
+      "bom-ref": "b4e637e314fb47cf",
+      "type": "library",
+      "publisher": "GNU Libc Maintainers <debian-glibc@lists.debian.org>",
+      "name": "tzdata",
+      "version": "2015g-0+deb6u1",
+      "cpe": "cpe:2.3:a:tzdata:tzdata:2015g-0\\+deb6u1:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/tzdata/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/tzdata.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "5112"
+        }
+      ]
+    },
+    {
+      "bom-ref": "d55354d7abe92b3f",
+      "type": "library",
+      "publisher": "LaMont Jones <lamont@debian.org>",
+      "name": "util-linux",
+      "version": "2.17.2-9",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:util-linux:util-linux:2.17.2-9:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:util-linux:util_linux:2.17.2-9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:util_linux:util-linux:2.17.2-9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:util_linux:util_linux:2.17.2-9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:util:util-linux:2.17.2-9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:util:util_linux:2.17.2-9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/util-linux/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/util-linux.conffiles"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/info/util-linux.md5sums"
+        },
+        {
+          "name": "syft:location:3:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:3:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "2240"
+        }
+      ]
+    },
+    {
+      "bom-ref": "f7c334e4792293ea",
+      "type": "library",
+      "publisher": "Jonathan Nieder <jrnieder@gmail.com>",
+      "name": "xz-utils",
+      "version": "5.0.0-2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Autoconf"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-2.0-or-later"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-or-later"
+          }
+        },
+        {
+          "license": {
+            "name": "PD"
+          }
+        },
+        {
+          "license": {
+            "name": "PD-debian"
+          }
+        },
+        {
+          "license": {
+            "name": "config-h"
+          }
+        },
+        {
+          "license": {
+            "name": "noderivs"
+          }
+        },
+        {
+          "license": {
+            "name": "permissive"
+          }
+        },
+        {
+          "license": {
+            "name": "permissive-nowarranty"
+          }
+        },
+        {
+          "license": {
+            "name": "probably-PD"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:xz-utils:xz-utils:5.0.0-2:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xz-utils:xz_utils:5.0.0-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xz_utils:xz-utils:5.0.0-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xz_utils:xz_utils:5.0.0-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xz:xz-utils:5.0.0-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:xz:xz_utils:5.0.0-2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/xz-utils/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/xz-utils.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "460"
+        }
+      ]
+    },
+    {
+      "bom-ref": "e9dda803b45622e1",
+      "type": "library",
+      "publisher": "Mark Brown <broonie@debian.org>",
+      "name": "zlib1g",
+      "version": "1:1.2.3.4.dfsg-3",
+      "cpe": "cpe:2.3:a:zlib1g:zlib1g:1\\:1.2.3.4.dfsg-3:*:*:*:*:*:*:*",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "dpkgdb-cataloger"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/usr/share/doc/zlib1g/copyright"
+        },
+        {
+          "name": "syft:location:1:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:1:path",
+          "value": "/var/lib/dpkg/info/zlib1g.md5sums"
+        },
+        {
+          "name": "syft:location:2:layerID",
+          "value": "sha256:085be35d9b38c9100656a58c1c3b952c110186ade2bf1e899cc951f7132a9584"
+        },
+        {
+          "name": "syft:location:2:path",
+          "value": "/var/lib/dpkg/status"
+        },
+        {
+          "name": "syft:metadata:installedSize",
+          "value": "172"
+        },
+        {
+          "name": "syft:metadata:source",
+          "value": "zlib"
+        }
+      ]
+    }
+  ]
+}
