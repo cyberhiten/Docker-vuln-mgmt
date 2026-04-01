@@ -2,6 +2,9 @@
 
 I have done Vunerability scans of 30+ Docker images using Trivy & Grype (Anchore CLI earlier) . My current goal is to perform similar scans using various OSS tools like Trivy, Grype & syft for SBOM
 
+
+> **📢 Supply Chain Notice**  
+> This project was created in 2023. Following the March 2026 Trivy incident, a [`SECURITY.md`](./SECURITY.md) file has been added with modern best practices for safely consuming security tooling. The original methodology remains valid, but see the security advisory for updated recommendations.
 ##### _(This is not a how-to doc)_
 
 * Trivy scans reports [Trivy reports](https://github.com/cyberhiten/Docker-vuln-mgmt/tree/main/docker-vuln-mgmt-poc/trivy-reports)
